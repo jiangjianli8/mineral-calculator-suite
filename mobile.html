@@ -57,12 +57,12 @@ body::before {
 }
 @keyframes gradientShift {0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
 .app-header .subtitle {font-size:11px;color:var(--text-secondary);margin-top:4px;letter-spacing:2px;}
-.tab-nav {display:flex;justify-content:center;gap:6px;overflow-x:auto;padding:4px 0 12px;-ms-overflow-style:none;scrollbar-width:none;}
+.tab-nav {display:flex;justify-content:flex-start;gap:4px;overflow-x:auto;padding:4px 4px 12px;-ms-overflow-style:none;scrollbar-width:none;scroll-behavior:smooth;}
 .tab-nav::-webkit-scrollbar{display:none}
 .tab-nav button {
-  flex:0 0 auto;padding:6px 12px;
+  flex:0 0 auto;padding:7px 10px;white-space:nowrap;
   background:var(--bg-secondary);border:1px solid rgba(255,255,255,0.08);
-  border-radius:16px;color:var(--text-secondary);font-size:12px;font-weight:700;
+  border-radius:16px;color:var(--text-secondary);font-size:11px;font-weight:700;
   cursor:pointer;transition:all 0.2s;
 }
 .tab-nav button.active {
@@ -437,12 +437,9 @@ function switchTo(index){
 // Tab click
 document.getElementById('tabNav').addEventListener('click',function(e){if(e.target.tagName==='BUTTON'){var idx=TAB_ORDER.indexOf(e.target.dataset.target);if(idx>=0)switchTo(idx);}});
 
-// Swipe gesture
-document.getElementById('cards-container').addEventListener('touchstart',function(e){this._sx=e.changedTouches[0].screenX;this._sy=e.changedTouches[0].screenY;this._st=Date.now();},{passive:true});
-document.getElementById('cards-container').addEventListener('touchend',function(e){if(this._sx==null)return;var ex=e.changedTouches[0].screenX;var ey=e.changedTouches[0].screenY;var dx=ex-this._sx;var dy=ey-this._sy;var dt=Date.now()-this._st;if(dt<400&&Math.abs(dx)>Math.abs(dy)&&Math.abs(dx)>50){if(dx<0){switchTo(currentIndex+1);}else{switchTo(currentIndex-1);}}this._sx=null;},{passive:true});
-
-// Also allow swipe on the active card body (cover full area)
-document.querySelectorAll('.calc-card').forEach(function(card){card.addEventListener('touchstart',function(e){card._sx=e.changedTouches[0].screenX;card._sy=e.changedTouches[0].screenY;card._st=Date.now();},{passive:true});card.addEventListener('touchend',function(e){if(card._sx==null)return;var ex=e.changedTouches[0].screenX;var ey=e.changedTouches[0].screenY;var dx=ex-card._sx;var dy=ey-card._sy;var dt=Date.now()-card._st;if(dt<400&&Math.abs(dx)>Math.abs(dy)&&Math.abs(dx)>50){if(dx<0){switchTo(currentIndex+1);}else{switchTo(currentIndex-1);}}card._sx=null;},{passive:true});});
+// Swipe gesture (container-level only, events bubble from cards)
+document.getElementById('cards-container').addEventListener('touchstart',function(e){this._sx=e.changedTouches[0].screenX;this._sy=e.changedTouches[0].screenY;this._st=Date.now();this._swiped=false;},{passive:true});
+document.getElementById('cards-container').addEventListener('touchend',function(e){if(this._sx==null||this._swiped)return;var ex=e.changedTouches[0].screenX;var ey=e.changedTouches[0].screenY;var dx=ex-this._sx;var dy=ey-this._sy;var dt=Date.now()-this._st;if(dt<500&&Math.abs(dx)>Math.abs(dy)&&Math.abs(dx)>50){this._swiped=true;if(dx<0){switchTo(currentIndex+1);}else{switchTo(currentIndex-1);}}this._sx=null;},{passive:true});
 
 // Global config listeners
 document.querySelectorAll('.global-panel input').forEach(function(input){input.addEventListener('change',function(){saveGlobalConfig();calculators.forEach(function(c){c.applyGlobalConfig(window.globalConfig);});});});
