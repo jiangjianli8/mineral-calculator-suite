@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>矿链通 · 矿产品综合计价工具</title>
+<style>
+/* ====== common.css (mobile-first) ====== */
+:root {
+  --bg-primary: #0a0a0f;
+  --bg-secondary: #12121a;
+  --bg-card: #1a1a25;
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0c0;
+  --text-muted: #606080;
+  --neon-purple: #9b00ff;
+  --neon-cyan: #00f0ff;
+  --neon-green: #00ff88;
+  --danger: #ff4466;
+  --radius-lg: 16px;
+  --radius-md: 10px;
+  --radius-sm: 6px;
+}
+* { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+body {
+  font-family: -apple-system,"PingFang SC","Microsoft YaHei","Segoe UI",sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
+  position:relative;
+  touch-action: pan-y;
+}
+body::before {
+  content: '';
+  position:fixed; top:-50%; left:-50%; width:200%; height:200%;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(155,0,255,0.06) 0%, transparent 40%),
+    radial-gradient(circle at 85% 80%, rgba(0,240,255,0.04) 0%, transparent 40%),
+    radial-gradient(circle at 50% 50%, rgba(0,45,255,0.03) 0%, transparent 50%);
+  pointer-events:none; z-index:0;
+  animation: bgFloat 25s ease-in-out infinite;
+}
+@keyframes bgFloat {
+  0%,100%{transform:translate(0,0) rotate(0deg)}
+  33%{transform:translate(3%,-2%) rotate(1deg)}
+  66%{transform:translate(-2%,3%) rotate(-1deg)}
+}
+.app {position:relative;z-index:1;max-width:640px;margin:0 auto;padding:12px 12px 40px;}
+.app-header {text-align:center;padding:14px 0 16px;}
+.app-header h1 {
+  font-size:18px;font-weight:900;letter-spacing:2px;
+  background:linear-gradient(135deg,var(--neon-purple),var(--neon-cyan),var(--neon-purple));
+  background-size:200% 200%;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  animation:gradientShift 4s ease infinite;
+}
+@keyframes gradientShift {0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+.app-header .subtitle {font-size:11px;color:var(--text-secondary);margin-top:4px;letter-spacing:2px;}
+.tab-nav {display:flex;justify-content:center;gap:6px;overflow-x:auto;padding:4px 0 12px;-ms-overflow-style:none;scrollbar-width:none;}
+.tab-nav::-webkit-scrollbar{display:none}
+.tab-nav button {
+  flex:0 0 auto;padding:6px 12px;
+  background:var(--bg-secondary);border:1px solid rgba(255,255,255,0.08);
+  border-radius:16px;color:var(--text-secondary);font-size:12px;font-weight:700;
+  cursor:pointer;transition:all 0.2s;
+}
+.tab-nav button.active {
+  background:linear-gradient(135deg,var(--neon-purple),var(--neon-cyan));
+  border-color:transparent;color:#fff;box-shadow:0 0 12px rgba(155,0,255,0.3);
+}
+.global-panel {
+  background:var(--bg-card);border:1px solid rgba(255,255,255,0.08);
+  border-radius:var(--radius-lg);padding:12px;margin-bottom:14px;
+}
+.global-panel h3 {font-size:12px;color:var(--text-secondary);margin-bottom:10px;letter-spacing:1px;}
+.global-fields {display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:10px;}
+.global-fields .field label {font-size:11px;}
+.global-fields .field input {padding:9px 10px;font-size:14px;}
+.global-ops {display:flex;gap:8px;}
+.global-ops button {flex:1;padding:8px 0;border-radius:20px;font-size:11px;font-weight:700;cursor:pointer;border:none;}
+.global-ops .btn-reset-all {background:rgba(255,255,255,0.08);color:var(--text-secondary);border:1px solid rgba(255,255,255,0.1);}
+.global-ops .btn-clear-cache {background:rgba(255,68,102,0.12);color:var(--danger);border:1px solid rgba(255,68,102,0.25);}
+#cards-container {position:relative;}
+.mcs-toast {
+  position:fixed;bottom:60px;left:50%;transform:translateX(-50%) translateY(20px);
+  background:linear-gradient(135deg,var(--neon-purple),var(--neon-cyan));
+  color:#fff;padding:10px 22px;border-radius:30px;font-size:12px;font-weight:600;
+  opacity:0;transition:all 0.3s ease;z-index:999;pointer-events:none;white-space:nowrap;
+}
+.mcs-toast.show {opacity:1;transform:translateX(-50%) translateY(0);}
+.app-footer {text-align:center;padding:24px 12px 0;font-size:11px;color:var(--text-muted);letter-spacing:1px;}
+.app-footer .version {display:inline-block;padding:3px 10px;background:rgba(155,0,255,0.1);border:1px solid rgba(155,0,255,0.2);border-radius:20px;margin-bottom:8px;color:var(--neon-cyan);font-size:10px;}
+button{font-family:inherit}input{font-family:inherit}
+.offline{color:var(--text-muted);font-size:14px;}
+
+/* ====== calc-card.css (mobile-first single-card) ====== */
+.calc-card {background:var(--bg-card);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius-lg);padding:0;overflow:hidden;transition:all 0.3s ease;display:none;flex-direction:column;animation:cardIn 0.3s ease;}
+.calc-card.active {display:flex;}
+@keyframes cardIn {from{opacity:0;transform:translateX(20px)}to{opacity:1;transform:translateX(0)}}
+.calc-card.folded .card-body {display:none;}
+.card-header {display:flex;justify-content:space-between;align-items:center;padding:12px 14px;background:linear-gradient(135deg,color-mix(in srgb,var(--theme-primary) 12%,transparent),color-mix(in srgb,var(--theme-accent) 8%,transparent));border-bottom:1px solid color-mix(in srgb,var(--theme-primary) 25%,transparent);}
+.card-title-wrap {display:flex;align-items:center;gap:8px;}
+.card-icon {width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;}
+.card-header h2 {font-size:14px;font-weight:800;letter-spacing:0.5px;color:var(--text-primary);}
+.card-tag {font-size:10px;opacity:0.8;}
+.card-actions {display:flex;gap:6px;}
+.card-actions button {background:rgba(0,0,0,0.25);border:1px solid rgba(255,255,255,0.1);color:var(--text-primary);width:30px;height:30px;border-radius:8px;cursor:pointer;font-size:13px;}
+.card-actions button:hover {background:rgba(255,255,255,0.12);}
+.card-body {padding:14px;display:flex;flex-direction:column;gap:12px;}
+.price-bar {background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius-md);padding:10px 12px;}
+.price-label {font-size:11px;color:var(--text-secondary);text-transform:uppercase;letter-spacing:1px;display:flex;align-items:center;gap:6px;margin-bottom:6px;}
+.price-label .dot {width:8px;height:8px;border-radius:50%;background:#00ff88;}
+.price-label .dot.offline {background:#e05555;}
+.price-value {font-size:28px;font-weight:900;line-height:1;color:var(--theme-accent);}
+.price-value .price-num {display:inline-block;background:linear-gradient(135deg,var(--theme-accent),#ffffff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-shadow:none;}
+.price-value .unit {font-size:13px;font-weight:700;color:var(--text-primary);margin-left:4px;}
+.price-value .offline-flag {font-size:12px;font-weight:600;color:var(--text-secondary);margin-left:6px;}
+.price-meta {display:flex;justify-content:space-between;align-items:center;margin-top:6px;font-size:11px;color:var(--text-secondary);}
+.btn-refresh {background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:var(--theme-accent);padding:3px 8px;border-radius:10px;font-size:11px;cursor:pointer;}
+.price-double {display:flex;justify-content:space-between;align-items:flex-start;gap:8px;}
+.price-double .price-col {flex:1;display:flex;flex-direction:column;gap:3px;}
+.price-double .price-col:first-child {text-align:left;}
+.price-double .price-col:last-child {text-align:right;}
+.price-double .pd-label {font-size:12px;font-weight:600;color:var(--text-secondary);}
+.price-double .pd-price {font-size:22px;font-weight:900;background:linear-gradient(135deg,var(--theme-accent),#ffffff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.price-double .pd-unit {font-size:11px;color:var(--text-primary);}
+.price-double-meta {display:flex;justify-content:space-between;align-items:center;margin-top:8px;font-size:11px;color:var(--text-secondary);}
+.inputs-area {display:flex;flex-direction:column;gap:10px;}
+.field {display:flex;flex-direction:column;gap:5px;}
+.field label {font-size:12px;font-weight:700;color:var(--text-secondary);}
+.field label span {font-weight:400;color:var(--text-muted);font-size:11px;}
+.input-wrap {position:relative;}
+.input-wrap input {width:100%;padding:10px 12px;background:var(--bg-secondary);border:1.5px solid rgba(255,255,255,0.08);border-radius:var(--radius-md);color:var(--text-primary);font-size:15px;font-weight:600;outline:none;transition:all 0.2s;}
+.input-wrap input:focus {border-color:var(--theme-primary);}
+.input-wrap input.error {border-color:var(--danger);}
+.input-wrap .suffix {position:absolute;right:10px;top:50%;transform:translateY(-50%);font-size:12px;color:var(--text-muted);pointer-events:none;}
+.error-tip {font-size:11px;color:var(--danger);}
+.two-col {display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.segmented {display:flex;gap:6px;}
+.segmented button {flex:1;padding:9px 4px;background:var(--bg-secondary);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius-md);color:var(--text-secondary);font-size:12px;font-weight:600;cursor:pointer;transition:all 0.2s;}
+.segmented button.active {background:rgba(255,255,255,0.15);border-color:var(--theme-primary);color:var(--text-primary);}
+.segmented.triple button {font-size:11px;padding:9px 2px;}
+.switch-field {flex-direction:row;align-items:center;justify-content:space-between;background:var(--bg-secondary);padding:10px 12px;border-radius:var(--radius-md);}
+.switch {position:relative;width:44px;height:24px;}
+.switch input{opacity:0;width:0;height:0;}
+.switch .slider {position:absolute;cursor:pointer;inset:0;background:rgba(255,255,255,0.15);border-radius:24px;transition:0.3s;}
+.switch .slider:before {content:"";position:absolute;height:18px;width:18px;left:3px;bottom:3px;background:#fff;border-radius:50%;transition:0.3s;}
+.switch input:checked+.slider {background:var(--theme-primary);}
+.switch input:checked+.slider:before {transform:translateX(20px);}
+.result-area {background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius-md);padding:12px;}
+.result-main {text-align:center;margin-bottom:8px;}
+.result-main .rm-label {display:block;font-size:11px;color:var(--theme-accent);letter-spacing:1px;margin-bottom:4px;}
+.result-main .rm-value {font-size:26px;font-weight:900;color:var(--theme-accent);}
+.result-sub {display:flex;justify-content:space-between;font-size:12px;color:var(--text-secondary);padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);}
+.result-sub:last-child{border-bottom:none;}
+.result-list {display:flex;flex-direction:column;gap:6px;}
+.result-item {display:flex;justify-content:space-between;align-items:center;padding:9px 10px;background:var(--bg-secondary);border-radius:var(--radius-sm);border:1px solid rgba(255,255,255,0.06);}
+.result-item.highlight {background:rgba(255,255,255,0.08);border-color:var(--theme-primary);}
+.result-item .r-label {font-size:12px;color:var(--text-secondary);}
+.result-item .r-value {font-size:14px;font-weight:800;color:var(--text-primary);}
+.result-item.highlight .r-value {color:var(--theme-accent);font-size:17px;}
+.result-grid {display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.result-box {background:var(--bg-secondary);border-radius:var(--radius-sm);padding:9px;text-align:center;}
+.result-box.highlight {background:rgba(255,255,255,0.08);border:1px solid var(--theme-primary);}
+.result-box .rb-label {display:block;font-size:10px;color:var(--text-secondary);margin-bottom:3px;}
+.result-box .rb-value {font-size:15px;font-weight:800;color:var(--text-primary);}
+.result-box.highlight .rb-value {color:var(--theme-accent);font-size:18px;}
+.formula {font-size:11px;color:var(--text-muted);margin-top:8px;line-height:1.5;word-break:break-all;}
+.result-error {color:var(--danger);text-align:center;font-size:13px;padding:10px;}
+.card-ops {display:flex;gap:8px;}
+.card-ops button {flex:1;padding:9px 0;border-radius:20px;font-size:12px;font-weight:700;cursor:pointer;transition:all 0.2s;border:none;}
+.card-ops .btn-copy {background:rgba(255,255,255,0.12);color:#fff;}
+.card-ops .btn-reset {background:transparent;color:var(--text-secondary);border:1px solid rgba(255,255,255,0.1);}
+.card-ops .btn-save {background:transparent;color:var(--theme-accent);border:1px solid var(--theme-accent);}
+.card-ops button:hover {transform:translateY(-1px);}
+.import-fields {display:flex;flex-direction:column;gap:10px;}
+.card-spodumene {--theme-primary:#9b00ff;--theme-accent:#00f0ff;}
+.card-copper     {--theme-primary:#ff8c42;--theme-accent:#ffea00;}
+.card-nickel     {--theme-primary:#00e676;--theme-accent:#00ffaa;}
+.card-tantalum   {--theme-primary:#9c27b0;--theme-accent:#e040fb;}
+.card-tin        {--theme-primary:#90a4ae;--theme-accent:#00e5ff;}
+.card-znpb       {--theme-primary:#ffc107;--theme-accent:#4ecdc4;}
+.calc-card.locked .card-header {background:linear-gradient(135deg,rgba(255,255,255,0.05),rgba(255,255,255,0.02));}
+
+/* swipe hint */
+.swipe-hint {text-align:center;font-size:11px;color:var(--text-muted);padding:8px 0 4px;letter-spacing:1px;}
+/* exchange rate */
+.exchange-status {font-weight:400;color:var(--neon-green);font-size:10px;}
+.exchange-status.offline {color:var(--text-muted);}
+.btn-refresh-exchange {position:absolute;right:10px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:var(--theme-accent);width:28px;height:28px;border-radius:8px;font-size:13px;cursor:pointer;padding:0;display:flex;align-items:center;justify-content:center;}
+</style>
+</head>
+<body>
+
+<div class="app">
+  <header class="app-header">
+    <h1>矿链通矿产品综合计价工具</h1>
+    <div class="subtitle">MINERAL CALCULATOR SUITE</div>
+  </header>
+
+  <nav class="tab-nav" id="tabNav">
+    <button data-target="spodumene" class="active">锂辉石</button>
+    <button data-target="copper">铜矿石</button>
+    <button data-target="nickel">镍矿石</button>
+    <button data-target="tantalum">钽铌矿</button>
+    <button data-target="tin">锡矿石</button>
+    <button data-target="znpb">铅锌矿</button>
+  </nav>
+
+  <section class="global-panel">
+    <h3>⚙️ 全局参数</h3>
+    <div class="global-fields">
+      <div class="field"><label>汇率 USD/CNY <span id="exchangeRateStatus" class="exchange-status">📡 实时</span></label><div class="input-wrap"><input type="number" id="globalExchangeRate" value="7.20" step="0.001"><button class="btn-refresh-exchange" id="btnRefreshExchange">↻</button></div></div>
+      <div class="field"><label>增值税率 %</label><div class="input-wrap"><input type="number" id="globalVatRate" value="13" step="0.5"></div></div>
+    </div>
+    <div class="global-ops">
+      <button class="btn-reset-all" id="btnResetAll">🔄 重置全部</button>
+      <button class="btn-clear-cache" id="btnClearCache">🗑️ 清空缓存</button>
+    </div>
+  </section>
+
+  <main id="cards-container"></main>
+  <div class="swipe-hint" id="swipeHint">← 左右滑动切换计价器 →</div>
+
+  <footer class="app-footer">
+    <div class="version">矿链通V8.1</div>
+    <div>Mineral Chain · 佛山市鑫善源商贸有限公司</div>
+  </footer>
+</div>
+
+<script>
+// ====== common.js ======
+(function(){
+var PREFIX='mcs_';
+function fmt(n,d){if(n==null||isNaN(n))return'--';return n.toLocaleString('zh-CN',{minimumFractionDigits:d,maximumFractionDigits:d});}
+function formatMoney(n){return fmt(n,2);}
+function formatPercent(n){return fmt(n,2)+'%';}
+function getStorage(key,fallback){try{var v=localStorage.getItem(PREFIX+key);return v?JSON.parse(v):fallback;}catch(e){return fallback;}}
+function setStorage(key,value){try{localStorage.setItem(PREFIX+key,JSON.stringify(value));}catch(e){}}
+function clearAllStorage(){try{Object.keys(localStorage).forEach(function(k){if(k.indexOf(PREFIX)===0)localStorage.removeItem(k);});}catch(e){}}
+function copyText(text,cb){if(navigator.clipboard){navigator.clipboard.writeText(text).then(function(){cb&&cb(true);},function(){cb&&cb(false);});}else{var ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');cb&&cb(true);}catch(e){cb&&cb(false);}document.body.removeChild(ta);}}
+function validateRange(input,min,max){var v=parseFloat(input.value);var err=input.parentElement.querySelector('.error-tip')||(input.closest('.field')?input.closest('.field').querySelector('.error-tip'):null);if(isNaN(v)||(min!=null&&v<min)||(max!=null&&v>max)){input.classList.add('error');if(err)err.style.display='block';return false;}input.classList.remove('error');if(err)err.style.display='none';return true;}
+function showToast(msg,duration){duration=duration||1500;var el=document.getElementById('mcs-toast');if(!el){el=document.createElement('div');el.id='mcs-toast';el.className='mcs-toast';document.body.appendChild(el);}el.textContent=msg;el.classList.add('show');clearTimeout(el._t);el._t=setTimeout(function(){el.classList.remove('show');},duration);}
+window.MCSCommon={fmt:fmt,formatMoney:formatMoney,formatPercent:formatPercent,getStorage:getStorage,setStorage:setStorage,clearAllStorage:clearAllStorage,copyText:copyText,validateRange:validateRange,showToast:showToast,PREFIX:PREFIX};
+})();
+
+// ====== base-calc.js ======
+(function(){
+var C=window.MCSCommon;
+function BaseCalc(config){
+  this.id=config.id;this.name=config.name;this.theme=config.theme||{primary:'#9b00ff',accent:'#00f0ff'};this.fields=config.fields||[];
+  this.priceSource=config.priceSource||null;this.price=0;this.manualPrice=false;this.state={locked:false,folded:false};
+  this.container=document.getElementById('cards-container');if(!this.container)throw new Error('缺少 #cards-container');this.init();
+}
+BaseCalc.prototype.calcTotal=function(inputs){throw new Error('子类必须实现 calcTotal');};
+BaseCalc.prototype.fetchPrice=function(){var self=this;this.updatePriceDisplay(true);this.autoCalc();};
+BaseCalc.prototype.updatePriceDisplay=function(offline){var el=this.el.querySelector('.price-value');if(!el)return;var defaultText=this.price?C.fmt(this.price,0):'--';el.innerHTML='<span class="price-num">'+defaultText+'</span><span class="unit">元/吨</span>'+(offline?'<span class="offline-flag">· 离线</span>':'');};
+BaseCalc.prototype.init=function(){this.renderCard();this.el=document.getElementById('card-'+this.id);this.bindInputs();this.loadDraft();this.fetchPrice();};
+BaseCalc.prototype.renderCard=function(){
+  var self=this;
+  var html='<article class="calc-card card-'+this.id+'" id="card-'+this.id+'">'+
+    '<header class="card-header">'+
+      '<div class="card-title-wrap"><span class="card-icon" style="background:'+this.theme.primary+'">'+(this.theme.icon||'◆')+'</span><div><h2>'+this.name+'</h2><span class="card-tag" style="color:'+this.theme.primary+'">'+(this.theme.tag||'')+'</span></div></div>'+
+      '<div class="card-actions"><button class="btn-lock" title="锁定全局参数">🔓</button><button class="btn-fold" title="折叠/展开">▼</button></div>'+
+    '</header>'+
+    '<div class="card-body">'+
+      '<div class="price-bar"><div class="price-label"><span class="dot"></span><span class="price-name">行情价格</span></div><div class="price-value">--</div><div class="price-meta"><span class="price-time">加载中...</span><button class="btn-refresh">↻ 刷新</button></div></div>'+
+      '<div class="inputs-area">'+this.renderInputs()+'</div>'+
+      '<div class="result-area"></div>'+
+      '<div class="card-ops"><button class="btn-copy">📋 复制结果</button><button class="btn-reset">🔄 本条重置</button><button class="btn-save">💾 保存草稿</button></div>'+
+    '</div></article>';
+  var wrapper=document.createElement('div');wrapper.innerHTML=html;this.container.appendChild(wrapper.firstElementChild);
+  var card=document.getElementById('card-'+this.id);
+  card.querySelector('.btn-lock').addEventListener('click',function(){self.toggleLock();});
+  card.querySelector('.btn-fold').addEventListener('click',function(){self.toggleFold();});
+  card.querySelector('.btn-refresh').addEventListener('click',function(){self.fetchPrice();});
+  card.querySelector('.btn-copy').addEventListener('click',function(){self.copyResult();});
+  card.querySelector('.btn-reset').addEventListener('click',function(){self.resetCard();});
+  card.querySelector('.btn-save').addEventListener('click',function(){self.saveDraft();});
+};
+BaseCalc.prototype.renderInputs=function(){
+  var self=this;
+  return this.fields.map(function(f){
+    var id=self.id+'_'+f.id;
+    return '<div class="field"><label>'+f.label+(f.unit?' <span>'+f.unit+'</span>':'')+'</label><div class="input-wrap"><input type="number" id="'+id+'" data-field="'+f.id+'"'+(f.step?' step="'+f.step+'"':'')+(f.min!=null?' min="'+f.min+'"':'')+(f.max!=null?' max="'+f.max+'"':'')+(f.default!=null?' value="'+f.default+'"':'')+' placeholder="'+(f.placeholder||'')+'">'+(f.unit?'<span class="suffix">'+f.unit+'</span>':'')+'</div><div class="error-tip" style="display:none">数值范围: '+(f.min!=null?f.min:'无下限')+' ~ '+(f.max!=null?f.max:'无上限')+'</div></div>';
+  }).join('');
+};
+BaseCalc.prototype.bindInputs=function(){var self=this;var inputs=this.el.querySelectorAll('input[data-field]');inputs.forEach(function(input){input.addEventListener('input',function(){self.autoCalc();});input.addEventListener('blur',function(){self.saveDraft();});});};
+BaseCalc.prototype.getInputs=function(){var vals={},self=this;this.fields.forEach(function(f){var el=self.el.querySelector('#'+self.id+'_'+f.id);vals[f.id]=el?parseFloat(el.value):(f.default!=null?f.default:0);});return vals;};
+BaseCalc.prototype.validate=function(){var self=this,ok=true;this.fields.forEach(function(f){var el=self.el.querySelector('#'+self.id+'_'+f.id);if(el&&!C.validateRange(el,f.min,f.max))ok=false;});return ok;};
+BaseCalc.prototype.autoCalc=function(){if(!this.validate()){this.el.querySelector('.result-area').innerHTML='<div class="result-error">请检查输入数值</div>';return;}var inputs=this.getInputs(),results=this.calcTotal(inputs);this.renderResults(results,inputs);};
+BaseCalc.prototype.renderResults=function(results,inputs){var html='<div class="result-list">';for(var key in results){if(key==='formula')continue;html+='<div class="result-item"><span class="r-label">'+key+'</span><span class="r-value">'+results[key]+'</span></div>';}html+='</div>';if(results.formula)html+='<div class="formula">'+results.formula+'</div>';this.el.querySelector('.result-area').innerHTML=html;};
+BaseCalc.prototype.saveDraft=function(){var vals=this.getInputs();C.setStorage(this.id+'_draft',{locked:this.state.locked,inputs:vals});C.showToast(this.name+' 草稿已保存');};
+BaseCalc.prototype.loadDraft=function(){var draft=C.getStorage(this.id+'_draft',null);if(!draft)return;if(draft.locked!=null)this.state.locked=draft.locked;this.updateLockIcon();if(draft.inputs){var self=this;for(var k in draft.inputs){var el=self.el.querySelector('#'+self.id+'_'+k);if(el)el.value=draft.inputs[k];}}};
+BaseCalc.prototype.resetCard=function(){var self=this;this.fields.forEach(function(f){var el=self.el.querySelector('#'+self.id+'_'+f.id);if(el)el.value=f.default!=null?f.default:'';});this.state.locked=false;this.updateLockIcon();this.autoCalc();C.showToast(this.name+' 已重置');};
+BaseCalc.prototype.copyResult=function(){var el=this.el.querySelector('.result-area');if(!el)return;var text=el.textContent||el.innerText||'',self=this;C.copyText(text,function(ok){C.showToast(ok?self.name+' 结果已复制':'复制失败');});};
+BaseCalc.prototype.toggleLock=function(){this.state.locked=!this.state.locked;this.updateLockIcon();this.saveDraft();};
+BaseCalc.prototype.updateLockIcon=function(){var btn=this.el.querySelector('.btn-lock');if(!btn)return;btn.textContent=this.state.locked?'🔒':'🔓';btn.title=this.state.locked?'已锁定全局参数':'锁定全局参数';this.el.classList.toggle('locked',this.state.locked);};
+BaseCalc.prototype.toggleFold=function(){this.state.folded=!this.state.folded;this.el.classList.toggle('folded',this.state.folded);var btn=this.el.querySelector('.btn-fold');if(btn)btn.textContent=this.state.folded?'▶':'▼';};
+BaseCalc.prototype.applyGlobalConfig=function(config){if(this.state.locked)return;};
+window.BaseCalc=BaseCalc;
+})();
+
+// ====== calc-spodumene.js ======
+(function(){
+var C=window.MCSCommon,BaseCalc=window.BaseCalc;
+function SpodumeneCalc(){BaseCalc.call(this,{id:'spodumene',name:'锂辉石',theme:{primary:'#9b00ff',accent:'#00f0ff',icon:'⚡',tag:'Li₂O · 广期所 LC'},fields:[{id:'lio2',label:'Li₂O 品位',unit:'%',min:2,max:100,step:0.1,default:5.0},{id:'recovery',label:'回收率',unit:'%',min:0,max:100,step:0.1,default:85},{id:'deduction',label:'扣减基准 D',unit:'CNY/吨',min:0,step:100,default:23000}]});this.price=80000;}
+SpodumeneCalc.prototype=Object.create(BaseCalc.prototype);SpodumeneCalc.prototype.constructor=SpodumeneCalc;
+SpodumeneCalc.prototype.fetchPrice=function(){var self=this;fetch('https://lc.fsxsymall.com/lc?_='+Date.now()).then(function(r){if(!r.ok)throw new Error('x');return r.json();}).then(function(d){if(d.price){self.price=d.price;self.updatePriceDisplay();self.autoCalc();}}).catch(function(){self.price=self.price||80000;self.updatePriceDisplay(true);self.autoCalc();});};
+SpodumeneCalc.prototype.updatePriceDisplay=function(offline){var el=this.el.querySelector('.price-value');if(!el)return;var label=this.el.querySelector('.price-name');if(label)label.textContent='广期所 LC 碳酸锂';el.innerHTML=(offline?'<span class="offline">离线 · ':'')+C.fmt(this.price,0)+'<span class="unit">元/吨</span>';var dot=this.el.querySelector('.price-bar .dot');if(dot)dot.className='dot '+(offline?'offline':'');};
+SpodumeneCalc.prototype.calcTotal=function(inputs){var price=this.price||0,h=30/74/(inputs.recovery/100)/(inputs.lio2/100),dmt=(price-inputs.deduction)/h,exchangeRate=(window.globalConfig&&window.globalConfig.exchangeRate)||7.2;return{h:h.toFixed(4),dmt:'¥'+C.formatMoney(dmt),dunPrice:'¥'+C.formatMoney(dmt/inputs.lio2),usd:'$'+C.formatMoney(dmt/exchangeRate),formula:'H = 30÷74÷回收率÷品位; DMT = (LC'+C.fmt(price,0)+' - D'+C.fmt(inputs.deduction,0)+') ÷ H'};};
+SpodumeneCalc.prototype.renderResults=function(results,inputs){var html='<div class="result-grid"><div class="result-box"><span class="rb-label">H 系数</span><span class="rb-value">'+results.h+'</span></div><div class="result-box highlight"><span class="rb-label">DMT 单价</span><span class="rb-value">'+results.dmt+'</span></div><div class="result-box"><span class="rb-label">吨度价</span><span class="rb-value">'+results.dunPrice+'</span></div><div class="result-box"><span class="rb-label">折合美元</span><span class="rb-value">'+results.usd+'</span></div></div><div class="formula">'+results.formula+'</div>';this.el.querySelector('.result-area').innerHTML=html;};
+window.SpodumeneCalc=SpodumeneCalc;
+})();
+
+// ====== calc-copper.js ======
+(function(){
+var C=window.MCSCommon,BaseCalc=window.BaseCalc;
+var COEFF_TABLE=[[1,40],[2,45],[3,50],[4,60],[5,65],[6,68],[7,70],[8,72],[9,74],[10,76],[11,78],[12,80],[13,83],[14,86],[15,88],[16,89],[17,90],[18,91],[19,92],[20,93],[21,95]];
+function getCoefficient(grade){if(grade<=1)return 40;if(grade>=21)return 95;for(var i=0;i<COEFF_TABLE.length-1;i++){var g1=COEFF_TABLE[i][0],c1=COEFF_TABLE[i][1],g2=COEFF_TABLE[i+1][0],c2=COEFF_TABLE[i+1][1];if(grade>=g1&&grade<=g2){var t=(grade-g1)/(g2-g1);return c1+t*(c2-c1);}}return 95;}
+function CopperCalc(){BaseCalc.call(this,{id:'copper',name:'铜矿石',theme:{primary:'#ff6b35',accent:'#ffd700',icon:'🔶',tag:'Cu · SMM 1#电解铜'},fields:[{id:'grade',label:'铜品位 Cu',unit:'%',min:1,max:21,step:0.1,default:5}]});this.price=101570;}
+CopperCalc.prototype=Object.create(BaseCalc.prototype);CopperCalc.prototype.constructor=CopperCalc;
+CopperCalc.prototype.calcTotal=function(inputs){var coeff=getCoefficient(inputs.grade),orePrice=this.price*(inputs.grade/100)*(coeff/100);return{coeff:C.formatPercent(coeff),orePrice:'¥'+C.fmt(orePrice,0)+' /吨',formula:this.price.toLocaleString()+' × '+inputs.grade.toFixed(1)+'% × '+coeff.toFixed(2)+'% = '+C.fmt(orePrice,0)+' 元/吨'};};
+CopperCalc.prototype.renderResults=function(results,inputs){var html='<div class="result-main"><span class="rm-label">铜矿石单价</span><span class="rm-value">'+results.orePrice+'</span></div><div class="result-sub"><span>计价系数</span><span>'+results.coeff+'</span></div><div class="formula">'+results.formula+'</div>';this.el.querySelector('.result-area').innerHTML=html;};
+window.CopperCalc=CopperCalc;
+})();
+
+// ====== calc-nickel.js ======
+(function(){
+var C=window.MCSCommon,BaseCalc=window.BaseCalc;
+var LATERITE_COEFF=[[0.5,75],[0.8,78],[1.0,80],[1.2,82],[1.4,84],[1.5,85],[1.6,86],[1.7,87],[1.8,88],[2.0,89],[2.2,90],[2.5,91],[3.0,92]];
+var SULFIDE_COEFF=[[0.5,80],[0.8,83],[1.0,85],[1.2,87],[1.4,88],[1.5,89],[1.6,90],[1.7,90],[1.8,91],[2.0,92],[2.2,93],[2.5,94],[3.0,95]];
+function getCoeff(table,grade){if(grade<=table[0][0])return table[0][1];if(grade>=table[table.length-1][0])return table[table.length-1][1];for(var i=0;i<table.length-1;i++){if(grade>=table[i][0]&&grade<=table[i+1][0]){var t=(grade-table[i][0])/(table[i+1][0]-table[i][0]);return table[i][1]+t*(table[i+1][1]-table[i][1]);}}return table[table.length-1][1];}
+function NickelCalc(){BaseCalc.call(this,{id:'nickel',name:'镍矿石',theme:{primary:'#50c878',accent:'#a0ffc0',icon:'💚',tag:'Ni · SMM 1#电解镍'},fields:[]});this.price=127250;this.oreType='laterite';}
+NickelCalc.prototype=Object.create(BaseCalc.prototype);NickelCalc.prototype.constructor=NickelCalc;
+NickelCalc.prototype.renderInputs=function(){
+  return '<div class="field"><label>矿石类型</label><div class="segmented" data-field="oreType"><button data-value="laterite" class="active">红土镍矿</button><button data-value="sulfide">硫化镍矿</button></div></div>'+
+    '<div class="field"><label>镍品位 Ni <span>%</span></label><div class="input-wrap"><input type="number" id="nickel_grade" data-field="grade" value="1.8" min="0.5" max="3.0" step="0.05"><span class="suffix">%</span></div></div>'+
+    '<div class="field"><label>冶炼加工费 TC <span>元/吨</span></label><div class="input-wrap"><input type="number" id="nickel_tc" data-field="tc" value="800" min="0" max="5000" step="50"><span class="suffix">元/吨</span></div></div>'+
+    '<div class="two-col"><div class="field"><label>汇率 USD/CNY</label><div class="input-wrap"><input type="number" id="nickel_exchangeRate" data-field="exchangeRate" value="7.25" min="6.5" max="8.0" step="0.01"></div></div><div class="field"><label>水分 H₂O <span>%</span></label><div class="input-wrap"><input type="number" id="nickel_moisture" data-field="moisture" value="35" min="20" max="45" step="1"><span class="suffix">%</span></div></div></div>'+
+    '<div class="field switch-field"><label>含税模式 (÷1.13)</label><label class="switch"><input type="checkbox" id="nickel_taxMode" checked><span class="slider"></span></label></div>';
+};
+NickelCalc.prototype.bindInputs=function(){var self=this;this.el.querySelectorAll('input').forEach(function(el){el.addEventListener('input',function(){self.autoCalc();});el.addEventListener('change',function(){self.autoCalc();self.saveDraft();});});this.el.querySelector('.segmented').addEventListener('click',function(e){if(e.target.tagName==='BUTTON'){self.el.querySelectorAll('.segmented button').forEach(function(b){b.classList.remove('active');});e.target.classList.add('active');self.oreType=e.target.dataset.value;self.autoCalc();self.saveDraft();}});};
+NickelCalc.prototype.getInputs=function(){var btn=this.el.querySelector('.segmented button.active');return{oreType:btn?btn.dataset.value:'laterite',grade:parseFloat(this.el.querySelector('#nickel_grade').value)||1.8,tc:parseFloat(this.el.querySelector('#nickel_tc').value)||800,exchangeRate:parseFloat(this.el.querySelector('#nickel_exchangeRate').value)||7.25,moisture:parseFloat(this.el.querySelector('#nickel_moisture').value)||35,taxMode:this.el.querySelector('#nickel_taxMode').checked?1:0};};
+NickelCalc.prototype.calcTotal=function(inputs){var table=inputs.oreType==='laterite'?LATERITE_COEFF:SULFIDE_COEFF,coeff=getCoeff(table,inputs.grade),divider=inputs.taxMode?1.13:1,metalValue;if(inputs.oreType==='laterite'){metalValue=(this.price/divider)*(inputs.grade/100)*(coeff/100)*(1-inputs.moisture/100);}else{metalValue=(this.price/divider)*(inputs.grade/100)*(coeff/100);}var orePrice=Math.max(0,metalValue-inputs.tc);return{coeff:C.formatPercent(coeff),orePrice:'¥'+C.fmt(orePrice,0)+' /吨',formula:'SMM '+this.price.toLocaleString()+(inputs.taxMode?' ÷1.13':'')+' × '+inputs.grade.toFixed(2)+'% × '+coeff.toFixed(1)+'%'+(inputs.oreType==='laterite'?' × (1-'+inputs.moisture+'%水分)':'')+' - TC '+inputs.tc};};
+NickelCalc.prototype.renderResults=function(results,inputs){var html='<div class="result-main"><span class="rm-label">镍矿石单价</span><span class="rm-value">'+results.orePrice+'</span></div><div class="result-sub"><span>计价系数</span><span>'+results.coeff+'</span></div><div class="formula">'+results.formula+'</div>';this.el.querySelector('.result-area').innerHTML=html;};
+NickelCalc.prototype.saveDraft=function(){var vals=this.getInputs();C.setStorage(this.id+'_draft',{locked:this.state.locked,inputs:vals,oreType:this.oreType});C.showToast(this.name+' 草稿已保存');};
+NickelCalc.prototype.loadDraft=function(){var draft=C.getStorage(this.id+'_draft',null);if(!draft)return;if(draft.locked!=null)this.state.locked=draft.locked;this.updateLockIcon();if(draft.oreType){this.oreType=draft.oreType;var self=this;this.el.querySelectorAll('.segmented button').forEach(function(b){b.classList.toggle('active',b.dataset.value===draft.oreType);});}if(draft.inputs){var self=this;for(var k in draft.inputs){if(k==='taxMode'){var cb=self.el.querySelector('#nickel_taxMode');if(cb)cb.checked=draft.inputs[k]===1;}else{var el=self.el.querySelector('#nickel_'+k);if(el)el.value=draft.inputs[k];}}}};
+window.NickelCalc=NickelCalc;
+})();
+
+// ====== calc-tantalum.js ======
+(function(){
+var C=window.MCSCommon,BaseCalc=window.BaseCalc,LBS_PER_TON=2204.6226;
+function TantalumCalc(){BaseCalc.call(this,{id:'tantalum',name:'钽铌矿',theme:{primary:'#9c27b0',accent:'#e040fb',icon:'💎',tag:'Ta₂O₅+Nb₂O₅ · CIF'},fields:[{id:'grade',label:'钽铌矿品位',unit:'%',min:1,max:50,step:0.1,default:30},{id:'vatRate',label:'增值税率',unit:'%',min:0,max:20,step:0.5,default:13},{id:'exchangeRate',label:'汇率 USD/CNY',unit:'',min:6.5,max:8.0,step:0.0001,default:7.25}]});this.intlPrice=232.5;this.exchangeRate=7.25;}
+TantalumCalc.prototype=Object.create(BaseCalc.prototype);TantalumCalc.prototype.constructor=TantalumCalc;
+TantalumCalc.prototype.fetchPrice=function(){var self=this;fetch('https://open.er-api.com/v6/latest/USD').then(function(r){return r.json();}).then(function(d){if(d.rates&&d.rates.CNY>0)self.exchangeRate=d.rates.CNY;self.updatePriceDisplay(true);self.autoCalc();}).catch(function(){self.updatePriceDisplay(true);self.autoCalc();});};
+TantalumCalc.prototype.updatePriceDisplay=function(offline){var el=this.el.querySelector('.price-value');if(!el)return;var label=this.el.querySelector('.price-name');if(label)label.textContent='国际钽铌矿 CIF';el.innerHTML='$'+C.fmt(this.intlPrice,1)+'<span class="unit">/磅</span>';var meta=this.el.querySelector('.price-time');if(meta)meta.textContent=(offline?'离线 · ':'')+'汇率 '+this.exchangeRate.toFixed(4);};
+TantalumCalc.prototype.calcTotal=function(inputs){var fxRate=inputs.exchangeRate||this.exchangeRate,cif=this.intlPrice*LBS_PER_TON*(inputs.grade/100),pretax=cif*fxRate,aftertax=pretax*(1+inputs.vatRate/100),td=inputs.grade>0?aftertax/inputs.grade:0;return{cif:'$'+C.formatMoney(cif)+' /吨',pretax:'¥'+C.formatMoney(pretax)+' /吨',aftertax:'¥'+C.formatMoney(aftertax)+' /吨',tonDegree:'¥'+C.formatMoney(td)+' /吨度',formula:'CIF = '+this.intlPrice+'$/磅 × 2204.62 × '+inputs.grade+'%; 税后 = CIF × '+fxRate.toFixed(4)+' × (1+'+inputs.vatRate+'%)'};};
+TantalumCalc.prototype.renderResults=function(results,inputs){var html='<div class="result-list"><div class="result-item"><span class="r-label">CIF 到岸价</span><span class="r-value">'+results.cif+'</span></div><div class="result-item"><span class="r-label">国内税前价</span><span class="r-value">'+results.pretax+'</span></div><div class="result-item highlight"><span class="r-label">国内税后价</span><span class="r-value">'+results.aftertax+'</span></div><div class="result-item"><span class="r-label">吨度价</span><span class="r-value">'+results.tonDegree+'</span></div></div><div class="formula">'+results.formula+'</div>';this.el.querySelector('.result-area').innerHTML=html;};
+window.TantalumCalc=TantalumCalc;
+})();
+
+// ====== calc-tin.js ======
+(function(){
+var C=window.MCSCommon,BaseCalc=window.BaseCalc;
+function getTC(grade){if(grade>=60)return 13500;if(grade>=55)return 13700;if(grade>=50)return 14000;if(grade>=45)return 15000;if(grade>=40)return 17500;if(grade>=20)return Math.round(22000+(17500-22000)*(grade-20)/20);if(grade>=10)return Math.round(27000+(22000-27000)*(grade-10)/10);return 27000;}
+function TinCalc(){BaseCalc.call(this,{id:'tin',name:'锡矿石',theme:{primary:'#b0bec5',accent:'#80deea',icon:'⬜',tag:'Sn · 沪锡 / LME'},fields:[]});this.price=412550;}
+TinCalc.prototype=Object.create(BaseCalc.prototype);TinCalc.prototype.constructor=TinCalc;
+TinCalc.prototype.renderInputs=function(){return '<div class="field"><label>计价模式</label><div class="segmented" data-field="mode"><button data-value="domestic" class="active">国内计价</button><button data-value="import">进口计价</button></div></div><div class="field"><label>锡品位 Sn <span>%</span></label><div class="input-wrap"><input type="number" id="tin_grade" data-field="grade" value="40" min="10" max="65" step="0.1"><span class="suffix">%</span></div></div><div class="import-fields" id="tin_importFields" style="display:none"><div class="field"><label>LME锡价 <span>美元/吨</span></label><div class="input-wrap"><input type="number" id="tin_lmePrice" data-field="lmePrice" value="53500" step="100"><span class="suffix">美元/吨</span></div></div><div class="two-col"><div class="field"><label>汇率</label><div class="input-wrap"><input type="number" id="tin_fxRate" data-field="fxRate" value="7.25" min="6.5" max="8.0" step="0.01"></div></div><div class="field"><label>进口杂费 <span>元/吨</span></label><div class="input-wrap"><input type="number" id="tin_importFee" data-field="importFee" value="500" step="10"><span class="suffix">元/吨</span></div></div></div></div>';};
+TinCalc.prototype.bindInputs=function(){var self=this;this.el.querySelectorAll('input').forEach(function(el){el.addEventListener('input',function(){self.autoCalc();});el.addEventListener('blur',function(){self.saveDraft();});});this.el.querySelector('.segmented').addEventListener('click',function(e){if(e.target.tagName==='BUTTON'){self.el.querySelectorAll('.segmented button').forEach(function(b){b.classList.remove('active');});e.target.classList.add('active');var mode=e.target.dataset.value;self.el.querySelector('#tin_importFields').style.display=mode==='import'?'block':'none';self.autoCalc();self.saveDraft();}});};
+TinCalc.prototype.getInputs=function(){var btn=this.el.querySelector('.segmented button.active');return{mode:btn?btn.dataset.value:'domestic',grade:parseFloat(this.el.querySelector('#tin_grade').value)||40,lmePrice:parseFloat(this.el.querySelector('#tin_lmePrice').value)||53500,fxRate:parseFloat(this.el.querySelector('#tin_fxRate').value)||7.25,importFee:parseFloat(this.el.querySelector('#tin_importFee').value)||500};};
+TinCalc.prototype.calcTotal=function(inputs){var price=inputs.mode==='import'?inputs.lmePrice*inputs.fxRate+inputs.importFee:this.price,tc=getTC(inputs.grade),metalTonPrice=price-tc,orePrice=metalTonPrice*(inputs.grade/100),coeff=(metalTonPrice/price)*100;return{tc:C.fmt(tc,0)+' 元/金属吨',coeff:C.formatPercent(coeff),metalTonPrice:'¥'+C.fmt(metalTonPrice,0)+' /金属吨',orePrice:'¥'+C.fmt(orePrice,0)+' /吨',formula:'('+C.fmt(price,0)+' - '+C.fmt(tc,0)+') × '+inputs.grade.toFixed(1)+'% = '+C.fmt(orePrice,0)+' 元/吨  ['+(inputs.mode==='import'?'LME×汇率+杂费':'沪锡结算价')+']'};};
+TinCalc.prototype.renderResults=function(results,inputs){var html='<div class="result-main"><span class="rm-label">锡矿石单价</span><span class="rm-value">'+results.orePrice+'</span></div><div class="result-sub"><span>净回值</span><span>'+results.metalTonPrice+'</span></div><div class="result-sub"><span>加工费 TC</span><span>'+results.tc+'</span></div><div class="result-sub"><span>计价系数</span><span>'+results.coeff+'</span></div><div class="formula">'+results.formula+'</div>';this.el.querySelector('.result-area').innerHTML=html;};
+TinCalc.prototype.saveDraft=function(){var vals=this.getInputs();C.setStorage(this.id+'_draft',{locked:this.state.locked,inputs:vals});};
+TinCalc.prototype.loadDraft=function(){var draft=C.getStorage(this.id+'_draft',null);if(!draft)return;if(draft.locked!=null)this.state.locked=draft.locked;this.updateLockIcon();if(draft.inputs){var self=this;for(var k in draft.inputs){var el=self.el.querySelector('#tin_'+k);if(el)el.value=draft.inputs[k];}}};
+window.TinCalc=TinCalc;
+})();
+
+// ====== calc-znpb.js ======
+(function(){
+var C=window.MCSCommon,BaseCalc=window.BaseCalc;
+var ZN_COEFF=[[25,60],[35,65],[45,70],[50,75],[55,75],[60,75]];
+var PB_COEFF=[[30,55],[35,60],[40,65],[50,75],[60,80],[70,88],[80,88]];
+function getCoeff(table,grade){if(grade<=table[0][0])return table[0][1];if(grade>=table[table.length-1][0])return table[table.length-1][1];for(var i=0;i<table.length-1;i++){if(grade>=table[i][0]&&grade<=table[i+1][0]){var t=(grade-table[i][0])/(table[i+1][0]-table[i][0]);return table[i][1]+t*(table[i+1][1]-table[i][1]);}}return table[table.length-1][1];}
+function ZnpbCalc(){BaseCalc.call(this,{id:'znpb',name:'铅锌矿',theme:{primary:'#ffc107',accent:'#4ecdc4',icon:'🟡',tag:'Zn / Pb · SMM'},fields:[]});this.znPrice=24420;this.pbPrice=16260;}
+ZnpbCalc.prototype=Object.create(BaseCalc.prototype);ZnpbCalc.prototype.constructor=ZnpbCalc;
+ZnpbCalc.prototype.fetchPrice=function(){var self=this;fetch('https://api.fsxsymall.com/api/znpb-price?_='+Date.now(),{signal:AbortSignal.timeout(5000)}).then(function(r){return r.json();}).then(function(d){if(d.zn&&d.zn.price)self.znPrice=d.zn.price;if(d.pb&&d.pb.price)self.pbPrice=d.pb.price;self.updatePriceDisplay();self.autoCalc();}).catch(function(){self.updatePriceDisplay(true);self.autoCalc();});};
+ZnpbCalc.prototype.updatePriceDisplay=function(offline){var el=this.el.querySelector('.price-bar');if(!el)return;el.innerHTML='<div class="price-double"><div class="price-col"><span class="pd-label">SMM 1#锌锭</span><span class="pd-price">Zn '+C.fmt(this.znPrice,0)+'</span><span class="pd-unit">元/吨</span></div><div class="price-col"><span class="pd-label">SMM 1#铅锭</span><span class="pd-price">Pb '+C.fmt(this.pbPrice,0)+'</span><span class="pd-unit">元/吨</span></div></div><div class="price-double-meta"><span>默认参考价</span><button class="btn-refresh" onclick="calculators[5].fetchPrice()">刷新</button></div>';};
+ZnpbCalc.prototype.renderInputs=function(){
+  return '<div class="field"><label>计价模式</label><div class="segmented triple" data-field="mode"><button data-value="zn" class="active">纯锌矿</button><button data-value="pb">纯铅矿</button><button data-value="mixed">铅锌混合矿</button></div></div>'+
+    '<div class="two-col"><div class="field"><label>锌品位 Zn <span>%</span></label><div class="input-wrap"><input type="number" id="znpb_znGrade" data-field="znGrade" value="50" min="25" max="60" step="0.1"><span class="suffix">%</span></div></div><div class="field"><label>铅品位 Pb <span>%</span></label><div class="input-wrap"><input type="number" id="znpb_pbGrade" data-field="pbGrade" value="60" min="30" max="80" step="0.1"><span class="suffix">%</span></div></div></div>'+
+    '<div class="two-col"><div class="field"><label>锌 TC <span>元/金属吨</span></label><div class="input-wrap"><input type="number" id="znpb_tcZn" data-field="tcZn" value="5200" min="4000" max="7000" step="100"><span class="suffix">元/金属吨</span></div></div><div class="field"><label>铅 TC <span>元/金属吨</span></label><div class="input-wrap"><input type="number" id="znpb_tcPb" data-field="tcPb" value="500" min="300" max="800" step="50"><span class="suffix">元/金属吨</span></div></div></div>'+
+    '<div class="field switch-field"><label>含税价 → 不含税 (÷1.13)</label><label class="switch"><input type="checkbox" id="znpb_taxMode" checked><span class="slider"></span></label></div>';
+};
+ZnpbCalc.prototype.bindInputs=function(){var self=this;this.el.querySelectorAll('input').forEach(function(el){el.addEventListener('input',function(){self.autoCalc();});el.addEventListener('change',function(){self.autoCalc();self.saveDraft();});});this.el.querySelector('.segmented').addEventListener('click',function(e){if(e.target.tagName==='BUTTON'){self.el.querySelectorAll('.segmented button').forEach(function(b){b.classList.remove('active');});e.target.classList.add('active');self.autoCalc();self.saveDraft();}});};
+ZnpbCalc.prototype.getInputs=function(){var btn=this.el.querySelector('.segmented button.active');return{mode:btn?btn.dataset.value:'zn',znGrade:parseFloat(this.el.querySelector('#znpb_znGrade').value)||50,pbGrade:parseFloat(this.el.querySelector('#znpb_pbGrade').value)||60,tcZn:parseFloat(this.el.querySelector('#znpb_tcZn').value)||5200,tcPb:parseFloat(this.el.querySelector('#znpb_tcPb').value)||500,taxMode:this.el.querySelector('#znpb_taxMode').checked?1:0};};
+ZnpbCalc.prototype.calcTotal=function(inputs){var divider=inputs.taxMode?1.13:1,znCoeff=getCoeff(ZN_COEFF,inputs.znGrade),pbCoeff=getCoeff(PB_COEFF,inputs.pbGrade),znOre=((this.znPrice/divider)-inputs.tcZn)*(znCoeff/100)*(inputs.znGrade/100),pbOre=((this.pbPrice/divider)-inputs.tcPb)*(pbCoeff/100)*(inputs.pbGrade/100),total=0,formula='';if(inputs.mode==='zn'){total=znOre;formula='1#锌 '+this.znPrice.toLocaleString()+(inputs.taxMode?' ÷1.13':'')+' × '+znCoeff.toFixed(1)+'% × '+inputs.znGrade.toFixed(1)+'% - TC '+inputs.tcZn;}else if(inputs.mode==='pb'){total=pbOre;formula='1#铅 '+this.pbPrice.toLocaleString()+(inputs.taxMode?' ÷1.13':'')+' × '+pbCoeff.toFixed(1)+'% × '+inputs.pbGrade.toFixed(1)+'% - TC '+inputs.tcPb;}else{total=znOre+pbOre;formula='锌部分: '+C.fmt(znOre,0)+' + 铅部分: '+C.fmt(pbOre,0);}return{znCoeff:C.formatPercent(znCoeff),pbCoeff:C.formatPercent(pbCoeff),orePrice:'¥'+C.fmt(total,0)+' /吨',formula:formula};};
+ZnpbCalc.prototype.renderResults=function(results,inputs){var html='<div class="result-main"><span class="rm-label">精矿单价</span><span class="rm-value">'+results.orePrice+'</span></div><div class="result-sub"><span>锌系数</span><span>'+results.znCoeff+'</span></div><div class="result-sub"><span>铅系数</span><span>'+results.pbCoeff+'</span></div><div class="formula">'+results.formula+'</div>';this.el.querySelector('.result-area').innerHTML=html;};
+ZnpbCalc.prototype.saveDraft=function(){var vals=this.getInputs();C.setStorage(this.id+'_draft',{locked:this.state.locked,inputs:vals});};
+ZnpbCalc.prototype.loadDraft=function(){var draft=C.getStorage(this.id+'_draft',null);if(!draft)return;if(draft.locked!=null)this.state.locked=draft.locked;this.updateLockIcon();if(draft.inputs){var self=this;for(var k in draft.inputs){if(k==='taxMode'){var cb=self.el.querySelector('#znpb_taxMode');if(cb)cb.checked=draft.inputs[k]===1;}else{var el=self.el.querySelector('#znpb_'+k);if(el)el.value=draft.inputs[k];}}}};
+window.ZnpbCalc=ZnpbCalc;
+})();
+
+// ====== init (mobile single-card + swipe) ======
+(function(){
+var C=window.MCSCommon;
+var TAB_ORDER=['spodumene','copper','nickel','tantalum','tin','znpb'];
+var calculators=[];
+var currentIndex=0;
+
+function loadGlobalConfig(){return C.getStorage('global_config',{exchangeRate:7.20,vatRate:13});}
+function saveGlobalConfig(){var cfg={exchangeRate:parseFloat(document.getElementById('globalExchangeRate').value)||7.20,vatRate:parseFloat(document.getElementById('globalVatRate').value)||13};C.setStorage('global_config',cfg);window.globalConfig=cfg;return cfg;}
+window.globalConfig=loadGlobalConfig();
+document.getElementById('globalExchangeRate').value=window.globalConfig.exchangeRate;
+document.getElementById('globalVatRate').value=window.globalConfig.vatRate;
+
+function fetchRealTimeExchange(){var statusEl=document.getElementById('exchangeRateStatus');var inputEl=document.getElementById('globalExchangeRate');statusEl.textContent='🔄 更新中';statusEl.className='exchange-status';fetch('https://open.er-api.com/v6/latest/USD').then(function(r){return r.json();}).then(function(d){if(d.rates&&d.rates.CNY>0){var rate=parseFloat(d.rates.CNY);inputEl.value=rate.toFixed(4);saveGlobalConfig();calculators.forEach(function(c){c.applyGlobalConfig(window.globalConfig);});statusEl.textContent='📡 实时';statusEl.className='exchange-status';C.showToast('汇率已更新为 '+rate.toFixed(4));}else{statusEl.textContent='📴 离线';statusEl.className='exchange-status offline';}}).catch(function(){statusEl.textContent='📴 离线';statusEl.className='exchange-status offline';});}
+fetchRealTimeExchange();
+
+calculators=[new window.SpodumeneCalc(),new window.CopperCalc(),new window.NickelCalc(),new window.TantalumCalc(),new window.TinCalc(),new window.ZnpbCalc()];
+
+function switchTo(index){
+  if(index<0)index=TAB_ORDER.length-1;
+  if(index>=TAB_ORDER.length)index=0;
+  currentIndex=index;
+  var targetId=TAB_ORDER[index];
+  calculators.forEach(function(c){c.el.classList.remove('active');});
+  var activeCard=document.getElementById('card-'+targetId);
+  if(activeCard){activeCard.classList.add('active');}
+  document.querySelectorAll('.tab-nav button').forEach(function(b){b.classList.toggle('active',b.dataset.target===targetId);});
+  var tabBtn=document.querySelector('.tab-nav button[data-target="'+targetId+'"]');
+  if(tabBtn)tabBtn.scrollIntoView({behavior:'smooth',inline:'center',block:'nearest'});
+}
+
+// Tab click
+document.getElementById('tabNav').addEventListener('click',function(e){if(e.target.tagName==='BUTTON'){var idx=TAB_ORDER.indexOf(e.target.dataset.target);if(idx>=0)switchTo(idx);}});
+
+// Swipe gesture
+document.getElementById('cards-container').addEventListener('touchstart',function(e){this._sx=e.changedTouches[0].screenX;this._sy=e.changedTouches[0].screenY;this._st=Date.now();},{passive:true});
+document.getElementById('cards-container').addEventListener('touchend',function(e){if(this._sx==null)return;var ex=e.changedTouches[0].screenX;var ey=e.changedTouches[0].screenY;var dx=ex-this._sx;var dy=ey-this._sy;var dt=Date.now()-this._st;if(dt<400&&Math.abs(dx)>Math.abs(dy)&&Math.abs(dx)>50){if(dx<0){switchTo(currentIndex+1);}else{switchTo(currentIndex-1);}}this._sx=null;},{passive:true});
+
+// Also allow swipe on the active card body (cover full area)
+document.querySelectorAll('.calc-card').forEach(function(card){card.addEventListener('touchstart',function(e){card._sx=e.changedTouches[0].screenX;card._sy=e.changedTouches[0].screenY;card._st=Date.now();},{passive:true});card.addEventListener('touchend',function(e){if(card._sx==null)return;var ex=e.changedTouches[0].screenX;var ey=e.changedTouches[0].screenY;var dx=ex-card._sx;var dy=ey-card._sy;var dt=Date.now()-card._st;if(dt<400&&Math.abs(dx)>Math.abs(dy)&&Math.abs(dx)>50){if(dx<0){switchTo(currentIndex+1);}else{switchTo(currentIndex-1);}}card._sx=null;},{passive:true});});
+
+// Global config listeners
+document.querySelectorAll('.global-panel input').forEach(function(input){input.addEventListener('change',function(){saveGlobalConfig();calculators.forEach(function(c){c.applyGlobalConfig(window.globalConfig);});});});
+
+document.getElementById('btnRefreshExchange').addEventListener('click',function(){fetchRealTimeExchange();});
+document.getElementById('btnResetAll').addEventListener('click',function(){if(!confirm('确定要重置所有计价器吗？'))return;calculators.forEach(function(c){c.resetCard();});C.showToast('全部已重置');});
+document.getElementById('btnClearCache').addEventListener('click',function(){if(!confirm('确定要清空所有本地缓存数据吗？此操作不可恢复。'))return;C.clearAllStorage();C.showToast('缓存已清空');});
+
+saveGlobalConfig();
+// Default to spodumene
+switchTo(0);
+})();
+</script>
+</body>
+</html>
