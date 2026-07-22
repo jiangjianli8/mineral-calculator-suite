@@ -181,6 +181,7 @@ button{font-family:inherit}input{font-family:inherit}
 .card-tantalum   {--theme-primary:#9c27b0;--theme-accent:#e040fb;}
 .card-tin        {--theme-primary:#90a4ae;--theme-accent:#00e5ff;}
 .card-znpb       {--theme-primary:#ffc107;--theme-accent:#4ecdc4;}
+.card-antimony   {--theme-primary:#ff4757;--theme-accent:#ffa502;}
 .calc-card.locked .card-header {background:linear-gradient(135deg,rgba(255,255,255,0.05),rgba(255,255,255,0.02));}
 
 /* swipe hint */
@@ -206,6 +207,7 @@ button{font-family:inherit}input{font-family:inherit}
     <button data-target="tantalum">钽铌矿</button>
     <button data-target="tin">锡矿石</button>
     <button data-target="znpb">铅锌矿</button>
+    <button data-target="antimony">锑矿石</button>
   </nav>
 
   <section class="global-panel">
@@ -224,7 +226,7 @@ button{font-family:inherit}input{font-family:inherit}
   <div class="swipe-hint" id="swipeHint">← 左右滑动切换计价器 →</div>
 
   <footer class="app-footer">
-    <div class="version">矿链通V8.1</div>
+    <div class="version">矿链通V8.2</div>
     <div>Mineral Chain · 佛山市鑫善源商贸有限公司</div>
   </footer>
 </div>
@@ -403,10 +405,71 @@ ZnpbCalc.prototype.loadDraft=function(){var draft=C.getStorage(this.id+'_draft',
 window.ZnpbCalc=ZnpbCalc;
 })();
 
+// ====== calc-antimony.js (锑矿石) ======
+(function(){
+var C=window.MCSCommon,BaseCalc=window.BaseCalc;
+// 锑矿石系数表 (按含量 Sb% 取对应系数含税)
+var SB_COEFF=[[6,47],[7,48],[8,49.5],[9,50],[10,53],[15,55],[20,65],[25,70],[30,72],[35,74.5],[40,77],[45,78],[50,79],[55,80],[60,83]];
+function getSbCoeff(grade){
+  if(grade<=6)return 47;
+  if(grade>=60)return 83;
+  for(var i=0;i<SB_COEFF.length-1;i++){
+    var g1=SB_COEFF[i][0],c1=SB_COEFF[i][1],g2=SB_COEFF[i+1][0],c2=SB_COEFF[i+1][1];
+    if(grade>=g1&&grade<=g2){
+      var t=(grade-g1)/(g2-g1);
+      return c1+t*(c2-c1);
+    }
+  }
+  return 83;
+}
+function AntimonyCalc(){
+  BaseCalc.call(this,{id:'antimony',name:'锑矿石',theme:{primary:'#ff4757',accent:'#ffa502',icon:'🟥',tag:'Sb · 上海有色网 2#低锑铋锭'},fields:[
+    {id:'grade',label:'锑品位 Sb',unit:'%',min:6,max:65,step:0.1,default:10}
+  ]});
+  this.price=90000; // 默认 2#低锑铋锭价 (元/吨)
+}
+AntimonyCalc.prototype=Object.create(BaseCalc.prototype);
+AntimonyCalc.prototype.constructor=AntimonyCalc;
+AntimonyCalc.prototype.fetchPrice=function(){
+  var self=this;
+  // 尝试实时获取价格(失败则使用默认值并显示离线)
+  fetch('https://api.fsxsymall.com/api/sb-price?_='+Date.now(),{signal:AbortSignal.timeout(5000)})
+    .then(function(r){return r.json();})
+    .then(function(d){if(d&&d.price){self.price=d.price;}self.updatePriceDisplay();self.autoCalc();})
+    .catch(function(){self.updatePriceDisplay(true);self.autoCalc();});
+};
+AntimonyCalc.prototype.updatePriceDisplay=function(offline){
+  var el=this.el.querySelector('.price-value');
+  if(!el)return;
+  var defaultText=C.fmt(this.price,0);
+  el.innerHTML='<span class="price-num">'+defaultText+'</span><span class="unit">元/吨</span>'+(offline?'<span class="offline-flag">· 离线</span>':'');
+  var dot=this.el.querySelector('.price-bar .dot');
+  if(dot)dot.className='dot '+(offline?'offline':'');
+  var meta=this.el.querySelector('.price-time');
+  if(meta)meta.textContent=offline?'上海有色网 · 默认参考价':'上海有色网 · 实时行情';
+};
+AntimonyCalc.prototype.calcTotal=function(inputs){
+  var price=this.price||0;
+  var coeff=getSbCoeff(inputs.grade);
+  var divider=1; // 默认含税
+  var orePrice=((price/divider)*coeff/100)*(inputs.grade/100);
+  return{
+    coeff:coeff.toFixed(1)+'%',
+    orePrice:'¥'+C.fmt(orePrice,0)+' /吨',
+    formula:'锑精矿单价 = 上海有色网 2#低锑铋锭价('+C.fmt(price,0)+') × 锑品位('+inputs.grade.toFixed(1)+'%) × 系数('+coeff.toFixed(1)+'%) = '+C.fmt(orePrice,0)+' 元/吨'
+  };
+};
+AntimonyCalc.prototype.renderResults=function(results,inputs){
+  var html='<div class="result-main"><span class="rm-label">精矿单价</span><span class="rm-value">'+results.orePrice+'</span></div><div class="result-sub"><span>锑系数 (含税)</span><span>'+results.coeff+'</span></div><div class="result-sub"><span>锑品位</span><span>'+inputs.grade.toFixed(1)+' %</span></div><div class="formula">'+results.formula+'</div>';
+  this.el.querySelector('.result-area').innerHTML=html;
+};
+window.AntimonyCalc=AntimonyCalc;
+})();
+
 // ====== init (mobile single-card + swipe) ======
 (function(){
 var C=window.MCSCommon;
-var TAB_ORDER=['spodumene','copper','nickel','tantalum','tin','znpb'];
+var TAB_ORDER=['spodumene','copper','nickel','tantalum','tin','znpb','antimony'];
 var calculators=[];
 var currentIndex=0;
 
@@ -419,7 +482,7 @@ document.getElementById('globalVatRate').value=window.globalConfig.vatRate;
 function fetchRealTimeExchange(){var statusEl=document.getElementById('exchangeRateStatus');var inputEl=document.getElementById('globalExchangeRate');statusEl.textContent='🔄 更新中';statusEl.className='exchange-status';fetch('https://open.er-api.com/v6/latest/USD').then(function(r){return r.json();}).then(function(d){if(d.rates&&d.rates.CNY>0){var rate=parseFloat(d.rates.CNY);inputEl.value=rate.toFixed(4);saveGlobalConfig();calculators.forEach(function(c){c.applyGlobalConfig(window.globalConfig);});statusEl.textContent='📡 实时';statusEl.className='exchange-status';C.showToast('汇率已更新为 '+rate.toFixed(4));}else{statusEl.textContent='📴 离线';statusEl.className='exchange-status offline';}}).catch(function(){statusEl.textContent='📴 离线';statusEl.className='exchange-status offline';});}
 fetchRealTimeExchange();
 
-calculators=[new window.SpodumeneCalc(),new window.CopperCalc(),new window.NickelCalc(),new window.TantalumCalc(),new window.TinCalc(),new window.ZnpbCalc()];
+calculators=[new window.SpodumeneCalc(),new window.CopperCalc(),new window.NickelCalc(),new window.TantalumCalc(),new window.TinCalc(),new window.ZnpbCalc(),new window.AntimonyCalc()];
 
 function switchTo(index){
   if(index<0)index=TAB_ORDER.length-1;
