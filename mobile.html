@@ -408,17 +408,29 @@ window.ZnpbCalc=ZnpbCalc;
 // ====== calc-antimony.js (锑矿石) ======
 (function(){
 var C=window.MCSCommon,BaseCalc=window.BaseCalc;
-// 锑矿石系数表 (按含量 Sb% 取对应系数含税)
-var SB_COEFF=[[6,47],[7,48],[8,49.5],[9,50],[10,53],[15,55],[20,65],[25,70],[30,72],[35,74.5],[40,77],[45,78],[50,79],[55,80],[60,83]];
+// 锑矿石系数表 (按含量 Sb% 区间定义，左开右闭 (lower, upper]，区间内系数相同，不能叠加)
+var SB_COEFF=[
+  [6, 47],   // <=6
+  [7, 47],   // 6<sb<=7
+  [8, 48],   // 7<sb<=8
+  [9, 49.5], // 8<sb<=9
+  [10, 50],  // 9<sb<=10
+  [15, 53],  // 10<sb<=15
+  [20, 55],  // 15<sb<=20
+  [25, 65],  // 20<sb<=25
+  [30, 70],  // 25<sb<=30
+  [35, 72],  // 30<sb<=35
+  [40, 74.5],// 35<sb<=40
+  [45, 77],  // 40<sb<=45
+  [50, 78],  // 45<sb<=50
+  [55, 79],  // 50<sb<=55
+  [60, 80],  // 55<sb<=60
+  [999,83]   // 60度以上
+];
 function getSbCoeff(grade){
-  if(grade<=6)return 47;
-  if(grade>=60)return 83;
-  for(var i=0;i<SB_COEFF.length-1;i++){
-    var g1=SB_COEFF[i][0],c1=SB_COEFF[i][1],g2=SB_COEFF[i+1][0],c2=SB_COEFF[i+1][1];
-    if(grade>=g1&&grade<=g2){
-      var t=(grade-g1)/(g2-g1);
-      return c1+t*(c2-c1);
-    }
+  for(var i=0;i<SB_COEFF.length;i++){
+    var upper=SB_COEFF[i][0],coeff=SB_COEFF[i][1];
+    if(grade<=upper)return coeff;
   }
   return 83;
 }
