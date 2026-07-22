@@ -435,7 +435,7 @@ function getSbCoeff(grade){
   return 83;
 }
 function AntimonyCalc(){
-  BaseCalc.call(this,{id:'antimony',name:'锑矿石',theme:{primary:'#ff4757',accent:'#ffa502',icon:'🟥',tag:'Sb · 上海有色网 2#低锑铋锭'},fields:[
+  BaseCalc.call(this,{id:'antimony',name:'锑矿石',theme:{primary:'#ff4757',accent:'#ffa502',icon:'🟥',tag:'Sb · 上海有色网 2#低铋锑锭'},fields:[
     {id:'grade',label:'锑品位 Sb',unit:'%',min:6,max:65,step:0.1,default:10}
   ]});
   this.price=90000; // 默认 2#低锑铋锭价 (元/吨)
@@ -468,7 +468,7 @@ AntimonyCalc.prototype.calcTotal=function(inputs){
   return{
     coeff:coeff.toFixed(1)+'%',
     orePrice:'¥'+C.fmt(orePrice,0)+' /吨',
-    formula:'锑精矿单价 = 上海有色网 2#低锑铋锭价('+C.fmt(price,0)+') × 锑品位('+inputs.grade.toFixed(1)+'%) × 系数('+coeff.toFixed(1)+'%) = '+C.fmt(orePrice,0)+' 元/吨'
+    formula:'锑精矿单价 = 上海有色网 2#低铋锑锭价('+C.fmt(price,0)+') × 锑品位('+inputs.grade.toFixed(1)+'%) × 系数('+coeff.toFixed(1)+'%) = '+C.fmt(orePrice,0)+' 元/吨'
   };
 };
 AntimonyCalc.prototype.renderResults=function(results,inputs){
