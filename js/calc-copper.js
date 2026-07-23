@@ -1,1 +1,72 @@
-Ly8ganMvY2FsYy1jb3BwZXIuanMKKGZ1bmN0aW9uKHdpbmRvdykgewogICd1c2Ugc3RyaWN0JzsKCiAgdmFyIEMgPSB3aW5kb3cuTUNTQ29tbW9uOwogIHZhciBCYXNlQ2FsYyA9IHdpbmRvdy5CYXNlQ2FsYzsKCiAgdmFyIENPRUZGX1RBQkxFID0gWwogICAgWzEsNDBdLFsyLDQ1XSxbMyw1MF0sWzQsNjBdLFs1LDY1XSxbNiw2OF0sWzcsNzBdLFs4LDcyXSxbOSw3NF0sWzEwLDc2XSwKICAgIFsxMSw3OF0sWzEyLDgwXSxbMTMsODNdLFsxNCw4Nl0sWzE1LDg4XSxbMTYsODldLFsxNyw5MF0sWzE4LDkxXSxbMTksOTJdLFsyMCw5M10sWzIxLDk1XQogIF07CgogIGZ1bmN0aW9uIGdldENvZWZmaWNpZW50KGdyYWRlKSB7CiAgICBpZiAoZ3JhZGUgPD0gMSkgcmV0dXJuIDQwOwogICAgaWYgKGdyYWRlID49IDIxKSByZXR1cm4gOTU7CiAgICBmb3IgKHZhciBpID0gMDsgaSA8IENPRUZGX1RBQkxFLmxlbmd0aCAtIDE7IGkrKykgewogICAgICB2YXIgZzEgPSBDT0VGRl9UQUJMRVtpXVswXSwgYzEgPSBDT0VGRl9UQUJMRVtpXVsxXTsKICAgICAgdmFyIGcyID0gQ09FRkZfVEFCTEVbaSsxXVswXSwgYzIgPSBDT0VGRl9UQUJMRVtpKzFdWzFdOwogICAgICBpZiAoZ3JhZGUgPj0gZzEgJiYgZ3JhZGUgPD0gZzIpIHsKICAgICAgICB2YXIgdCA9IChncmFkZSAtIGcxKSAvIChnMiAtIGcxKTsKICAgICAgICByZXR1cm4gYzEgKyB0ICogKGMyIC0gYzEpOwogICAgICB9CiAgICB9CiAgICByZXR1cm4gOTU7CiAgfQoKICBmdW5jdGlvbiBDb3BwZXJDYWxjKCkgewogICAgQmFzZUNhbGMuY2FsbCh0aGlzLCB7CiAgICAgIGlkOiAnY29wcGVyJywKICAgICAgbmFtZTogJ+mTnOefv+efsycsCiAgICAgIHRoZW1lOiB7IHByaW1hcnk6ICcjZmY2YjM1JywgYWNjZW50OiAnI2ZmZDcwMCcsIGljb246ICfwn5S2JywgdGFnOiAnQ3UgwrcgU01NIDEj55S16Kej6ZOcJyB9LAogICAgICBmaWVsZHM6IFsKICAgICAgICB7IGlkOiAnZ3JhZGUnLCBsYWJlbDogJ+mTnOWTgeS9jSBDdScsIHVuaXQ6ICclJywgbWluOiAxLCBtYXg6IDIxLCBzdGVwOiAwLjEsIGRlZmF1bHQ6IDUgfQogICAgICBdCiAgICB9KTsKICAgIHRoaXMucHJpY2UgPSAxMDE1NzA7CiAgfQoKICBDb3BwZXJDYWxjLnByb3RvdHlwZSA9IE9iamVjdC5jcmVhdGUoQmFzZUNhbGMucHJvdG90eXBlKTsKICBDb3BwZXJDYWxjLnByb3RvdHlwZS5jb25zdHJ1Y3RvciA9IENvcHBlckNhbGM7CgogIENvcHBlckNhbGMucHJvdG90eXBlLnVwZGF0ZVByaWNlRGlzcGxheSA9IGZ1bmN0aW9uKG9mZmxpbmUpIHsKICAgIHZhciBlbCA9IHRoaXMuZWwucXVlcnlTZWxlY3RvcignLnByaWNlLXZhbHVlJyk7CiAgICBpZiAoIWVsKSByZXR1cm47CiAgICB2YXIgbGFiZWwgPSB0aGlzLmVsLnF1ZXJ5U2VsZWN0b3IoJy5wcmljZS1uYW1lJyk7CiAgICBpZiAobGFiZWwpIGxhYmVsLnRleHRDb250ZW50ID0gJ1NNTSAxI+eUteino+mTnCc7CiAgICBpZiAob2ZmbGluZSkgewogICAgICBlbC5pbm5lckhUTUwgPSAnPHNwYW4gY2xhc3M9Im9mZmxpbmUiPuemu+e6vyDCtyAnICsgQy5mbXQodGhpcy5wcmljZSwgMCkgKyAnPC9zcGFuPjxzcGFuIGNsYXNzPSJ1bml0Ij7lhYMv5ZCoPC9zcGFuPic7CiAgICB9IGVsc2UgewogICAgICBlbC5pbm5lckhUTUwgPSBDLmZtdCh0aGlzLnByaWNlLCAwKSArICc8c3BhbiBjbGFzcz0idW5pdCI+5YWDL+WQqDwvc3Bhbj4nOwogICAgfQogIH07CgogIENvcHBlckNhbGMucHJvdG90eXBlLmNhbGNUb3RhbCA9IGZ1bmN0aW9uKGlucHV0cykgewogICAgdmFyIGNvZWZmID0gZ2V0Q29lZmZpY2llbnQoaW5wdXRzLmdyYWRlKTsKICAgIHZhciBvcmVQcmljZSA9IHRoaXMucHJpY2UgKiAoaW5wdXRzLmdyYWRlIC8gMTAwKSAqIChjb2VmZiAvIDEwMCk7CiAgICByZXR1cm4gewogICAgICBjb2VmZjogQy5mb3JtYXRQZXJjZW50KGNvZWZmKSwKICAgICAgb3JlUHJpY2U6ICfCpScgKyBDLmZtdChvcmVQcmljZSwgMCkgKyAnIC/lkKgnLAogICAgICBmb3JtdWxhOiB0aGlzLnByaWNlLnRvTG9jYWxlU3RyaW5nKCkgKyAnIMOXICcgKyBpbnB1dHMuZ3JhZGUudG9GaXhlZCgxKSArICclIMOXICcgKyBjb2VmZi50b0ZpeGVkKDIpICsgJyUgPSAnICsgQy5mbXQob3JlUHJpY2UsIDApICsgJyDlhYMv5ZCoJwogICAgfTsKICB9OwoKICBDb3BwZXJDYWxjLnByb3RvdHlwZS5yZW5kZXJSZXN1bHRzID0gZnVuY3Rpb24ocmVzdWx0cywgaW5wdXRzKSB7CiAgICB2YXIgaHRtbCA9ICc8ZGl2IGNsYXNzPSJyZXN1bHQtbWFpbiI+PHNwYW4gY2xhc3M9InJtLWxhYmVsIj7pk5znn7/nn7PljZXku7c8L3NwYW4+PHNwYW4gY2xhc3M9InJtLXZhbHVlIj4nICsgcmVzdWx0cy5vcmVQcmljZSArICc8L3NwYW4+PC9kaXY+JyArCiAgICAgICc8ZGl2IGNsYXNzPSJyZXN1bHQtc3ViIj48c3Bhbj7orqHku7fns7vmlbA8L3NwYW4+PHNwYW4+JyArIHJlc3VsdHMuY29lZmYgKyAnPC9zcGFuPjwvZGl2PicgKwogICAgICAnPGRpdiBjbGFzcz0iZm9ybXVsYSI+JyArIHJlc3VsdHMuZm9ybXVsYSArICc8L2Rpdj4nOwogICAgdGhpcy5lbC5xdWVyeVNlbGVjdG9yKCcucmVzdWx0LWFyZWEnKS5pbm5lckhUTUwgPSBodG1sOwogIH07CgogIHdpbmRvdy5Db3BwZXJDYWxjID0gQ29wcGVyQ2FsYzsKfSkod2luZG93KTsK
+// js/calc-copper.js
+(function(window) {
+  'use strict';
+
+  var C = window.MCSCommon;
+  var BaseCalc = window.BaseCalc;
+
+  var COEFF_TABLE = [
+    [2,40],[3,55],[4,65],[5,73],[6,76],[7,79],[8,82],[9,83],[10,85],
+    [11,86],[12,87],[13,88],[14,88.5],[15,89],[16,89],[17,90],[18,91],[19,92],[20,93],[21,95]
+  ];
+
+  function getCoefficient(grade) {
+    if (grade < 2) return 0;
+    if (grade >= 21) return 95;
+    for (var i = 0; i < COEFF_TABLE.length - 1; i++) {
+      var g1 = COEFF_TABLE[i][0], c1 = COEFF_TABLE[i][1];
+      var g2 = COEFF_TABLE[i+1][0], c2 = COEFF_TABLE[i+1][1];
+      if (grade >= g1 && grade < g2) {
+        var t = (grade - g1) / (g2 - g1);
+        return c1 + t * (c2 - c1);
+      }
+    }
+    return 95;
+  }
+
+  function CopperCalc() {
+    BaseCalc.call(this, {
+      id: 'copper',
+      name: '铜矿石',
+      theme: { primary: '#ff6b35', accent: '#ffd700', icon: '🔶', tag: 'Cu · SMM 1#电解铜' },
+      fields: [
+        { id: 'grade', label: '铜品位 Cu', unit: '%', min: 2, max: 21, step: 0.1, default: 5 }
+      ]
+    });
+    this.price = 101570;
+  }
+
+  CopperCalc.prototype = Object.create(BaseCalc.prototype);
+  CopperCalc.prototype.constructor = CopperCalc;
+
+  CopperCalc.prototype.updatePriceDisplay = function(offline) {
+    var el = this.el.querySelector('.price-value');
+    if (!el) return;
+    var label = this.el.querySelector('.price-name');
+    if (label) label.textContent = 'SMM 1#电解铜';
+    if (offline) {
+      el.innerHTML = '<span class="offline">离线 · ' + C.fmt(this.price, 0) + '</span><span class="unit">元/吨</span>';
+    } else {
+      el.innerHTML = C.fmt(this.price, 0) + '<span class="unit">元/吨</span>';
+    }
+  };
+
+  CopperCalc.prototype.calcTotal = function(inputs) {
+    var coeff = getCoefficient(inputs.grade);
+    var orePrice = this.price * (inputs.grade / 100) * (coeff / 100);
+    return {
+      coeff: C.formatPercent(coeff),
+      orePrice: '¥' + C.fmt(orePrice, 0) + ' /吨',
+      formula: this.price.toLocaleString() + ' × ' + inputs.grade.toFixed(1) + '% × ' + coeff.toFixed(2) + '% = ' + C.fmt(orePrice, 0) + ' 元/吨'
+    };
+  };
+
+  CopperCalc.prototype.renderResults = function(results, inputs) {
+    var html = '<div class="result-main"><span class="rm-label">铜矿石单价</span><span class="rm-value">' + results.orePrice + '</span></div>' +
+      '<div class="result-sub"><span>计价系数</span><span>' + results.coeff + '</span></div>' +
+      '<div class="formula">' + results.formula + '</div>';
+    this.el.querySelector('.result-area').innerHTML = html;
+  };
+
+  window.CopperCalc = CopperCalc;
+})(window);

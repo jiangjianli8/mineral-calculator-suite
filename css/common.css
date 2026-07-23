@@ -1,1 +1,262 @@
-LyogY3NzL2NvbW1vbi5jc3MgKi8KCjpyb290IHsKICAtLWJnLXByaW1hcnk6ICMwYTBhMGY7CiAgLS1iZy1zZWNvbmRhcnk6ICMxMjEyMWE7CiAgLS1iZy1jYXJkOiAjMWExYTI1OwogIC0tdGV4dC1wcmltYXJ5OiAjZmZmZmZmOwogIC0tdGV4dC1zZWNvbmRhcnk6ICNhMGEwYzA7CiAgLS10ZXh0LW11dGVkOiAjNjA2MDgwOwogIC0tbmVvbi1wdXJwbGU6ICM5YjAwZmY7CiAgLS1uZW9uLWN5YW46ICMwMGYwZmY7CiAgLS1uZW9uLWdyZWVuOiAjMDBmZjg4OwogIC0tbmVvbi1nb2xkOiAjZmZkNzAwOwogIC0tZGFuZ2VyOiAjZmY0NDY2OwogIC0tc3VjY2VzczogIzAwZmY4ODsKICAtLXdhcm5pbmc6ICNmZmFhMDA7CiAgLS1yYWRpdXMtbGc6IDE4cHg7CiAgLS1yYWRpdXMtbWQ6IDEycHg7CiAgLS1yYWRpdXMtc206IDhweDsKfQoKKiB7CiAgbWFyZ2luOiAwOwogIHBhZGRpbmc6IDA7CiAgYm94LXNpemluZzogYm9yZGVyLWJveDsKICAtd2Via2l0LXRhcC1oaWdobGlnaHQtY29sb3I6IHRyYW5zcGFyZW50Owp9Cgpib2R5IHsKICBmb250LWZhbWlseTogLWFwcGxlLXN5c3RlbSwgIlBpbmdGYW5nIFNDIiwgIk1pY3Jvc29mdCBZYUhlaSIsICJTZWdvZSBVSSIsIHNhbnMtc2VyaWY7CiAgYmFja2dyb3VuZDogdmFyKC0tYmctcHJpbWFyeSk7CiAgY29sb3I6IHZhcigtLXRleHQtcHJpbWFyeSk7CiAgbWluLWhlaWdodDogMTAwdmg7CiAgb3ZlcmZsb3cteDogaGlkZGVuOwogIHBvc2l0aW9uOiByZWxhdGl2ZTsKfQoKYm9keTo6YmVmb3JlIHsKICBjb250ZW50OiAnJzsKICBwb3NpdGlvbjogZml4ZWQ7CiAgdG9wOiAtNTAlOwogIGxlZnQ6IC01MCU7CiAgd2lkdGg6IDIwMCU7CiAgaGVpZ2h0OiAyMDAlOwogIGJhY2tncm91bmQ6CiAgICByYWRpYWwtZ3JhZGllbnQoY2lyY2xlIGF0IDE1JSAyMCUsIHJnYmEoMTU1LCAwLCAyNTUsIDAuMDYpIDAlLCB0cmFuc3BhcmVudCA0MCUpLAogICAgcmFkaWFsLWdyYWRpZW50KGNpcmNsZSBhdCA4NSUgODAlLCByZ2JhKDAsIDI0MCwgMjU1LCAwLjA0KSAwJSwgdHJhbnNwYXJlbnQgNDAlKSwKICAgIHJhZGlhbC1ncmFkaWVudChjaXJjbGUgYXQgNTAlIDUwJSwgcmdiYSgwLCA0NSwgMjU1LCAwLjAzKSAwJSwgdHJhbnNwYXJlbnQgNTAlKTsKICBwb2ludGVyLWV2ZW50czogbm9uZTsKICB6LWluZGV4OiAwOwogIGFuaW1hdGlvbjogYmdGbG9hdCAyNXMgZWFzZS1pbi1vdXQgaW5maW5pdGU7Cn0KCkBrZXlmcmFtZXMgYmdGbG9hdCB7CiAgMCUsIDEwMCUgeyB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgwLCAwKSByb3RhdGUoMGRlZyk7IH0KICAzMyUgeyB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgzJSwgLTIlKSByb3RhdGUoMWRlZyk7IH0KICA2NiUgeyB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtMiUsIDMlKSByb3RhdGUoLTFkZWcpOyB9Cn0KCi5hcHAgewogIHBvc2l0aW9uOiByZWxhdGl2ZTsKICB6LWluZGV4OiAxOwogIG1heC13aWR0aDogMTQwMHB4OwogIG1hcmdpbjogMCBhdXRvOwogIHBhZGRpbmc6IDIwcHggMTZweCA2MHB4Owp9CgovKiA9PT09PSDpobbpg6jmoIfpopggPT09PT0gKi8KLmFwcC1oZWFkZXIgewogIHRleHQtYWxpZ246IGNlbnRlcjsKICBwYWRkaW5nOiAyMHB4IDAgMjRweDsKfQoKLmFwcC1oZWFkZXIgaDEgewogIGZvbnQtc2l6ZTogMjRweDsKICBmb250LXdlaWdodDogOTAwOwogIGxldHRlci1zcGFjaW5nOiAycHg7CiAgYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KDEzNWRlZywgdmFyKC0tbmVvbi1wdXJwbGUpLCB2YXIoLS1uZW9uLWN5YW4pLCB2YXIoLS1uZW9uLXB1cnBsZSkpOwogIGJhY2tncm91bmQtc2l6ZTogMjAwJSAyMDAlOwogIC13ZWJraXQtYmFja2dyb3VuZC1jbGlwOiB0ZXh0OwogIC13ZWJraXQtdGV4dC1maWxsLWNvbG9yOiB0cmFuc3BhcmVudDsKICBiYWNrZ3JvdW5kLWNsaXA6IHRleHQ7CiAgYW5pbWF0aW9uOiBncmFkaWVudFNoaWZ0IDRzIGVhc2UgaW5maW5pdGU7Cn0KCkBrZXlmcmFtZXMgZ3JhZGllbnRTaGlmdCB7CiAgMCUsIDEwMCUgeyBiYWNrZ3JvdW5kLXBvc2l0aW9uOiAwJSA1MCU7IH0KICA1MCUgeyBiYWNrZ3JvdW5kLXBvc2l0aW9uOiAxMDAlIDUwJTsgfQp9CgouYXBwLWhlYWRlciAuc3VidGl0bGUgewogIGZvbnQtc2l6ZTogMTJweDsKICBjb2xvcjogdmFyKC0tdGV4dC1zZWNvbmRhcnkpOwogIG1hcmdpbi10b3A6IDZweDsKICBsZXR0ZXItc3BhY2luZzogMnB4Owp9CgovKiA9PT09PSBUYWIg5a+86IiqID09PT09ICovCi50YWItbmF2IHsKICBkaXNwbGF5OiBmbGV4OwogIGdhcDogOHB4OwogIG92ZXJmbG93LXg6IGF1dG87CiAgcGFkZGluZzogNHB4IDAgMTZweDsKICAtbXMtb3ZlcmZsb3ctc3R5bGU6IG5vbmU7CiAgc2Nyb2xsYmFyLXdpZHRoOiBub25lOwp9CgoudGFiLW5hdjo6LXdlYmtpdC1zY3JvbGxiYXIgeyBkaXNwbGF5OiBub25lOyB9CgoudGFiLW5hdiBidXR0b24gewogIGZsZXg6IDAgMCBhdXRvOwogIHBhZGRpbmc6IDhweCAxNHB4OwogIGJhY2tncm91bmQ6IHZhcigtLWJnLXNlY29uZGFyeSk7CiAgYm9yZGVyOiAxcHggc29saWQgcmdiYSgyNTUsMjU1LDI1NSwwLjA4KTsKICBib3JkZXItcmFkaXVzOiAyMHB4OwogIGNvbG9yOiB2YXIoLS10ZXh0LXNlY29uZGFyeSk7CiAgZm9udC1zaXplOiAxM3B4OwogIGZvbnQtd2VpZ2h0OiA3MDA7CiAgY3Vyc29yOiBwb2ludGVyOwogIHRyYW5zaXRpb246IGFsbCAwLjJzOwp9CgoudGFiLW5hdiBidXR0b24uYWN0aXZlIHsKICBiYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQoMTM1ZGVnLCB2YXIoLS1uZW9uLXB1cnBsZSksIHZhcigtLW5lb24tY3lhbikpOwogIGJvcmRlci1jb2xvcjogdHJhbnNwYXJlbnQ7CiAgY29sb3I6ICNmZmY7CiAgYm94LXNoYWRvdzogMCAwIDE1cHggcmdiYSgxNTUsMCwyNTUsMC4zKTsKfQoKLyogPT09PT0g5YWo5bGA5Y+C5pWw6Z2i5p2/ID09PT09ICovCi5nbG9iYWwtcGFuZWwgewogIGJhY2tncm91bmQ6IHZhcigtLWJnLWNhcmQpOwogIGJvcmRlcjogMXB4IHNvbGlkIHJnYmEoMjU1LDI1NSwyNTUsMC4wOCk7CiAgYm9yZGVyLXJhZGl1czogdmFyKC0tcmFkaXVzLWxnKTsKICBwYWRkaW5nOiAxNnB4OwogIG1hcmdpbi1ib3R0b206IDIwcHg7Cn0KCi5nbG9iYWwtcGFuZWwgaDMgewogIGZvbnQtc2l6ZTogMTNweDsKICBjb2xvcjogdmFyKC0tdGV4dC1zZWNvbmRhcnkpOwogIG1hcmdpbi1ib3R0b206IDEycHg7CiAgbGV0dGVyLXNwYWNpbmc6IDFweDsKfQoKLmdsb2JhbC1maWVsZHMgewogIGRpc3BsYXk6IGdyaWQ7CiAgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiByZXBlYXQoMiwgMWZyKTsKICBnYXA6IDEwcHg7CiAgbWFyZ2luLWJvdHRvbTogMTJweDsKfQoKLmdsb2JhbC1maWVsZHMgLmZpZWxkIGxhYmVsIHsKICBmb250LXNpemU6IDExcHg7Cn0KCi5nbG9iYWwtZmllbGRzIC5maWVsZCBpbnB1dCB7CiAgcGFkZGluZzogOXB4IDEycHg7CiAgZm9udC1zaXplOiAxNHB4Owp9CgouZ2xvYmFsLW9wcyB7CiAgZGlzcGxheTogZmxleDsKICBnYXA6IDEwcHg7Cn0KCi5nbG9iYWwtb3BzIGJ1dHRvbiB7CiAgZmxleDogMTsKICBwYWRkaW5nOiAxMHB4IDA7CiAgYm9yZGVyLXJhZGl1czogMjBweDsKICBmb250LXNpemU6IDEycHg7CiAgZm9udC13ZWlnaHQ6IDcwMDsKICBjdXJzb3I6IHBvaW50ZXI7CiAgYm9yZGVyOiBub25lOwogIHRyYW5zaXRpb246IGFsbCAwLjJzOwp9CgouZ2xvYmFsLW9wcyAuYnRuLXJlc2V0LWFsbCB7CiAgYmFja2dyb3VuZDogcmdiYSgyNTUsMjU1LDI1NSwwLjA4KTsKICBjb2xvcjogdmFyKC0tdGV4dC1zZWNvbmRhcnkpOwogIGJvcmRlcjogMXB4IHNvbGlkIHJnYmEoMjU1LDI1NSwyNTUsMC4xKTsKfQoKLmdsb2JhbC1vcHMgLmJ0bi1jbGVhci1jYWNoZSB7CiAgYmFja2dyb3VuZDogcmdiYSgyNTUsNjgsMTAyLDAuMTIpOwogIGNvbG9yOiB2YXIoLS1kYW5nZXIpOwogIGJvcmRlcjogMXB4IHNvbGlkIHJnYmEoMjU1LDY4LDEwMiwwLjI1KTsKfQoKLyogPT09PT0g5Y2h54mH572R5qC8ID09PT09ICovCiNjYXJkcy1jb250YWluZXIgewogIGRpc3BsYXk6IGdyaWQ7CiAgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiAxZnI7CiAgZ2FwOiAxNnB4Owp9CgovKiA9PT09PSBUb2FzdCA9PT09PSAqLwoubWNzLXRvYXN0IHsKICBwb3NpdGlvbjogZml4ZWQ7CiAgYm90dG9tOiA4MHB4OwogIGxlZnQ6IDUwJTsKICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVgoLTUwJSkgdHJhbnNsYXRlWSgyMHB4KTsKICBiYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQoMTM1ZGVnLCB2YXIoLS1uZW9uLXB1cnBsZSksIHZhcigtLW5lb24tY3lhbikpOwogIGNvbG9yOiAjZmZmOwogIHBhZGRpbmc6IDEwcHggMjRweDsKICBib3JkZXItcmFkaXVzOiAzMHB4OwogIGZvbnQtc2l6ZTogMTNweDsKICBmb250LXdlaWdodDogNjAwOwogIG9wYWNpdHk6IDA7CiAgdHJhbnNpdGlvbjogYWxsIDAuM3MgZWFzZTsKICB6LWluZGV4OiA5OTk7CiAgcG9pbnRlci1ldmVudHM6IG5vbmU7CiAgYm94LXNoYWRvdzogMCA0cHggMjBweCByZ2JhKDE1NSwwLDI1NSwwLjM1KTsKfQoKLm1jcy10b2FzdC5zaG93IHsKICBvcGFjaXR5OiAxOwogIHRyYW5zZm9ybTogdHJhbnNsYXRlWCgtNTAlKSB0cmFuc2xhdGVZKDApOwp9CgovKiA9PT09PSDlupXpg6ggPT09PT0gKi8KLmFwcC1mb290ZXIgewogIHRleHQtYWxpZ246IGNlbnRlcjsKICBwYWRkaW5nOiA0MHB4IDE2cHggMDsKICBmb250LXNpemU6IDExcHg7CiAgY29sb3I6IHZhcigtLXRleHQtbXV0ZWQpOwogIGxldHRlci1zcGFjaW5nOiAxcHg7Cn0KCi5hcHAtZm9vdGVyIC52ZXJzaW9uIHsKICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7CiAgcGFkZGluZzogNHB4IDEycHg7CiAgYmFja2dyb3VuZDogcmdiYSgxNTUsMCwyNTUsMC4xKTsKICBib3JkZXI6IDFweCBzb2xpZCByZ2JhKDE1NSwwLDI1NSwwLjIpOwogIGJvcmRlci1yYWRpdXM6IDIwcHg7CiAgbWFyZ2luLWJvdHRvbTogMTBweDsKICBjb2xvcjogdmFyKC0tbmVvbi1jeWFuKTsKfQoKLyogPT09PT0g6YCa55So5oyJ6ZKuL+i+k+WFpSA9PT09PSAqLwpidXR0b24geyBmb250LWZhbWlseTogaW5oZXJpdDsgfQppbnB1dCB7IGZvbnQtZmFtaWx5OiBpbmhlcml0OyB9Cgoub2ZmbGluZSB7CiAgY29sb3I6IHZhcigtLXRleHQtbXV0ZWQpOwogIGZvbnQtc2l6ZTogMTRweDsKfQoKQG1lZGlhIChtaW4td2lkdGg6IDc2OHB4KSB7CiAgI2NhcmRzLWNvbnRhaW5lciB7CiAgICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IHJlcGVhdCgyLCAxZnIpOwogIH0KICAuZ2xvYmFsLWZpZWxkcyB7CiAgICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IHJlcGVhdCg0LCAxZnIpOwogIH0KfQoKQG1lZGlhIChtaW4td2lkdGg6IDEyMDBweCkgewogICNjYXJkcy1jb250YWluZXIgewogICAgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiByZXBlYXQoMywgMWZyKTsKICB9Cn0K
+/* css/common.css */
+
+:root {
+  --bg-primary: #0a0a0f;
+  --bg-secondary: #12121a;
+  --bg-card: #1a1a25;
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0c0;
+  --text-muted: #606080;
+  --neon-purple: #9b00ff;
+  --neon-cyan: #00f0ff;
+  --neon-green: #00ff88;
+  --neon-gold: #ffd700;
+  --danger: #ff4466;
+  --success: #00ff88;
+  --warning: #ffaa00;
+  --radius-lg: 18px;
+  --radius-md: 12px;
+  --radius-sm: 8px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: -apple-system, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(155, 0, 255, 0.06) 0%, transparent 40%),
+    radial-gradient(circle at 85% 80%, rgba(0, 240, 255, 0.04) 0%, transparent 40%),
+    radial-gradient(circle at 50% 50%, rgba(0, 45, 255, 0.03) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+  animation: bgFloat 25s ease-in-out infinite;
+}
+
+@keyframes bgFloat {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  33% { transform: translate(3%, -2%) rotate(1deg); }
+  66% { transform: translate(-2%, 3%) rotate(-1deg); }
+}
+
+.app {
+  position: relative;
+  z-index: 1;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 16px 60px;
+}
+
+/* ===== 顶部标题 ===== */
+.app-header {
+  text-align: center;
+  padding: 20px 0 24px;
+}
+
+.app-header h1 {
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  background: linear-gradient(135deg, var(--neon-purple), var(--neon-cyan), var(--neon-purple));
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 4s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.app-header .subtitle {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 6px;
+  letter-spacing: 2px;
+}
+
+/* ===== Tab 导航 ===== */
+.tab-nav {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 4px 0 16px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.tab-nav::-webkit-scrollbar { display: none; }
+
+.tab-nav button {
+  flex: 0 0 auto;
+  padding: 8px 14px;
+  background: var(--bg-secondary);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px;
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tab-nav button.active {
+  background: linear-gradient(135deg, var(--neon-purple), var(--neon-cyan));
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 0 15px rgba(155,0,255,0.3);
+}
+
+/* ===== 全局参数面板 ===== */
+.global-panel {
+  background: var(--bg-card);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.global-panel h3 {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+.global-fields {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.global-fields .field label {
+  font-size: 11px;
+}
+
+.global-fields .field input {
+  padding: 9px 12px;
+  font-size: 14px;
+}
+
+.global-ops {
+  display: flex;
+  gap: 10px;
+}
+
+.global-ops button {
+  flex: 1;
+  padding: 10px 0;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s;
+}
+
+.global-ops .btn-reset-all {
+  background: rgba(255,255,255,0.08);
+  color: var(--text-secondary);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.global-ops .btn-clear-cache {
+  background: rgba(255,68,102,0.12);
+  color: var(--danger);
+  border: 1px solid rgba(255,68,102,0.25);
+}
+
+/* ===== 卡片网格 ===== */
+#cards-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+/* ===== Toast ===== */
+.mcs-toast {
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: linear-gradient(135deg, var(--neon-purple), var(--neon-cyan));
+  color: #fff;
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 600;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 999;
+  pointer-events: none;
+  box-shadow: 0 4px 20px rgba(155,0,255,0.35);
+}
+
+.mcs-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ===== 底部 ===== */
+.app-footer {
+  text-align: center;
+  padding: 40px 16px 0;
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+}
+
+.app-footer .version {
+  display: inline-block;
+  padding: 4px 12px;
+  background: rgba(155,0,255,0.1);
+  border: 1px solid rgba(155,0,255,0.2);
+  border-radius: 20px;
+  margin-bottom: 10px;
+  color: var(--neon-cyan);
+}
+
+/* ===== 通用按钮/输入 ===== */
+button { font-family: inherit; }
+input { font-family: inherit; }
+
+.offline {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  #cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .global-fields {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  #cards-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

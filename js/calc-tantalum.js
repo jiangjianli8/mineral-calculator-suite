@@ -1,1 +1,98 @@
-Ly8ganMvY2FsYy10YW50YWx1bS5qcwooZnVuY3Rpb24od2luZG93KSB7CiAgJ3VzZSBzdHJpY3QnOwoKICB2YXIgQyA9IHdpbmRvdy5NQ1NDb21tb247CiAgdmFyIEJhc2VDYWxjID0gd2luZG93LkJhc2VDYWxjOwogIHZhciBMQlNfUEVSX1RPTiA9IDIyMDQuNjIyNjsKCiAgZnVuY3Rpb24gVGFudGFsdW1DYWxjKCkgewogICAgQmFzZUNhbGMuY2FsbCh0aGlzLCB7CiAgICAgIGlkOiAndGFudGFsdW0nLAogICAgICBuYW1lOiAn6ZK96ZOM55+/JywKICAgICAgdGhlbWU6IHsgcHJpbWFyeTogJyM5YzI3YjAnLCBhY2NlbnQ6ICcjZTA0MGZiJywgaWNvbjogJ/Cfko4nLCB0YWc6ICdUYeKCgk/igoUrTmLigoJP4oKFIMK3IENJRicgfSwKICAgICAgZmllbGRzOiBbCiAgICAgICAgeyBpZDogJ2dyYWRlJywgbGFiZWw6ICfpkr3pk4znn7/lk4HkvY0nLCB1bml0OiAnJScsIG1pbjogMSwgbWF4OiA1MCwgc3RlcDogMC4xLCBkZWZhdWx0OiAzMCB9LAogICAgICAgIHsgaWQ6ICd2YXRSYXRlJywgbGFiZWw6ICflop7lgLznqI7njocnLCB1bml0OiAnJScsIG1pbjogMCwgbWF4OiAyMCwgc3RlcDogMC41LCBkZWZhdWx0OiAxMyB9LAogICAgICAgIHsgaWQ6ICdleGNoYW5nZVJhdGUnLCBsYWJlbDogJ+axh+eOhyBVU0QvQ05ZJywgdW5pdDogJycsIG1pbjogNi41LCBtYXg6IDguMCwgc3RlcDogMC4wMDAxLCBkZWZhdWx0OiA3LjI1IH0KICAgICAgXQogICAgfSk7CiAgICB0aGlzLmludGxQcmljZSA9IDIzMi41OyAvLyBVU0QvbGIKICAgIHRoaXMuZXhjaGFuZ2VSYXRlID0gNy4yNTsKICB9CgogIFRhbnRhbHVtQ2FsYy5wcm90b3R5cGUgPSBPYmplY3QuY3JlYXRlKEJhc2VDYWxjLnByb3RvdHlwZSk7CiAgVGFudGFsdW1DYWxjLnByb3RvdHlwZS5jb25zdHJ1Y3RvciA9IFRhbnRhbHVtQ2FsYzsKCiAgVGFudGFsdW1DYWxjLnByb3RvdHlwZS5mZXRjaFByaWNlID0gZnVuY3Rpb24oKSB7CiAgICB2YXIgc2VsZiA9IHRoaXM7CiAgICBmZXRjaCgnZGF0YS9wcmljZS5qc29uP189JyArIERhdGUubm93KCkpCiAgICAgIC50aGVuKGZ1bmN0aW9uKHIpIHsgcmV0dXJuIHIuanNvbigpOyB9KQogICAgICAudGhlbihmdW5jdGlvbihkKSB7CiAgICAgICAgaWYgKGQuaW50bF9wcmljZSAmJiBkLmludGxfcHJpY2UgPiAwKSBzZWxmLmludGxQcmljZSA9IGQuaW50bF9wcmljZTsKICAgICAgICBpZiAoZC5leGNoYW5nZV9yYXRlICYmIGQuZXhjaGFuZ2VfcmF0ZSA+IDApIHNlbGYuZXhjaGFuZ2VSYXRlID0gZC5leGNoYW5nZV9yYXRlOwogICAgICAgIHNlbGYudXBkYXRlUHJpY2VEaXNwbGF5KCk7CiAgICAgICAgc2VsZi5hdXRvQ2FsYygpOwogICAgICB9KQogICAgICAuY2F0Y2goZnVuY3Rpb24oKSB7CiAgICAgICAgc2VsZi5mZXRjaExpdmVGWCgpOwogICAgICB9KTsKICB9OwoKICBUYW50YWx1bUNhbGMucHJvdG90eXBlLmZldGNoTGl2ZUZYID0gZnVuY3Rpb24oKSB7CiAgICB2YXIgc2VsZiA9IHRoaXM7CiAgICBmZXRjaCgnaHR0cHM6Ly9vcGVuLmVyLWFwaS5jb20vdjYvbGF0ZXN0L1VTRCcpCiAgICAgIC50aGVuKGZ1bmN0aW9uKHIpIHsgcmV0dXJuIHIuanNvbigpOyB9KQogICAgICAudGhlbihmdW5jdGlvbihkKSB7CiAgICAgICAgaWYgKGQucmF0ZXMgJiYgZC5yYXRlcy5DTlkgPiAwKSBzZWxmLmV4Y2hhbmdlUmF0ZSA9IGQucmF0ZXMuQ05ZOwogICAgICAgIHNlbGYudXBkYXRlUHJpY2VEaXNwbGF5KHRydWUpOwogICAgICAgIHNlbGYuYXV0b0NhbGMoKTsKICAgICAgfSkKICAgICAgLmNhdGNoKGZ1bmN0aW9uKCkgewogICAgICAgIHNlbGYudXBkYXRlUHJpY2VEaXNwbGF5KHRydWUpOwogICAgICAgIHNlbGYuYXV0b0NhbGMoKTsKICAgICAgfSk7CiAgfTsKCiAgVGFudGFsdW1DYWxjLnByb3RvdHlwZS51cGRhdGVQcmljZURpc3BsYXkgPSBmdW5jdGlvbihvZmZsaW5lKSB7CiAgICB2YXIgZWwgPSB0aGlzLmVsLnF1ZXJ5U2VsZWN0b3IoJy5wcmljZS12YWx1ZScpOwogICAgaWYgKCFlbCkgcmV0dXJuOwogICAgdmFyIGxhYmVsID0gdGhpcy5lbC5xdWVyeVNlbGVjdG9yKCcucHJpY2UtbmFtZScpOwogICAgaWYgKGxhYmVsKSBsYWJlbC50ZXh0Q29udGVudCA9ICflm73pmYXpkr3pk4znn78gQ0lGJzsKICAgIGlmIChvZmZsaW5lKSB7CiAgICAgIGVsLmlubmVySFRNTCA9ICc8c3BhbiBjbGFzcz0ib2ZmbGluZSI+JCcgKyBDLmZtdCh0aGlzLmludGxQcmljZSwgMSkgKyAnPC9zcGFuPjxzcGFuIGNsYXNzPSJ1bml0Ij4v56OFPC9zcGFuPic7CiAgICB9IGVsc2UgewogICAgICBlbC5pbm5lckhUTUwgPSAnJCcgKyBDLmZtdCh0aGlzLmludGxQcmljZSwgMSkgKyAnPHNwYW4gY2xhc3M9InVuaXQiPi/no4U8L3NwYW4+JzsKICAgIH0KICAgIHZhciBtZXRhID0gdGhpcy5lbC5xdWVyeVNlbGVjdG9yKCcucHJpY2UtdGltZScpOwogICAgaWYgKG1ldGEpIG1ldGEudGV4dENvbnRlbnQgPSAob2ZmbGluZSA/ICfnprvnur8gwrcgJyA6ICcnKSArICfmsYfnjocgJyArIHRoaXMuZXhjaGFuZ2VSYXRlLnRvRml4ZWQoNCk7CiAgfTsKCiAgVGFudGFsdW1DYWxjLnByb3RvdHlwZS5jYWxjVG90YWwgPSBmdW5jdGlvbihpbnB1dHMpIHsKICAgIHZhciBmeFJhdGUgPSBpbnB1dHMuZXhjaGFuZ2VSYXRlIHx8IHRoaXMuZXhjaGFuZ2VSYXRlOwogICAgdmFyIGNpZiA9IHRoaXMuaW50bFByaWNlICogTEJTX1BFUl9UT04gKiAoaW5wdXRzLmdyYWRlIC8gMTAwKTsKICAgIHZhciBwcmV0YXggPSBjaWYgKiBmeFJhdGU7CiAgICB2YXIgYWZ0ZXJ0YXggPSBwcmV0YXggKiAoMSArIGlucHV0cy52YXRSYXRlIC8gMTAwKTsKICAgIHZhciB0ZCA9IGlucHV0cy5ncmFkZSA+IDAgPyBhZnRlcnRheCAvIGlucHV0cy5ncmFkZSA6IDA7CiAgICByZXR1cm4gewogICAgICBjaWY6ICckJyArIEMuZm9ybWF0TW9uZXkoY2lmKSArICcgL+WQqCcsCiAgICAgIHByZXRheDogJ8KlJyArIEMuZm9ybWF0TW9uZXkocHJldGF4KSArICcgL+WQqCcsCiAgICAgIGFmdGVydGF4OiAnwqUnICsgQy5mb3JtYXRNb25leShhZnRlcnRheCkgKyAnIC/lkKgnLAogICAgICB0b25EZWdyZWU6ICfCpScgKyBDLmZvcm1hdE1vbmV5KHRkKSArICcgL+WQqOW6picsCiAgICAgIGZvcm11bGE6ICdDSUYgPSAnICsgdGhpcy5pbnRsUHJpY2UgKyAnJC/no4Ugw5cgMjIwNC42MiDDlyAnICsgaW5wdXRzLmdyYWRlICsgJyU7IOeojuWQjiA9IENJRiDDlyAnICsgZnhSYXRlLnRvRml4ZWQoNCkgKyAnIMOXICgxKycgKyBpbnB1dHMudmF0UmF0ZSArICclKScKICAgIH07CiAgfTsKCiAgVGFudGFsdW1DYWxjLnByb3RvdHlwZS5yZW5kZXJSZXN1bHRzID0gZnVuY3Rpb24ocmVzdWx0cywgaW5wdXRzKSB7CiAgICB2YXIgaHRtbCA9ICc8ZGl2IGNsYXNzPSJyZXN1bHQtbGlzdCI+JyArCiAgICAgICc8ZGl2IGNsYXNzPSJyZXN1bHQtaXRlbSI+PHNwYW4gY2xhc3M9InItbGFiZWwiPkNJRiDliLDlsrjku7c8L3NwYW4+PHNwYW4gY2xhc3M9InItdmFsdWUiPicgKyByZXN1bHRzLmNpZiArICc8L3NwYW4+PC9kaXY+JyArCiAgICAgICc8ZGl2IGNsYXNzPSJyZXN1bHQtaXRlbSI+PHNwYW4gY2xhc3M9InItbGFiZWwiPuWbveWGheeojuWJjeS7tzwvc3Bhbj48c3BhbiBjbGFzcz0ici12YWx1ZSI+JyArIHJlc3VsdHMucHJldGF4ICsgJzwvc3Bhbj48L2Rpdj4nICsKICAgICAgJzxkaXYgY2xhc3M9InJlc3VsdC1pdGVtIGhpZ2hsaWdodCI+PHNwYW4gY2xhc3M9InItbGFiZWwiPuWbveWGheeojuWQjuS7tzwvc3Bhbj48c3BhbiBjbGFzcz0ici12YWx1ZSI+JyArIHJlc3VsdHMuYWZ0ZXJ0YXggKyAnPC9zcGFuPjwvZGl2PicgKwogICAgICAnPGRpdiBjbGFzcz0icmVzdWx0LWl0ZW0iPjxzcGFuIGNsYXNzPSJyLWxhYmVsIj7lkKjluqbku7c8L3NwYW4+PHNwYW4gY2xhc3M9InItdmFsdWUiPicgKyByZXN1bHRzLnRvbkRlZ3JlZSArICc8L3NwYW4+PC9kaXY+JyArCiAgICAnPC9kaXY+JyArCiAgICAnPGRpdiBjbGFzcz0iZm9ybXVsYSI+JyArIHJlc3VsdHMuZm9ybXVsYSArICc8L2Rpdj4nOwogICAgdGhpcy5lbC5xdWVyeVNlbGVjdG9yKCcucmVzdWx0LWFyZWEnKS5pbm5lckhUTUwgPSBodG1sOwogIH07CgogIHdpbmRvdy5UYW50YWx1bUNhbGMgPSBUYW50YWx1bUNhbGM7Cn0pKHdpbmRvdyk7Cg==
+// js/calc-tantalum.js
+(function(window) {
+  'use strict';
+
+  var C = window.MCSCommon;
+  var BaseCalc = window.BaseCalc;
+  var LBS_PER_TON = 2204.6226;
+
+  function TantalumCalc() {
+    BaseCalc.call(this, {
+      id: 'tantalum',
+      name: '钽铌矿',
+      theme: { primary: '#9c27b0', accent: '#e040fb', icon: '💎', tag: 'Ta₂O₅+Nb₂O₅ · CIF' },
+      fields: [
+        { id: 'grade', label: '钽铌矿品位', unit: '%', min: 1, max: 50, step: 0.1, default: 30 },
+        { id: 'vatRate', label: '增值税率', unit: '%', min: 0, max: 20, step: 0.5, default: 13 },
+        { id: 'exchangeRate', label: '汇率 USD/CNY', unit: '', min: 6.5, max: 8.0, step: 0.0001, default: 7.25 }
+      ]
+    });
+    this.intlPrice = 232.5; // USD/lb
+    this.exchangeRate = 7.25;
+  }
+
+  TantalumCalc.prototype = Object.create(BaseCalc.prototype);
+  TantalumCalc.prototype.constructor = TantalumCalc;
+
+  TantalumCalc.prototype.fetchPrice = function() {
+    var self = this;
+    fetch('data/price.json?_=' + Date.now())
+      .then(function(r) { return r.json(); })
+      .then(function(d) {
+        if (d.intl_price && d.intl_price > 0) self.intlPrice = d.intl_price;
+        if (d.exchange_rate && d.exchange_rate > 0) self.exchangeRate = d.exchange_rate;
+        self.updatePriceDisplay();
+        self.autoCalc();
+      })
+      .catch(function() {
+        self.fetchLiveFX();
+      });
+  };
+
+  TantalumCalc.prototype.fetchLiveFX = function() {
+    var self = this;
+    fetch('https://open.er-api.com/v6/latest/USD')
+      .then(function(r) { return r.json(); })
+      .then(function(d) {
+        if (d.rates && d.rates.CNY > 0) self.exchangeRate = d.rates.CNY;
+        self.updatePriceDisplay(true);
+        self.autoCalc();
+      })
+      .catch(function() {
+        self.updatePriceDisplay(true);
+        self.autoCalc();
+      });
+  };
+
+  TantalumCalc.prototype.updatePriceDisplay = function(offline) {
+    var el = this.el.querySelector('.price-value');
+    if (!el) return;
+    var label = this.el.querySelector('.price-name');
+    if (label) label.textContent = '国际钽铌矿 CIF';
+    if (offline) {
+      el.innerHTML = '<span class="offline">$' + C.fmt(this.intlPrice, 1) + '</span><span class="unit">/磅</span>';
+    } else {
+      el.innerHTML = '$' + C.fmt(this.intlPrice, 1) + '<span class="unit">/磅</span>';
+    }
+    var meta = this.el.querySelector('.price-time');
+    if (meta) meta.textContent = (offline ? '离线 · ' : '') + '汇率 ' + this.exchangeRate.toFixed(4);
+  };
+
+  TantalumCalc.prototype.calcTotal = function(inputs) {
+    var fxRate = inputs.exchangeRate || this.exchangeRate;
+    var cif = this.intlPrice * LBS_PER_TON * (inputs.grade / 100);
+    var pretax = cif * fxRate;
+    var aftertax = pretax * (1 + inputs.vatRate / 100);
+    var td = inputs.grade > 0 ? aftertax / inputs.grade : 0;
+    return {
+      cif: '$' + C.formatMoney(cif) + ' /吨',
+      pretax: '¥' + C.formatMoney(pretax) + ' /吨',
+      aftertax: '¥' + C.formatMoney(aftertax) + ' /吨',
+      tonDegree: '¥' + C.formatMoney(td) + ' /吨度',
+      formula: 'CIF = ' + this.intlPrice + '$/磅 × 2204.62 × ' + inputs.grade + '%; 税后 = CIF × ' + fxRate.toFixed(4) + ' × (1+' + inputs.vatRate + '%)'
+    };
+  };
+
+  TantalumCalc.prototype.renderResults = function(results, inputs) {
+    var html = '<div class="result-list">' +
+      '<div class="result-item"><span class="r-label">CIF 到岸价</span><span class="r-value">' + results.cif + '</span></div>' +
+      '<div class="result-item"><span class="r-label">国内税前价</span><span class="r-value">' + results.pretax + '</span></div>' +
+      '<div class="result-item highlight"><span class="r-label">国内税后价</span><span class="r-value">' + results.aftertax + '</span></div>' +
+      '<div class="result-item"><span class="r-label">吨度价</span><span class="r-value">' + results.tonDegree + '</span></div>' +
+    '</div>' +
+    '<div class="formula">' + results.formula + '</div>';
+    this.el.querySelector('.result-area').innerHTML = html;
+  };
+
+  window.TantalumCalc = TantalumCalc;
+})(window);

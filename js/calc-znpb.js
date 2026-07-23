@@ -1,1 +1,187 @@
-Ly8ganMvY2FsYy16bnBiLmpzCihmdW5jdGlvbih3aW5kb3cpIHsKICAndXNlIHN0cmljdCc7CgogIHZhciBDID0gd2luZG93Lk1DU0NvbW1vbjsKICB2YXIgQmFzZUNhbGMgPSB3aW5kb3cuQmFzZUNhbGM7CgogIHZhciBaTl9DT0VGRiA9IFtbMjUsNjBdLFszNSw2NV0sWzQ1LDcwXSxbNTAsNzVdLFs1NSw3NV0sWzYwLDc1XV07CiAgdmFyIFBCX0NPRUZGID0gW1szMCw1NV0sWzM1LDYwXSxbNDAsNjVdLFs1MCw3NV0sWzYwLDgwXSxbNzAsODhdLFs4MCw4OF1dOwoKICBmdW5jdGlvbiBnZXRDb2VmZih0YWJsZSwgZ3JhZGUpIHsKICAgIGlmIChncmFkZSA8PSB0YWJsZVswXVswXSkgcmV0dXJuIHRhYmxlWzBdWzFdOwogICAgaWYgKGdyYWRlID49IHRhYmxlW3RhYmxlLmxlbmd0aC0xXVswXSkgcmV0dXJuIHRhYmxlW3RhYmxlLmxlbmd0aC0xXVsxXTsKICAgIGZvciAodmFyIGkgPSAwOyBpIDwgdGFibGUubGVuZ3RoIC0gMTsgaSsrKSB7CiAgICAgIGlmIChncmFkZSA+PSB0YWJsZVtpXVswXSAmJiBncmFkZSA8PSB0YWJsZVtpKzFdWzBdKSB7CiAgICAgICAgdmFyIHQgPSAoZ3JhZGUgLSB0YWJsZVtpXVswXSkgLyAodGFibGVbaSsxXVswXSAtIHRhYmxlW2ldWzBdKTsKICAgICAgICByZXR1cm4gdGFibGVbaV1bMV0gKyB0ICogKHRhYmxlW2krMV1bMV0gLSB0YWJsZVtpXVsxXSk7CiAgICAgIH0KICAgIH0KICAgIHJldHVybiB0YWJsZVt0YWJsZS5sZW5ndGgtMV1bMV07CiAgfQoKICBmdW5jdGlvbiBabnBiQ2FsYygpIHsKICAgIEJhc2VDYWxjLmNhbGwodGhpcywgewogICAgICBpZDogJ3pucGInLAogICAgICBuYW1lOiAn6ZOF6ZSM55+/JywKICAgICAgdGhlbWU6IHsgcHJpbWFyeTogJyNmZmMxMDcnLCBhY2NlbnQ6ICcjNGVjZGM0JywgaWNvbjogJ/Cfn6EnLCB0YWc6ICdabiAvIFBiIMK3IFNNTScgfSwKICAgICAgZmllbGRzOiBbXQogICAgfSk7CiAgICB0aGlzLnpuUHJpY2UgPSAyNDQyMDsKICAgIHRoaXMucGJQcmljZSA9IDE2MjYwOwogIH0KCiAgWm5wYkNhbGMucHJvdG90eXBlID0gT2JqZWN0LmNyZWF0ZShCYXNlQ2FsYy5wcm90b3R5cGUpOwogIFpucGJDYWxjLnByb3RvdHlwZS5jb25zdHJ1Y3RvciA9IFpucGJDYWxjOwoKICBabnBiQ2FsYy5wcm90b3R5cGUuZmV0Y2hQcmljZSA9IGZ1bmN0aW9uKCkgewogICAgdmFyIHNlbGYgPSB0aGlzOwogICAgZmV0Y2goJ2h0dHBzOi8vYXBpLmZzeHN5bWFsbC5jb20vYXBpL3pucGItcHJpY2U/Xz0nICsgRGF0ZS5ub3coKSwgeyBzaWduYWw6IEFib3J0U2lnbmFsLnRpbWVvdXQoNTAwMCkgfSkKICAgICAgLnRoZW4oZnVuY3Rpb24ocikgeyByZXR1cm4gci5qc29uKCk7IH0pCiAgICAgIC50aGVuKGZ1bmN0aW9uKGQpIHsKICAgICAgICBpZiAoZC56biAmJiBkLnpuLnByaWNlKSBzZWxmLnpuUHJpY2UgPSBkLnpuLnByaWNlOwogICAgICAgIGlmIChkLnBiICYmIGQucGIucHJpY2UpIHNlbGYucGJQcmljZSA9IGQucGIucHJpY2U7CiAgICAgICAgc2VsZi51cGRhdGVQcmljZURpc3BsYXkoKTsKICAgICAgICBzZWxmLmF1dG9DYWxjKCk7CiAgICAgIH0pCiAgICAgIC5jYXRjaChmdW5jdGlvbigpIHsKICAgICAgICBmZXRjaCgnZGF0YS9wcmljZS5qc29uP189JyArIERhdGUubm93KCkpCiAgICAgICAgICAudGhlbihmdW5jdGlvbihyKSB7IHJldHVybiByLmpzb24oKTsgfSkKICAgICAgICAgIC50aGVuKGZ1bmN0aW9uKGQpIHsKICAgICAgICAgICAgaWYgKGQuem4gJiYgZC56bi5wcmljZSkgc2VsZi56blByaWNlID0gZC56bi5wcmljZTsKICAgICAgICAgICAgaWYgKGQucGIgJiYgZC5wYi5wcmljZSkgc2VsZi5wYlByaWNlID0gZC5wYi5wcmljZTsKICAgICAgICAgICAgc2VsZi51cGRhdGVQcmljZURpc3BsYXkodHJ1ZSk7CiAgICAgICAgICAgIHNlbGYuYXV0b0NhbGMoKTsKICAgICAgICAgIH0pCiAgICAgICAgICAuY2F0Y2goZnVuY3Rpb24oKSB7CiAgICAgICAgICAgIHNlbGYudXBkYXRlUHJpY2VEaXNwbGF5KHRydWUpOwogICAgICAgICAgICBzZWxmLmF1dG9DYWxjKCk7CiAgICAgICAgICB9KTsKICAgICAgfSk7CiAgfTsKCiAgWm5wYkNhbGMucHJvdG90eXBlLnVwZGF0ZVByaWNlRGlzcGxheSA9IGZ1bmN0aW9uKG9mZmxpbmUpIHsKICAgIHZhciBsYWJlbCA9IHRoaXMuZWwucXVlcnlTZWxlY3RvcignLnByaWNlLW5hbWUnKTsKICAgIGlmIChsYWJlbCkgbGFiZWwudGV4dENvbnRlbnQgPSAnU01NIDEj6ZSM6ZStIC8gMSPpk4XplK0nOwogICAgdmFyIGVsID0gdGhpcy5lbC5xdWVyeVNlbGVjdG9yKCcucHJpY2UtdmFsdWUnKTsKICAgIGlmIChlbCkgewogICAgICBpZiAob2ZmbGluZSkgewogICAgICAgIGVsLmlubmVySFRNTCA9ICc8c3BhbiBjbGFzcz0ib2ZmbGluZSI+Wm4gJyArIEMuZm10KHRoaXMuem5QcmljZSwgMCkgKyAnIC8gUGIgJyArIEMuZm10KHRoaXMucGJQcmljZSwgMCkgKyAnPC9zcGFuPjxzcGFuIGNsYXNzPSJ1bml0Ij7lhYMv5ZCoPC9zcGFuPic7CiAgICAgIH0gZWxzZSB7CiAgICAgICAgZWwuaW5uZXJIVE1MID0gJ1puICcgKyBDLmZtdCh0aGlzLnpuUHJpY2UsIDApICsgJyAvIFBiICcgKyBDLmZtdCh0aGlzLnBiUHJpY2UsIDApICsgJzxzcGFuIGNsYXNzPSJ1bml0Ij7lhYMv5ZCoPC9zcGFuPic7CiAgICAgIH0KICAgIH0KICAgIHZhciBtZXRhID0gdGhpcy5lbC5xdWVyeVNlbGVjdG9yKCcucHJpY2UtdGltZScpOwogICAgaWYgKG1ldGEpIG1ldGEudGV4dENvbnRlbnQgPSBvZmZsaW5lID8gJ+emu+e6vyDCtyDpu5jorqTlj4LogIPku7cnIDogJ+WunuaXtuihjOaDhSc7CiAgfTsKCiAgWm5wYkNhbGMucHJvdG90eXBlLnJlbmRlcklucHV0cyA9IGZ1bmN0aW9uKCkgewogICAgcmV0dXJuICc8ZGl2IGNsYXNzPSJmaWVsZCI+JyArCiAgICAgICc8bGFiZWw+6K6h5Lu35qih5byPPC9sYWJlbD4nICsKICAgICAgJzxkaXYgY2xhc3M9InNlZ21lbnRlZCB0cmlwbGUiIGRhdGEtZmllbGQ9Im1vZGUiPicgKwogICAgICAgICc8YnV0dG9uIGRhdGEtdmFsdWU9InpuIiBjbGFzcz0iYWN0aXZlIj7wn6qZIOe6r+mUjOefvzwvYnV0dG9uPicgKwogICAgICAgICc8YnV0dG9uIGRhdGEtdmFsdWU9InBiIj7wn6qoIOe6r+mTheefvzwvYnV0dG9uPicgKwogICAgICAgICc8YnV0dG9uIGRhdGEtdmFsdWU9Im1peGVkIj7impLvuI8g6ZOF6ZSM5re35ZCI55+/PC9idXR0b24+JyArCiAgICAgICc8L2Rpdj4nICsKICAgICc8L2Rpdj4nICsKICAgICc8ZGl2IGNsYXNzPSJ0d28tY29sIj4nICsKICAgICAgJzxkaXYgY2xhc3M9ImZpZWxkIj48bGFiZWw+6ZSM5ZOB5L2NIFpuIDxzcGFuPiU8L3NwYW4+PC9sYWJlbD48ZGl2IGNsYXNzPSJpbnB1dC13cmFwIj48aW5wdXQgdHlwZT0ibnVtYmVyIiBpZD0iem5wYl96bkdyYWRlIiBkYXRhLWZpZWxkPSJ6bkdyYWRlIiB2YWx1ZT0iNTAiIG1pbj0iMjUiIG1heD0iNjAiIHN0ZXA9IjAuMSI+PHNwYW4gY2xhc3M9InN1ZmZpeCI+JTwvc3Bhbj48L2Rpdj48L2Rpdj4nICsKICAgICAgJzxkaXYgY2xhc3M9ImZpZWxkIj48bGFiZWw+6ZOF5ZOB5L2NIFBiIDxzcGFuPiU8L3NwYW4+PC9sYWJlbD48ZGl2IGNsYXNzPSJpbnB1dC13cmFwIj48aW5wdXQgdHlwZT0ibnVtYmVyIiBpZD0iem5wYl9wYkdyYWRlIiBkYXRhLWZpZWxkPSJwYkdyYWRlIiB2YWx1ZT0iNjAiIG1pbj0iMzAiIG1heD0iODAiIHN0ZXA9IjAuMSI+PHNwYW4gY2xhc3M9InN1ZmZpeCI+JTwvc3Bhbj48L2Rpdj48L2Rpdj4nICsKICAgICc8L2Rpdj4nICsKICAgICc8ZGl2IGNsYXNzPSJ0d28tY29sIj4nICsKICAgICAgJzxkaXYgY2xhc3M9ImZpZWxkIj48bGFiZWw+6ZSMIFRDIDxzcGFuPuWFgy/ph5HlsZ7lkKg8L3NwYW4+PC9sYWJlbD48ZGl2IGNsYXNzPSJpbnB1dC13cmFwIj48aW5wdXQgdHlwZT0ibnVtYmVyIiBpZD0iem5wYl90Y1puIiBkYXRhLWZpZWxkPSJ0Y1puIiB2YWx1ZT0iNTIwMCIgbWluPSI0MDAwIiBtYXg9IjcwMDAiIHN0ZXA9IjEwMCI+PHNwYW4gY2xhc3M9InN1ZmZpeCI+5YWDL+mHkeWxnuWQqDwvc3Bhbj48L2Rpdj48L2Rpdj4nICsKICAgICAgJzxkaXYgY2xhc3M9ImZpZWxkIj48bGFiZWw+6ZOFIFRDIDxzcGFuPuWFgy/ph5HlsZ7lkKg8L3NwYW4+PC9sYWJlbD48ZGl2IGNsYXNzPSJpbnB1dC13cmFwIj48aW5wdXQgdHlwZT0ibnVtYmVyIiBpZD0iem5wYl90Y1BiIiBkYXRhLWZpZWxkPSJ0Y1BiIiB2YWx1ZT0iNTAwIiBtaW49IjMwMCIgbWF4PSI4MDAiIHN0ZXA9IjUwIj48c3BhbiBjbGFzcz0ic3VmZml4Ij7lhYMv6YeR5bGe5ZCoPC9zcGFuPjwvZGl2PjwvZGl2PicgKwogICAgJzwvZGl2PicgKwogICAgJzxkaXYgY2xhc3M9ImZpZWxkIHN3aXRjaC1maWVsZCI+PGxhYmVsPuWQq+eojuS7tyDihpIg5LiN5ZCr56iOICjDtzEuMTMpPC9sYWJlbD48bGFiZWwgY2xhc3M9InN3aXRjaCI+PGlucHV0IHR5cGU9ImNoZWNrYm94IiBpZD0iem5wYl90YXhNb2RlIiBjaGVja2VkPjxzcGFuIGNsYXNzPSJzbGlkZXIiPjwvc3Bhbj48L2xhYmVsPjwvZGl2Pic7CiAgfTsKCiAgWm5wYkNhbGMucHJvdG90eXBlLmJpbmRJbnB1dHMgPSBmdW5jdGlvbigpIHsKICAgIHZhciBzZWxmID0gdGhpczsKICAgIHZhciBhbGxJbnB1dHMgPSB0aGlzLmVsLnF1ZXJ5U2VsZWN0b3JBbGwoJ2lucHV0Jyk7CiAgICBhbGxJbnB1dHMuZm9yRWFjaChmdW5jdGlvbihlbCkgewogICAgICBlbC5hZGRFdmVudExpc3RlbmVyKCdpbnB1dCcsIGZ1bmN0aW9uKCkgeyBzZWxmLmF1dG9DYWxjKCk7IH0pOwogICAgICBlbC5hZGRFdmVudExpc3RlbmVyKCdjaGFuZ2UnLCBmdW5jdGlvbigpIHsgc2VsZi5hdXRvQ2FsYygpOyBzZWxmLnNhdmVEcmFmdCgpOyB9KTsKICAgIH0pOwogICAgdGhpcy5lbC5xdWVyeVNlbGVjdG9yKCcuc2VnbWVudGVkJykuYWRkRXZlbnRMaXN0ZW5lcignY2xpY2snLCBmdW5jdGlvbihlKSB7CiAgICAgIGlmIChlLnRhcmdldC50YWdOYW1lID09PSAnQlVUVE9OJykgewogICAgICAgIHNlbGYuZWwucXVlcnlTZWxlY3RvckFsbCgnLnNlZ21lbnRlZCBidXR0b24nKS5mb3JFYWNoKGZ1bmN0aW9uKGIpIHsgYi5jbGFzc0xpc3QucmVtb3ZlKCdhY3RpdmUnKTsgfSk7CiAgICAgICAgZS50YXJnZXQuY2xhc3NMaXN0LmFkZCgnYWN0aXZlJyk7CiAgICAgICAgc2VsZi5hdXRvQ2FsYygpOwogICAgICAgIHNlbGYuc2F2ZURyYWZ0KCk7CiAgICAgIH0KICAgIH0pOwogIH07CgogIFpucGJDYWxjLnByb3RvdHlwZS5nZXRJbnB1dHMgPSBmdW5jdGlvbigpIHsKICAgIHZhciBtb2RlQnRuID0gdGhpcy5lbC5xdWVyeVNlbGVjdG9yKCcuc2VnbWVudGVkIGJ1dHRvbi5hY3RpdmUnKTsKICAgIHJldHVybiB7CiAgICAgIG1vZGU6IG1vZGVCdG4gPyBtb2RlQnRuLmRhdGFzZXQudmFsdWUgOiAnem4nLAogICAgICB6bkdyYWRlOiBwYXJzZUZsb2F0KHRoaXMuZWwucXVlcnlTZWxlY3RvcignI3pucGJfem5HcmFkZScpLnZhbHVlKSB8fCA1MCwKICAgICAgcGJHcmFkZTogcGFyc2VGbG9hdCh0aGlzLmVsLnF1ZXJ5U2VsZWN0b3IoJyN6bnBiX3BiR3JhZGUnKS52YWx1ZSkgfHwgNjAsCiAgICAgIHRjWm46IHBhcnNlRmxvYXQodGhpcy5lbC5xdWVyeVNlbGVjdG9yKCcjem5wYl90Y1puJykudmFsdWUpIHx8IDUyMDAsCiAgICAgIHRjUGI6IHBhcnNlRmxvYXQodGhpcy5lbC5xdWVyeVNlbGVjdG9yKCcjem5wYl90Y1BiJykudmFsdWUpIHx8IDUwMCwKICAgICAgdGF4TW9kZTogdGhpcy5lbC5xdWVyeVNlbGVjdG9yKCcjem5wYl90YXhNb2RlJykuY2hlY2tlZCA/IDEgOiAwCiAgICB9OwogIH07CgogIFpucGJDYWxjLnByb3RvdHlwZS5jYWxjVG90YWwgPSBmdW5jdGlvbihpbnB1dHMpIHsKICAgIHZhciBkaXZpZGVyID0gaW5wdXRzLnRheE1vZGUgPyAxLjEzIDogMTsKICAgIHZhciB6bkNvZWZmID0gZ2V0Q29lZmYoWk5fQ09FRkYsIGlucHV0cy56bkdyYWRlKTsKICAgIHZhciBwYkNvZWZmID0gZ2V0Q29lZmYoUEJfQ09FRkYsIGlucHV0cy5wYkdyYWRlKTsKICAgIHZhciB6bk9yZSA9ICgodGhpcy56blByaWNlIC8gZGl2aWRlcikgLSBpbnB1dHMudGNabikgKiAoem5Db2VmZiAvIDEwMCkgKiAoaW5wdXRzLnpuR3JhZGUgLyAxMDApOwogICAgdmFyIHBiT3JlID0gKCh0aGlzLnBiUHJpY2UgLyBkaXZpZGVyKSAtIGlucHV0cy50Y1BiKSAqIChwYkNvZWZmIC8gMTAwKSAqIChpbnB1dHMucGJHcmFkZSAvIDEwMCk7CiAgICB2YXIgdG90YWwgPSAwLCBmb3JtdWxhID0gJyc7CiAgICBpZiAoaW5wdXRzLm1vZGUgPT09ICd6bicpIHsKICAgICAgdG90YWwgPSB6bk9yZTsKICAgICAgZm9ybXVsYSA9ICcxI+mUjCAnICsgdGhpcy56blByaWNlLnRvTG9jYWxlU3RyaW5nKCkgKyAoaW5wdXRzLnRheE1vZGUgPyAnIMO3MS4xMycgOiAnJykgKyAnIMOXICcgKyB6bkNvZWZmLnRvRml4ZWQoMSkgKyAnJSDDlyAnICsgaW5wdXRzLnpuR3JhZGUudG9GaXhlZCgxKSArICclIC0gVEMgJyArIGlucHV0cy50Y1puOwogICAgfSBlbHNlIGlmIChpbnB1dHMubW9kZSA9PT0gJ3BiJykgewogICAgICB0b3RhbCA9IHBiT3JlOwogICAgICBmb3JtdWxhID0gJzEj6ZOFICcgKyB0aGlzLnBiUHJpY2UudG9Mb2NhbGVTdHJpbmcoKSArIChpbnB1dHMudGF4TW9kZSA/ICcgw7cxLjEzJyA6ICcnKSArICcgw5cgJyArIHBiQ29lZmYudG9GaXhlZCgxKSArICclIMOXICcgKyBpbnB1dHMucGJHcmFkZS50b0ZpeGVkKDEpICsgJyUgLSBUQyAnICsgaW5wdXRzLnRjUGI7CiAgICB9IGVsc2UgewogICAgICB0b3RhbCA9IHpuT3JlICsgcGJPcmU7CiAgICAgIGZvcm11bGEgPSAn6ZSM6YOo5YiGOiAnICsgQy5mbXQoem5PcmUsIDApICsgJyArIOmThemDqOWIhjogJyArIEMuZm10KHBiT3JlLCAwKTsKICAgIH0KICAgIHJldHVybiB7CiAgICAgIHpuQ29lZmY6IEMuZm9ybWF0UGVyY2VudCh6bkNvZWZmKSwKICAgICAgcGJDb2VmZjogQy5mb3JtYXRQZXJjZW50KHBiQ29lZmYpLAogICAgICBvcmVQcmljZTogJ8KlJyArIEMuZm10KHRvdGFsLCAwKSArICcgL+WQqCcsCiAgICAgIGZvcm11bGE6IGZvcm11bGEKICAgIH07CiAgfTsKCiAgWm5wYkNhbGMucHJvdG90eXBlLnJlbmRlclJlc3VsdHMgPSBmdW5jdGlvbihyZXN1bHRzLCBpbnB1dHMpIHsKICAgIHZhciBodG1sID0gJzxkaXYgY2xhc3M9InJlc3VsdC1tYWluIj48c3BhbiBjbGFzcz0icm0tbGFiZWwiPueyvuefv+WNleS7tzwvc3Bhbj48c3BhbiBjbGFzcz0icm0tdmFsdWUiPicgKyByZXN1bHRzLm9yZVByaWNlICsgJzwvc3Bhbj48L2Rpdj4nICsKICAgICAgJzxkaXYgY2xhc3M9InJlc3VsdC1zdWIiPjxzcGFuPumUjOezu+aVsDwvc3Bhbj48c3Bhbj4nICsgcmVzdWx0cy56bkNvZWZmICsgJzwvc3Bhbj48L2Rpdj4nICsKICAgICAgJzxkaXYgY2xhc3M9InJlc3VsdC1zdWIiPjxzcGFuPumTheezu+aVsDwvc3Bhbj48c3Bhbj4nICsgcmVzdWx0cy5wYkNvZWZmICsgJzwvc3Bhbj48L2Rpdj4nICsKICAgICAgJzxkaXYgY2xhc3M9ImZvcm11bGEiPicgKyByZXN1bHRzLmZvcm11bGEgKyAnPC9kaXY+JzsKICAgIHRoaXMuZWwucXVlcnlTZWxlY3RvcignLnJlc3VsdC1hcmVhJykuaW5uZXJIVE1MID0gaHRtbDsKICB9OwoKICBabnBiQ2FsYy5wcm90b3R5cGUuc2F2ZURyYWZ0ID0gZnVuY3Rpb24oKSB7CiAgICB2YXIgdmFscyA9IHRoaXMuZ2V0SW5wdXRzKCk7CiAgICB2YXIgZGF0YSA9IHsgbG9ja2VkOiB0aGlzLnN0YXRlLmxvY2tlZCwgaW5wdXRzOiB2YWxzIH07CiAgICBDLnNldFN0b3JhZ2UodGhpcy5pZCArICdfZHJhZnQnLCBkYXRhKTsKICAgIEMuc2hvd1RvYXN0KHRoaXMubmFtZSArICcg6I2J56i/5bey5L+d5a2YJyk7CiAgfTsKCiAgWm5wYkNhbGMucHJvdG90eXBlLmxvYWREcmFmdCA9IGZ1bmN0aW9uKCkgewogICAgdmFyIGRyYWZ0ID0gQy5nZXRTdG9yYWdlKHRoaXMuaWQgKyAnX2RyYWZ0JywgbnVsbCk7CiAgICBpZiAoIWRyYWZ0KSByZXR1cm47CiAgICBpZiAoZHJhZnQubG9ja2VkICE9IG51bGwpIHRoaXMuc3RhdGUubG9ja2VkID0gZHJhZnQubG9ja2VkOwogICAgdGhpcy51cGRhdGVMb2NrSWNvbigpOwogICAgaWYgKGRyYWZ0LmlucHV0cykgewogICAgICB2YXIgc2VsZiA9IHRoaXM7CiAgICAgIGZvciAodmFyIGsgaW4gZHJhZnQuaW5wdXRzKSB7CiAgICAgICAgaWYgKGsgPT09ICd0YXhNb2RlJykgewogICAgICAgICAgdmFyIGNiID0gc2VsZi5lbC5xdWVyeVNlbGVjdG9yKCcjem5wYl90YXhNb2RlJyk7CiAgICAgICAgICBpZiAoY2IpIGNiLmNoZWNrZWQgPSBkcmFmdC5pbnB1dHNba10gPT09IDE7CiAgICAgICAgfSBlbHNlIHsKICAgICAgICAgIHZhciBlbCA9IHNlbGYuZWwucXVlcnlTZWxlY3RvcignI3pucGJfJyArIGspOwogICAgICAgICAgaWYgKGVsKSBlbC52YWx1ZSA9IGRyYWZ0LmlucHV0c1trXTsKICAgICAgICB9CiAgICAgIH0KICAgIH0KICB9OwoKICB3aW5kb3cuWm5wYkNhbGMgPSBabnBiQ2FsYzsKfSkod2luZG93KTsK
+// js/calc-znpb.js
+(function(window) {
+  'use strict';
+
+  var C = window.MCSCommon;
+  var BaseCalc = window.BaseCalc;
+
+  var ZN_COEFF = [[25,60],[35,65],[45,70],[50,75],[55,75],[60,75]];
+  var PB_COEFF = [[30,55],[35,60],[40,65],[50,75],[60,80],[70,88],[80,88]];
+
+  function getCoeff(table, grade) {
+    if (grade <= table[0][0]) return table[0][1];
+    if (grade >= table[table.length-1][0]) return table[table.length-1][1];
+    for (var i = 0; i < table.length - 1; i++) {
+      if (grade >= table[i][0] && grade <= table[i+1][0]) {
+        var t = (grade - table[i][0]) / (table[i+1][0] - table[i][0]);
+        return table[i][1] + t * (table[i+1][1] - table[i][1]);
+      }
+    }
+    return table[table.length-1][1];
+  }
+
+  function ZnpbCalc() {
+    BaseCalc.call(this, {
+      id: 'znpb',
+      name: '铅锌矿',
+      theme: { primary: '#ffc107', accent: '#4ecdc4', icon: '🟡', tag: 'Zn / Pb · SMM' },
+      fields: []
+    });
+    this.znPrice = 24420;
+    this.pbPrice = 16260;
+  }
+
+  ZnpbCalc.prototype = Object.create(BaseCalc.prototype);
+  ZnpbCalc.prototype.constructor = ZnpbCalc;
+
+  ZnpbCalc.prototype.fetchPrice = function() {
+    var self = this;
+    fetch('https://api.fsxsymall.com/api/znpb-price?_=' + Date.now(), { signal: AbortSignal.timeout(5000) })
+      .then(function(r) { return r.json(); })
+      .then(function(d) {
+        if (d.zn && d.zn.price) self.znPrice = d.zn.price;
+        if (d.pb && d.pb.price) self.pbPrice = d.pb.price;
+        self.updatePriceDisplay();
+        self.autoCalc();
+      })
+      .catch(function() {
+        fetch('data/price.json?_=' + Date.now())
+          .then(function(r) { return r.json(); })
+          .then(function(d) {
+            if (d.zn && d.zn.price) self.znPrice = d.zn.price;
+            if (d.pb && d.pb.price) self.pbPrice = d.pb.price;
+            self.updatePriceDisplay(true);
+            self.autoCalc();
+          })
+          .catch(function() {
+            self.updatePriceDisplay(true);
+            self.autoCalc();
+          });
+      });
+  };
+
+  ZnpbCalc.prototype.updatePriceDisplay = function(offline) {
+    var label = this.el.querySelector('.price-name');
+    if (label) label.textContent = 'SMM 1#锌锭 / 1#铅锭';
+    var el = this.el.querySelector('.price-value');
+    if (el) {
+      if (offline) {
+        el.innerHTML = '<span class="offline">Zn ' + C.fmt(this.znPrice, 0) + ' / Pb ' + C.fmt(this.pbPrice, 0) + '</span><span class="unit">元/吨</span>';
+      } else {
+        el.innerHTML = 'Zn ' + C.fmt(this.znPrice, 0) + ' / Pb ' + C.fmt(this.pbPrice, 0) + '<span class="unit">元/吨</span>';
+      }
+    }
+    var meta = this.el.querySelector('.price-time');
+    if (meta) meta.textContent = offline ? '离线 · 默认参考价' : '实时行情';
+  };
+
+  ZnpbCalc.prototype.renderInputs = function() {
+    return '<div class="field">' +
+      '<label>计价模式</label>' +
+      '<div class="segmented triple" data-field="mode">' +
+        '<button data-value="zn" class="active">🪙 纯锌矿</button>' +
+        '<button data-value="pb">🪨 纯铅矿</button>' +
+        '<button data-value="mixed">⚒️ 铅锌混合矿</button>' +
+      '</div>' +
+    '</div>' +
+    '<div class="two-col">' +
+      '<div class="field"><label>锌品位 Zn <span>%</span></label><div class="input-wrap"><input type="number" id="znpb_znGrade" data-field="znGrade" value="50" min="25" max="60" step="0.1"><span class="suffix">%</span></div></div>' +
+      '<div class="field"><label>铅品位 Pb <span>%</span></label><div class="input-wrap"><input type="number" id="znpb_pbGrade" data-field="pbGrade" value="60" min="30" max="80" step="0.1"><span class="suffix">%</span></div></div>' +
+    '</div>' +
+    '<div class="two-col">' +
+      '<div class="field"><label>锌 TC <span>元/金属吨</span></label><div class="input-wrap"><input type="number" id="znpb_tcZn" data-field="tcZn" value="5200" min="4000" max="7000" step="100"><span class="suffix">元/金属吨</span></div></div>' +
+      '<div class="field"><label>铅 TC <span>元/金属吨</span></label><div class="input-wrap"><input type="number" id="znpb_tcPb" data-field="tcPb" value="500" min="300" max="800" step="50"><span class="suffix">元/金属吨</span></div></div>' +
+    '</div>' +
+    '<div class="field switch-field"><label>含税价 → 不含税 (÷1.13)</label><label class="switch"><input type="checkbox" id="znpb_taxMode" checked><span class="slider"></span></label></div>';
+  };
+
+  ZnpbCalc.prototype.bindInputs = function() {
+    var self = this;
+    var allInputs = this.el.querySelectorAll('input');
+    allInputs.forEach(function(el) {
+      el.addEventListener('input', function() { self.autoCalc(); });
+      el.addEventListener('change', function() { self.autoCalc(); self.saveDraft(); });
+    });
+    this.el.querySelector('.segmented').addEventListener('click', function(e) {
+      if (e.target.tagName === 'BUTTON') {
+        self.el.querySelectorAll('.segmented button').forEach(function(b) { b.classList.remove('active'); });
+        e.target.classList.add('active');
+        self.autoCalc();
+        self.saveDraft();
+      }
+    });
+  };
+
+  ZnpbCalc.prototype.getInputs = function() {
+    var modeBtn = this.el.querySelector('.segmented button.active');
+    return {
+      mode: modeBtn ? modeBtn.dataset.value : 'zn',
+      znGrade: parseFloat(this.el.querySelector('#znpb_znGrade').value) || 50,
+      pbGrade: parseFloat(this.el.querySelector('#znpb_pbGrade').value) || 60,
+      tcZn: parseFloat(this.el.querySelector('#znpb_tcZn').value) || 5200,
+      tcPb: parseFloat(this.el.querySelector('#znpb_tcPb').value) || 500,
+      taxMode: this.el.querySelector('#znpb_taxMode').checked ? 1 : 0
+    };
+  };
+
+  ZnpbCalc.prototype.calcTotal = function(inputs) {
+    var divider = inputs.taxMode ? 1.13 : 1;
+    var znCoeff = getCoeff(ZN_COEFF, inputs.znGrade);
+    var pbCoeff = getCoeff(PB_COEFF, inputs.pbGrade);
+    var znOre = ((this.znPrice / divider) - inputs.tcZn) * (znCoeff / 100) * (inputs.znGrade / 100);
+    var pbOre = ((this.pbPrice / divider) - inputs.tcPb) * (pbCoeff / 100) * (inputs.pbGrade / 100);
+    var total = 0, formula = '';
+    if (inputs.mode === 'zn') {
+      total = znOre;
+      formula = '1#锌 ' + this.znPrice.toLocaleString() + (inputs.taxMode ? ' ÷1.13' : '') + ' × ' + znCoeff.toFixed(1) + '% × ' + inputs.znGrade.toFixed(1) + '% - TC ' + inputs.tcZn;
+    } else if (inputs.mode === 'pb') {
+      total = pbOre;
+      formula = '1#铅 ' + this.pbPrice.toLocaleString() + (inputs.taxMode ? ' ÷1.13' : '') + ' × ' + pbCoeff.toFixed(1) + '% × ' + inputs.pbGrade.toFixed(1) + '% - TC ' + inputs.tcPb;
+    } else {
+      total = znOre + pbOre;
+      formula = '锌部分: ' + C.fmt(znOre, 0) + ' + 铅部分: ' + C.fmt(pbOre, 0);
+    }
+    return {
+      znCoeff: C.formatPercent(znCoeff),
+      pbCoeff: C.formatPercent(pbCoeff),
+      orePrice: '¥' + C.fmt(total, 0) + ' /吨',
+      formula: formula
+    };
+  };
+
+  ZnpbCalc.prototype.renderResults = function(results, inputs) {
+    var html = '<div class="result-main"><span class="rm-label">精矿单价</span><span class="rm-value">' + results.orePrice + '</span></div>' +
+      '<div class="result-sub"><span>锌系数</span><span>' + results.znCoeff + '</span></div>' +
+      '<div class="result-sub"><span>铅系数</span><span>' + results.pbCoeff + '</span></div>' +
+      '<div class="formula">' + results.formula + '</div>';
+    this.el.querySelector('.result-area').innerHTML = html;
+  };
+
+  ZnpbCalc.prototype.saveDraft = function() {
+    var vals = this.getInputs();
+    var data = { locked: this.state.locked, inputs: vals };
+    C.setStorage(this.id + '_draft', data);
+    C.showToast(this.name + ' 草稿已保存');
+  };
+
+  ZnpbCalc.prototype.loadDraft = function() {
+    var draft = C.getStorage(this.id + '_draft', null);
+    if (!draft) return;
+    if (draft.locked != null) this.state.locked = draft.locked;
+    this.updateLockIcon();
+    if (draft.inputs) {
+      var self = this;
+      for (var k in draft.inputs) {
+        if (k === 'taxMode') {
+          var cb = self.el.querySelector('#znpb_taxMode');
+          if (cb) cb.checked = draft.inputs[k] === 1;
+        } else {
+          var el = self.el.querySelector('#znpb_' + k);
+          if (el) el.value = draft.inputs[k];
+        }
+      }
+    }
+  };
+
+  window.ZnpbCalc = ZnpbCalc;
+})(window);

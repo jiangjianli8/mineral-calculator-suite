@@ -1,1 +1,156 @@
-Ly8ganMvY2FsYy1uaWNrZWwuanMKKGZ1bmN0aW9uKHdpbmRvdykgewogICd1c2Ugc3RyaWN0JzsKCiAgdmFyIEMgPSB3aW5kb3cuTUNTQ29tbW9uOwogIHZhciBCYXNlQ2FsYyA9IHdpbmRvdy5CYXNlQ2FsYzsKCiAgdmFyIExBVEVSSVRFX0NPRUZGID0gW1swLjUsNzVdLFswLjgsNzhdLFsxLjAsODBdLFsxLjIsODJdLFsxLjQsODRdLFsxLjUsODVdLFsxLjYsODZdLFsxLjcsODddLFsxLjgsODhdLFsyLjAsODldLFsyLjIsOTBdLFsyLjUsOTFdLFszLjAsOTJdXTsKICB2YXIgU1VMRklERV9DT0VGRiA9IFtbMC41LDgwXSxbMC44LDgzXSxbMS4wLDg1XSxbMS4yLDg3XSxbMS40LDg4XSxbMS41LDg5XSxbMS42LDkwXSxbMS43LDkwXSxbMS44LDkxXSxbMi4wLDkyXSxbMi4yLDkzXSxbMi41LDk0XSxbMy4wLDk1XV07CgogIGZ1bmN0aW9uIGdldENvZWZmKHRhYmxlLCBncmFkZSkgewogICAgaWYgKGdyYWRlIDw9IHRhYmxlWzBdWzBdKSByZXR1cm4gdGFibGVbMF1bMV07CiAgICBpZiAoZ3JhZGUgPj0gdGFibGVbdGFibGUubGVuZ3RoLTFdWzBdKSByZXR1cm4gdGFibGVbdGFibGUubGVuZ3RoLTFdWzFdOwogICAgZm9yICh2YXIgaSA9IDA7IGkgPCB0YWJsZS5sZW5ndGggLSAxOyBpKyspIHsKICAgICAgaWYgKGdyYWRlID49IHRhYmxlW2ldWzBdICYmIGdyYWRlIDw9IHRhYmxlW2krMV1bMF0pIHsKICAgICAgICB2YXIgdCA9IChncmFkZSAtIHRhYmxlW2ldWzBdKSAvICh0YWJsZVtpKzFdWzBdIC0gdGFibGVbaV1bMF0pOwogICAgICAgIHJldHVybiB0YWJsZVtpXVsxXSArIHQgKiAodGFibGVbaSsxXVsxXSAtIHRhYmxlW2ldWzFdKTsKICAgICAgfQogICAgfQogICAgcmV0dXJuIHRhYmxlW3RhYmxlLmxlbmd0aC0xXVsxXTsKICB9CgogIGZ1bmN0aW9uIE5pY2tlbENhbGMoKSB7CiAgICBCYXNlQ2FsYy5jYWxsKHRoaXMsIHsKICAgICAgaWQ6ICduaWNrZWwnLAogICAgICBuYW1lOiAn6ZWN55+/55+zJywKICAgICAgdGhlbWU6IHsgcHJpbWFyeTogJyM1MGM4NzgnLCBhY2NlbnQ6ICcjYTBmZmMwJywgaWNvbjogJ/CfkponLCB0YWc6ICdOaSDCtyBTTU0gMSPnlLXop6PplY0nIH0sCiAgICAgIGZpZWxkczogW10KICAgIH0pOwogICAgdGhpcy5wcmljZSA9IDEyNzI1MDsKICAgIHRoaXMub3JlVHlwZSA9ICdsYXRlcml0ZSc7CiAgfQoKICBOaWNrZWxDYWxjLnByb3RvdHlwZSA9IE9iamVjdC5jcmVhdGUoQmFzZUNhbGMucHJvdG90eXBlKTsKICBOaWNrZWxDYWxjLnByb3RvdHlwZS5jb25zdHJ1Y3RvciA9IE5pY2tlbENhbGM7CgogIE5pY2tlbENhbGMucHJvdG90eXBlLnVwZGF0ZVByaWNlRGlzcGxheSA9IGZ1bmN0aW9uKG9mZmxpbmUpIHsKICAgIHZhciBlbCA9IHRoaXMuZWwucXVlcnlTZWxlY3RvcignLnByaWNlLXZhbHVlJyk7CiAgICBpZiAoIWVsKSByZXR1cm47CiAgICB2YXIgbGFiZWwgPSB0aGlzLmVsLnF1ZXJ5U2VsZWN0b3IoJy5wcmljZS1uYW1lJyk7CiAgICBpZiAobGFiZWwpIGxhYmVsLnRleHRDb250ZW50ID0gJ1NNTSAxI+eUteino+mVjSc7CiAgICBpZiAob2ZmbGluZSkgewogICAgICBlbC5pbm5lckhUTUwgPSAnPHNwYW4gY2xhc3M9Im9mZmxpbmUiPuemu+e6vyDCtyAnICsgQy5mbXQodGhpcy5wcmljZSwgMCkgKyAnPC9zcGFuPjxzcGFuIGNsYXNzPSJ1bml0Ij7lhYMv5ZCoPC9zcGFuPic7CiAgICB9IGVsc2UgewogICAgICBlbC5pbm5lckhUTUwgPSBDLmZtdCh0aGlzLnByaWNlLCAwKSArICc8c3BhbiBjbGFzcz0idW5pdCI+5YWDL+WQqDwvc3Bhbj4nOwogICAgfQogIH07CgogIE5pY2tlbENhbGMucHJvdG90eXBlLnJlbmRlcklucHV0cyA9IGZ1bmN0aW9uKCkgewogICAgcmV0dXJuICc8ZGl2IGNsYXNzPSJmaWVsZCI+JyArCiAgICAgICc8bGFiZWw+55+/55+z57G75Z6LPC9sYWJlbD4nICsKICAgICAgJzxkaXYgY2xhc3M9InNlZ21lbnRlZCIgZGF0YS1maWVsZD0ib3JlVHlwZSI+JyArCiAgICAgICAgJzxidXR0b24gZGF0YS12YWx1ZT0ibGF0ZXJpdGUiIGNsYXNzPSJhY3RpdmUiPue6ouWcn+mVjeefvzwvYnV0dG9uPicgKwogICAgICAgICc8YnV0dG9uIGRhdGEtdmFsdWU9InN1bGZpZGUiPuehq+WMlumVjeefvzwvYnV0dG9uPicgKwogICAgICAnPC9kaXY+JyArCiAgICAnPC9kaXY+JyArCiAgICAnPGRpdiBjbGFzcz0iZmllbGQiPjxsYWJlbD7plY3lk4HkvY0gTmkgPHNwYW4+JTwvc3Bhbj48L2xhYmVsPjxkaXYgY2xhc3M9ImlucHV0LXdyYXAiPjxpbnB1dCB0eXBlPSJudW1iZXIiIGlkPSJuaWNrZWxfZ3JhZGUiIGRhdGEtZmllbGQ9ImdyYWRlIiB2YWx1ZT0iMS44IiBtaW49IjAuNSIgbWF4PSIzLjAiIHN0ZXA9IjAuMDUiPjxzcGFuIGNsYXNzPSJzdWZmaXgiPiU8L3NwYW4+PC9kaXY+PC9kaXY+JyArCiAgICAnPGRpdiBjbGFzcz0iZmllbGQiPjxsYWJlbD7lhrbngrzliqDlt6XotLkgVEMgPHNwYW4+5YWDL+WQqDwvc3Bhbj48L2xhYmVsPjxkaXYgY2xhc3M9ImlucHV0LXdyYXAiPjxpbnB1dCB0eXBlPSJudW1iZXIiIGlkPSJuaWNrZWxfdGMiIGRhdGEtZmllbGQ9InRjIiB2YWx1ZT0iODAwIiBtaW49IjAiIG1heD0iNTAwMCIgc3RlcD0iNTAiPjxzcGFuIGNsYXNzPSJzdWZmaXgiPuWFgy/lkKg8L3NwYW4+PC9kaXY+PC9kaXY+JyArCiAgICAnPGRpdiBjbGFzcz0idHdvLWNvbCI+JyArCiAgICAgICc8ZGl2IGNsYXNzPSJmaWVsZCI+PGxhYmVsPuaxh+eOhyBVU0QvQ05ZPC9sYWJlbD48ZGl2IGNsYXNzPSJpbnB1dC13cmFwIj48aW5wdXQgdHlwZT0ibnVtYmVyIiBpZD0ibmlja2VsX2V4Y2hhbmdlUmF0ZSIgZGF0YS1maWVsZD0iZXhjaGFuZ2VSYXRlIiB2YWx1ZT0iNy4yNSIgbWluPSI2LjUiIG1heD0iOC4wIiBzdGVwPSIwLjAxIj48L2Rpdj48L2Rpdj4nICsKICAgICAgJzxkaXYgY2xhc3M9ImZpZWxkIj48bGFiZWw+5rC05YiGIEjigoJPIDxzcGFuPiU8L3NwYW4+PC9sYWJlbD48ZGl2IGNsYXNzPSJpbnB1dC13cmFwIj48aW5wdXQgdHlwZT0ibnVtYmVyIiBpZD0ibmlja2VsX21vaXN0dXJlIiBkYXRhLWZpZWxkPSJtb2lzdHVyZSIgdmFsdWU9IjM1IiBtaW49IjIwIiBtYXg9IjQ1IiBzdGVwPSIxIj48c3BhbiBjbGFzcz0ic3VmZml4Ij4lPC9zcGFuPjwvZGl2PjwvZGl2PicgKwogICAgJzwvZGl2PicgKwogICAgJzxkaXYgY2xhc3M9ImZpZWxkIHN3aXRjaC1maWVsZCI+PGxhYmVsPuWQq+eojuaooeW8jyAow7cxLjEzKTwvbGFiZWw+PGxhYmVsIGNsYXNzPSJzd2l0Y2giPjxpbnB1dCB0eXBlPSJjaGVja2JveCIgaWQ9Im5pY2tlbF90YXhNb2RlIiBjaGVja2VkPjxzcGFuIGNsYXNzPSJzbGlkZXIiPjwvc3Bhbj48L2xhYmVsPjwvZGl2Pic7CiAgfTsKCiAgTmlja2VsQ2FsYy5wcm90b3R5cGUuYmluZElucHV0cyA9IGZ1bmN0aW9uKCkgewogICAgdmFyIHNlbGYgPSB0aGlzOwogICAgdmFyIGFsbElucHV0cyA9IHRoaXMuZWwucXVlcnlTZWxlY3RvckFsbCgnaW5wdXQnKTsKICAgIGFsbElucHV0cy5mb3JFYWNoKGZ1bmN0aW9uKGVsKSB7CiAgICAgIGVsLmFkZEV2ZW50TGlzdGVuZXIoJ2lucHV0JywgZnVuY3Rpb24oKSB7IHNlbGYuYXV0b0NhbGMoKTsgfSk7CiAgICAgIGVsLmFkZEV2ZW50TGlzdGVuZXIoJ2NoYW5nZScsIGZ1bmN0aW9uKCkgeyBzZWxmLmF1dG9DYWxjKCk7IHNlbGYuc2F2ZURyYWZ0KCk7IH0pOwogICAgfSk7CiAgICB0aGlzLmVsLnF1ZXJ5U2VsZWN0b3IoJy5zZWdtZW50ZWQnKS5hZGRFdmVudExpc3RlbmVyKCdjbGljaycsIGZ1bmN0aW9uKGUpIHsKICAgICAgaWYgKGUudGFyZ2V0LnRhZ05hbWUgPT09ICdCVVRUT04nKSB7CiAgICAgICAgc2VsZi5lbC5xdWVyeVNlbGVjdG9yQWxsKCcuc2VnbWVudGVkIGJ1dHRvbicpLmZvckVhY2goZnVuY3Rpb24oYikgeyBiLmNsYXNzTGlzdC5yZW1vdmUoJ2FjdGl2ZScpOyB9KTsKICAgICAgICBlLnRhcmdldC5jbGFzc0xpc3QuYWRkKCdhY3RpdmUnKTsKICAgICAgICBzZWxmLm9yZVR5cGUgPSBlLnRhcmdldC5kYXRhc2V0LnZhbHVlOwogICAgICAgIHNlbGYuYXV0b0NhbGMoKTsKICAgICAgICBzZWxmLnNhdmVEcmFmdCgpOwogICAgICB9CiAgICB9KTsKICB9OwoKICBOaWNrZWxDYWxjLnByb3RvdHlwZS5nZXRJbnB1dHMgPSBmdW5jdGlvbigpIHsKICAgIHZhciBvcmVUeXBlQnRuID0gdGhpcy5lbC5xdWVyeVNlbGVjdG9yKCcuc2VnbWVudGVkIGJ1dHRvbi5hY3RpdmUnKTsKICAgIHZhciBvcmVUeXBlID0gb3JlVHlwZUJ0biA/IG9yZVR5cGVCdG4uZGF0YXNldC52YWx1ZSA6ICdsYXRlcml0ZSc7CiAgICByZXR1cm4gewogICAgICBvcmVUeXBlOiBvcmVUeXBlLAogICAgICBncmFkZTogcGFyc2VGbG9hdCh0aGlzLmVsLnF1ZXJ5U2VsZWN0b3IoJyNuaWNrZWxfZ3JhZGUnKS52YWx1ZSkgfHwgMS44LAogICAgICB0YzogcGFyc2VGbG9hdCh0aGlzLmVsLnF1ZXJ5U2VsZWN0b3IoJyNuaWNrZWxfdGMnKS52YWx1ZSkgfHwgODAwLAogICAgICBleGNoYW5nZVJhdGU6IHBhcnNlRmxvYXQodGhpcy5lbC5xdWVyeVNlbGVjdG9yKCcjbmlja2VsX2V4Y2hhbmdlUmF0ZScpLnZhbHVlKSB8fCA3LjI1LAogICAgICBtb2lzdHVyZTogcGFyc2VGbG9hdCh0aGlzLmVsLnF1ZXJ5U2VsZWN0b3IoJyNuaWNrZWxfbW9pc3R1cmUnKS52YWx1ZSkgfHwgMzUsCiAgICAgIHRheE1vZGU6IHRoaXMuZWwucXVlcnlTZWxlY3RvcignI25pY2tlbF90YXhNb2RlJykuY2hlY2tlZCA/IDEgOiAwCiAgICB9OwogIH07CgogIE5pY2tlbENhbGMucHJvdG90eXBlLmNhbGNUb3RhbCA9IGZ1bmN0aW9uKGlucHV0cykgewogICAgdmFyIHRhYmxlID0gaW5wdXRzLm9yZVR5cGUgPT09ICdsYXRlcml0ZScgPyBMQVRFUklURV9DT0VGRiA6IFNVTEZJREVfQ09FRkY7CiAgICB2YXIgY29lZmYgPSBnZXRDb2VmZih0YWJsZSwgaW5wdXRzLmdyYWRlKTsKICAgIHZhciBkaXZpZGVyID0gaW5wdXRzLnRheE1vZGUgPyAxLjEzIDogMTsKICAgIHZhciBtZXRhbFZhbHVlOwogICAgaWYgKGlucHV0cy5vcmVUeXBlID09PSAnbGF0ZXJpdGUnKSB7CiAgICAgIG1ldGFsVmFsdWUgPSAodGhpcy5wcmljZSAvIGRpdmlkZXIpICogKGlucHV0cy5ncmFkZSAvIDEwMCkgKiAoY29lZmYgLyAxMDApICogKDEgLSBpbnB1dHMubW9pc3R1cmUgLyAxMDApOwogICAgfSBlbHNlIHsKICAgICAgbWV0YWxWYWx1ZSA9ICh0aGlzLnByaWNlIC8gZGl2aWRlcikgKiAoaW5wdXRzLmdyYWRlIC8gMTAwKSAqIChjb2VmZiAvIDEwMCk7CiAgICB9CiAgICB2YXIgb3JlUHJpY2UgPSBNYXRoLm1heCgwLCBtZXRhbFZhbHVlIC0gaW5wdXRzLnRjKTsKICAgIHJldHVybiB7CiAgICAgIGNvZWZmOiBDLmZvcm1hdFBlcmNlbnQoY29lZmYpLAogICAgICBvcmVQcmljZTogJ8KlJyArIEMuZm10KG9yZVByaWNlLCAwKSArICcgL+WQqCcsCiAgICAgIGZvcm11bGE6ICdTTU0gJyArIHRoaXMucHJpY2UudG9Mb2NhbGVTdHJpbmcoKSArIChpbnB1dHMudGF4TW9kZSA/ICcgw7cxLjEzJyA6ICcnKSArICcgw5cgJyArIGlucHV0cy5ncmFkZS50b0ZpeGVkKDIpICsgJyUgw5cgJyArIGNvZWZmLnRvRml4ZWQoMSkgKyAnJScgKyAoaW5wdXRzLm9yZVR5cGUgPT09ICdsYXRlcml0ZScgPyAnIMOXICgxLScgKyBpbnB1dHMubW9pc3R1cmUgKyAnJeawtOWIhiknIDogJycpICsgJyAtIFRDICcgKyBpbnB1dHMudGMKICAgIH07CiAgfTsKCiAgTmlja2VsQ2FsYy5wcm90b3R5cGUucmVuZGVyUmVzdWx0cyA9IGZ1bmN0aW9uKHJlc3VsdHMsIGlucHV0cykgewogICAgdmFyIGh0bWwgPSAnPGRpdiBjbGFzcz0icmVzdWx0LW1haW4iPjxzcGFuIGNsYXNzPSJybS1sYWJlbCI+6ZWN55+/55+z5Y2V5Lu3PC9zcGFuPjxzcGFuIGNsYXNzPSJybS12YWx1ZSI+JyArIHJlc3VsdHMub3JlUHJpY2UgKyAnPC9zcGFuPjwvZGl2PicgKwogICAgICAnPGRpdiBjbGFzcz0icmVzdWx0LXN1YiI+PHNwYW4+6K6h5Lu357O75pWwPC9zcGFuPjxzcGFuPicgKyByZXN1bHRzLmNvZWZmICsgJzwvc3Bhbj48L2Rpdj4nICsKICAgICAgJzxkaXYgY2xhc3M9ImZvcm11bGEiPicgKyByZXN1bHRzLmZvcm11bGEgKyAnPC9kaXY+JzsKICAgIHRoaXMuZWwucXVlcnlTZWxlY3RvcignLnJlc3VsdC1hcmVhJykuaW5uZXJIVE1MID0gaHRtbDsKICB9OwoKICBOaWNrZWxDYWxjLnByb3RvdHlwZS5zYXZlRHJhZnQgPSBmdW5jdGlvbigpIHsKICAgIHZhciB2YWxzID0gdGhpcy5nZXRJbnB1dHMoKTsKICAgIHZhciBkYXRhID0geyBsb2NrZWQ6IHRoaXMuc3RhdGUubG9ja2VkLCBpbnB1dHM6IHZhbHMsIG9yZVR5cGU6IHRoaXMub3JlVHlwZSB9OwogICAgQy5zZXRTdG9yYWdlKHRoaXMuaWQgKyAnX2RyYWZ0JywgZGF0YSk7CiAgICBDLnNob3dUb2FzdCh0aGlzLm5hbWUgKyAnIOiNieeov+W3suS/neWtmCcpOwogIH07CgogIE5pY2tlbENhbGMucHJvdG90eXBlLmxvYWREcmFmdCA9IGZ1bmN0aW9uKCkgewogICAgdmFyIGRyYWZ0ID0gQy5nZXRTdG9yYWdlKHRoaXMuaWQgKyAnX2RyYWZ0JywgbnVsbCk7CiAgICBpZiAoIWRyYWZ0KSByZXR1cm47CiAgICBpZiAoZHJhZnQubG9ja2VkICE9IG51bGwpIHRoaXMuc3RhdGUubG9ja2VkID0gZHJhZnQubG9ja2VkOwogICAgdGhpcy51cGRhdGVMb2NrSWNvbigpOwogICAgaWYgKGRyYWZ0Lm9yZVR5cGUpIHsKICAgICAgdGhpcy5vcmVUeXBlID0gZHJhZnQub3JlVHlwZTsKICAgICAgdmFyIHNlbGYgPSB0aGlzOwogICAgICB0aGlzLmVsLnF1ZXJ5U2VsZWN0b3JBbGwoJy5zZWdtZW50ZWQgYnV0dG9uJykuZm9yRWFjaChmdW5jdGlvbihiKSB7CiAgICAgICAgYi5jbGFzc0xpc3QudG9nZ2xlKCdhY3RpdmUnLCBiLmRhdGFzZXQudmFsdWUgPT09IGRyYWZ0Lm9yZVR5cGUpOwogICAgICB9KTsKICAgIH0KICAgIGlmIChkcmFmdC5pbnB1dHMpIHsKICAgICAgdmFyIHNlbGYgPSB0aGlzOwogICAgICBmb3IgKHZhciBrIGluIGRyYWZ0LmlucHV0cykgewogICAgICAgIGlmIChrID09PSAndGF4TW9kZScpIHsKICAgICAgICAgIHZhciBjYiA9IHNlbGYuZWwucXVlcnlTZWxlY3RvcignI25pY2tlbF90YXhNb2RlJyk7CiAgICAgICAgICBpZiAoY2IpIGNiLmNoZWNrZWQgPSBkcmFmdC5pbnB1dHNba10gPT09IDE7CiAgICAgICAgfSBlbHNlIHsKICAgICAgICAgIHZhciBlbCA9IHNlbGYuZWwucXVlcnlTZWxlY3RvcignI25pY2tlbF8nICsgayk7CiAgICAgICAgICBpZiAoZWwpIGVsLnZhbHVlID0gZHJhZnQuaW5wdXRzW2tdOwogICAgICAgIH0KICAgICAgfQogICAgfQogIH07CgogIHdpbmRvdy5OaWNrZWxDYWxjID0gTmlja2VsQ2FsYzsKfSkod2luZG93KTsK
+// js/calc-nickel.js
+(function(window) {
+  'use strict';
+
+  var C = window.MCSCommon;
+  var BaseCalc = window.BaseCalc;
+
+  var LATERITE_COEFF = [[0.5,75],[0.8,78],[1.0,80],[1.2,82],[1.4,84],[1.5,85],[1.6,86],[1.7,87],[1.8,88],[2.0,89],[2.2,90],[2.5,91],[3.0,92]];
+  var SULFIDE_COEFF = [[0.5,80],[0.8,83],[1.0,85],[1.2,87],[1.4,88],[1.5,89],[1.6,90],[1.7,90],[1.8,91],[2.0,92],[2.2,93],[2.5,94],[3.0,95]];
+
+  function getCoeff(table, grade) {
+    if (grade <= table[0][0]) return table[0][1];
+    if (grade >= table[table.length-1][0]) return table[table.length-1][1];
+    for (var i = 0; i < table.length - 1; i++) {
+      if (grade >= table[i][0] && grade <= table[i+1][0]) {
+        var t = (grade - table[i][0]) / (table[i+1][0] - table[i][0]);
+        return table[i][1] + t * (table[i+1][1] - table[i][1]);
+      }
+    }
+    return table[table.length-1][1];
+  }
+
+  function NickelCalc() {
+    BaseCalc.call(this, {
+      id: 'nickel',
+      name: '镍矿石',
+      theme: { primary: '#50c878', accent: '#a0ffc0', icon: '💚', tag: 'Ni · SMM 1#电解镍' },
+      fields: []
+    });
+    this.price = 127250;
+    this.oreType = 'laterite';
+  }
+
+  NickelCalc.prototype = Object.create(BaseCalc.prototype);
+  NickelCalc.prototype.constructor = NickelCalc;
+
+  NickelCalc.prototype.updatePriceDisplay = function(offline) {
+    var el = this.el.querySelector('.price-value');
+    if (!el) return;
+    var label = this.el.querySelector('.price-name');
+    if (label) label.textContent = 'SMM 1#电解镍';
+    if (offline) {
+      el.innerHTML = '<span class="offline">离线 · ' + C.fmt(this.price, 0) + '</span><span class="unit">元/吨</span>';
+    } else {
+      el.innerHTML = C.fmt(this.price, 0) + '<span class="unit">元/吨</span>';
+    }
+  };
+
+  NickelCalc.prototype.renderInputs = function() {
+    return '<div class="field">' +
+      '<label>矿石类型</label>' +
+      '<div class="segmented" data-field="oreType">' +
+        '<button data-value="laterite" class="active">红土镍矿</button>' +
+        '<button data-value="sulfide">硫化镍矿</button>' +
+      '</div>' +
+    '</div>' +
+    '<div class="field"><label>镍品位 Ni <span>%</span></label><div class="input-wrap"><input type="number" id="nickel_grade" data-field="grade" value="1.8" min="0.5" max="3.0" step="0.05"><span class="suffix">%</span></div></div>' +
+    '<div class="field"><label>冶炼加工费 TC <span>元/吨</span></label><div class="input-wrap"><input type="number" id="nickel_tc" data-field="tc" value="800" min="0" max="5000" step="50"><span class="suffix">元/吨</span></div></div>' +
+    '<div class="two-col">' +
+      '<div class="field"><label>汇率 USD/CNY</label><div class="input-wrap"><input type="number" id="nickel_exchangeRate" data-field="exchangeRate" value="7.25" min="6.5" max="8.0" step="0.01"></div></div>' +
+      '<div class="field"><label>水分 H₂O <span>%</span></label><div class="input-wrap"><input type="number" id="nickel_moisture" data-field="moisture" value="35" min="20" max="45" step="1"><span class="suffix">%</span></div></div>' +
+    '</div>' +
+    '<div class="field switch-field"><label>含税模式 (÷1.13)</label><label class="switch"><input type="checkbox" id="nickel_taxMode" checked><span class="slider"></span></label></div>';
+  };
+
+  NickelCalc.prototype.bindInputs = function() {
+    var self = this;
+    var allInputs = this.el.querySelectorAll('input');
+    allInputs.forEach(function(el) {
+      el.addEventListener('input', function() { self.autoCalc(); });
+      el.addEventListener('change', function() { self.autoCalc(); self.saveDraft(); });
+    });
+    this.el.querySelector('.segmented').addEventListener('click', function(e) {
+      if (e.target.tagName === 'BUTTON') {
+        self.el.querySelectorAll('.segmented button').forEach(function(b) { b.classList.remove('active'); });
+        e.target.classList.add('active');
+        self.oreType = e.target.dataset.value;
+        self.autoCalc();
+        self.saveDraft();
+      }
+    });
+  };
+
+  NickelCalc.prototype.getInputs = function() {
+    var oreTypeBtn = this.el.querySelector('.segmented button.active');
+    var oreType = oreTypeBtn ? oreTypeBtn.dataset.value : 'laterite';
+    return {
+      oreType: oreType,
+      grade: parseFloat(this.el.querySelector('#nickel_grade').value) || 1.8,
+      tc: parseFloat(this.el.querySelector('#nickel_tc').value) || 800,
+      exchangeRate: parseFloat(this.el.querySelector('#nickel_exchangeRate').value) || 7.25,
+      moisture: parseFloat(this.el.querySelector('#nickel_moisture').value) || 35,
+      taxMode: this.el.querySelector('#nickel_taxMode').checked ? 1 : 0
+    };
+  };
+
+  NickelCalc.prototype.calcTotal = function(inputs) {
+    var table = inputs.oreType === 'laterite' ? LATERITE_COEFF : SULFIDE_COEFF;
+    var coeff = getCoeff(table, inputs.grade);
+    var divider = inputs.taxMode ? 1.13 : 1;
+    var metalValue;
+    if (inputs.oreType === 'laterite') {
+      metalValue = (this.price / divider) * (inputs.grade / 100) * (coeff / 100) * (1 - inputs.moisture / 100);
+    } else {
+      metalValue = (this.price / divider) * (inputs.grade / 100) * (coeff / 100);
+    }
+    var orePrice = Math.max(0, metalValue - inputs.tc);
+    return {
+      coeff: C.formatPercent(coeff),
+      orePrice: '¥' + C.fmt(orePrice, 0) + ' /吨',
+      formula: 'SMM ' + this.price.toLocaleString() + (inputs.taxMode ? ' ÷1.13' : '') + ' × ' + inputs.grade.toFixed(2) + '% × ' + coeff.toFixed(1) + '%' + (inputs.oreType === 'laterite' ? ' × (1-' + inputs.moisture + '%水分)' : '') + ' - TC ' + inputs.tc
+    };
+  };
+
+  NickelCalc.prototype.renderResults = function(results, inputs) {
+    var html = '<div class="result-main"><span class="rm-label">镍矿石单价</span><span class="rm-value">' + results.orePrice + '</span></div>' +
+      '<div class="result-sub"><span>计价系数</span><span>' + results.coeff + '</span></div>' +
+      '<div class="formula">' + results.formula + '</div>';
+    this.el.querySelector('.result-area').innerHTML = html;
+  };
+
+  NickelCalc.prototype.saveDraft = function() {
+    var vals = this.getInputs();
+    var data = { locked: this.state.locked, inputs: vals, oreType: this.oreType };
+    C.setStorage(this.id + '_draft', data);
+    C.showToast(this.name + ' 草稿已保存');
+  };
+
+  NickelCalc.prototype.loadDraft = function() {
+    var draft = C.getStorage(this.id + '_draft', null);
+    if (!draft) return;
+    if (draft.locked != null) this.state.locked = draft.locked;
+    this.updateLockIcon();
+    if (draft.oreType) {
+      this.oreType = draft.oreType;
+      var self = this;
+      this.el.querySelectorAll('.segmented button').forEach(function(b) {
+        b.classList.toggle('active', b.dataset.value === draft.oreType);
+      });
+    }
+    if (draft.inputs) {
+      var self = this;
+      for (var k in draft.inputs) {
+        if (k === 'taxMode') {
+          var cb = self.el.querySelector('#nickel_taxMode');
+          if (cb) cb.checked = draft.inputs[k] === 1;
+        } else {
+          var el = self.el.querySelector('#nickel_' + k);
+          if (el) el.value = draft.inputs[k];
+        }
+      }
+    }
+  };
+
+  window.NickelCalc = NickelCalc;
+})(window);

@@ -1,1 +1,109 @@
-Ly8ganMvY29tbW9uLmpzIC0g55+/6ZO+6YCa57u85ZCI6K6h5Lu35bel5YW35YWs5YWx5bel5YW35bqTCihmdW5jdGlvbih3aW5kb3cpIHsKICAndXNlIHN0cmljdCc7CgogIHZhciBQUkVGSVggPSAnbWNzXyc7CgogIGZ1bmN0aW9uIGZtdChuLCBkKSB7CiAgICBpZiAobiA9PSBudWxsIHx8IGlzTmFOKG4pKSByZXR1cm4gJy0tJzsKICAgIHJldHVybiBuLnRvTG9jYWxlU3RyaW5nKCd6aC1DTicsIHsgbWluaW11bUZyYWN0aW9uRGlnaXRzOiBkLCBtYXhpbXVtRnJhY3Rpb25EaWdpdHM6IGQgfSk7CiAgfQoKICBmdW5jdGlvbiBmb3JtYXRNb25leShuKSB7CiAgICByZXR1cm4gZm10KG4sIDIpOwogIH0KCiAgZnVuY3Rpb24gZm9ybWF0UGVyY2VudChuKSB7CiAgICByZXR1cm4gZm10KG4sIDIpICsgJyUnOwogIH0KCiAgZnVuY3Rpb24gZGVib3VuY2UoZm4sIHdhaXQpIHsKICAgIHZhciB0OwogICAgcmV0dXJuIGZ1bmN0aW9uKCkgewogICAgICB2YXIgY3R4ID0gdGhpcywgYXJncyA9IGFyZ3VtZW50czsKICAgICAgY2xlYXJUaW1lb3V0KHQpOwogICAgICB0ID0gc2V0VGltZW91dChmdW5jdGlvbigpIHsgZm4uYXBwbHkoY3R4LCBhcmdzKTsgfSwgd2FpdCk7CiAgICB9OwogIH0KCiAgZnVuY3Rpb24gZ2V0U3RvcmFnZShrZXksIGZhbGxiYWNrKSB7CiAgICB0cnkgewogICAgICB2YXIgdiA9IGxvY2FsU3RvcmFnZS5nZXRJdGVtKFBSRUZJWCArIGtleSk7CiAgICAgIHJldHVybiB2ID8gSlNPTi5wYXJzZSh2KSA6IGZhbGxiYWNrOwogICAgfSBjYXRjaCAoZSkgewogICAgICByZXR1cm4gZmFsbGJhY2s7CiAgICB9CiAgfQoKICBmdW5jdGlvbiBzZXRTdG9yYWdlKGtleSwgdmFsdWUpIHsKICAgIHRyeSB7IGxvY2FsU3RvcmFnZS5zZXRJdGVtKFBSRUZJWCArIGtleSwgSlNPTi5zdHJpbmdpZnkodmFsdWUpKTsgfSBjYXRjaCAoZSkge30KICB9CgogIGZ1bmN0aW9uIHJlbW92ZVN0b3JhZ2Uoa2V5KSB7CiAgICB0cnkgeyBsb2NhbFN0b3JhZ2UucmVtb3ZlSXRlbShQUkVGSVggKyBrZXkpOyB9IGNhdGNoIChlKSB7fQogIH0KCiAgZnVuY3Rpb24gY2xlYXJBbGxTdG9yYWdlKCkgewogICAgdHJ5IHsKICAgICAgT2JqZWN0LmtleXMobG9jYWxTdG9yYWdlKS5mb3JFYWNoKGZ1bmN0aW9uKGspIHsKICAgICAgICBpZiAoay5pbmRleE9mKFBSRUZJWCkgPT09IDApIGxvY2FsU3RvcmFnZS5yZW1vdmVJdGVtKGspOwogICAgICB9KTsKICAgIH0gY2F0Y2ggKGUpIHt9CiAgfQoKICBmdW5jdGlvbiBjb3B5VGV4dCh0ZXh0LCBjYikgewogICAgaWYgKG5hdmlnYXRvci5jbGlwYm9hcmQpIHsKICAgICAgbmF2aWdhdG9yLmNsaXBib2FyZC53cml0ZVRleHQodGV4dCkudGhlbihmdW5jdGlvbigpIHsgY2IgJiYgY2IodHJ1ZSk7IH0sIGZ1bmN0aW9uKCkgeyBjYiAmJiBjYihmYWxzZSk7IH0pOwogICAgfSBlbHNlIHsKICAgICAgdmFyIHRhID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgndGV4dGFyZWEnKTsKICAgICAgdGEudmFsdWUgPSB0ZXh0OwogICAgICBkb2N1bWVudC5ib2R5LmFwcGVuZENoaWxkKHRhKTsKICAgICAgdGEuc2VsZWN0KCk7CiAgICAgIHRyeSB7IGRvY3VtZW50LmV4ZWNDb21tYW5kKCdjb3B5Jyk7IGNiICYmIGNiKHRydWUpOyB9IGNhdGNoIChlKSB7IGNiICYmIGNiKGZhbHNlKTsgfQogICAgICBkb2N1bWVudC5ib2R5LnJlbW92ZUNoaWxkKHRhKTsKICAgIH0KICB9CgogIGZ1bmN0aW9uIHZhbGlkYXRlUmFuZ2UoaW5wdXQsIG1pbiwgbWF4KSB7CiAgICB2YXIgdiA9IHBhcnNlRmxvYXQoaW5wdXQudmFsdWUpOwogICAgdmFyIGVyciA9IGlucHV0LnBhcmVudEVsZW1lbnQucXVlcnlTZWxlY3RvcignLmVycm9yLXRpcCcpIHx8IChpbnB1dC5jbG9zZXN0KCcuZmllbGQnKSA/IGlucHV0LmNsb3Nlc3QoJy5maWVsZCcpLnF1ZXJ5U2VsZWN0b3IoJy5lcnJvci10aXAnKSA6IG51bGwpOwogICAgaWYgKGlzTmFOKHYpIHx8IChtaW4gIT0gbnVsbCAmJiB2IDwgbWluKSB8fCAobWF4ICE9IG51bGwgJiYgdiA+IG1heCkpIHsKICAgICAgaW5wdXQuY2xhc3NMaXN0LmFkZCgnZXJyb3InKTsKICAgICAgaWYgKGVycikgZXJyLnN0eWxlLmRpc3BsYXkgPSAnYmxvY2snOwogICAgICByZXR1cm4gZmFsc2U7CiAgICB9CiAgICBpbnB1dC5jbGFzc0xpc3QucmVtb3ZlKCdlcnJvcicpOwogICAgaWYgKGVycikgZXJyLnN0eWxlLmRpc3BsYXkgPSAnbm9uZSc7CiAgICByZXR1cm4gdHJ1ZTsKICB9CgogIGZ1bmN0aW9uIHNob3dUb2FzdChtc2csIGR1cmF0aW9uKSB7CiAgICBkdXJhdGlvbiA9IGR1cmF0aW9uIHx8IDE1MDA7CiAgICB2YXIgZWwgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnbWNzLXRvYXN0Jyk7CiAgICBpZiAoIWVsKSB7CiAgICAgIGVsID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnZGl2Jyk7CiAgICAgIGVsLmlkID0gJ21jcy10b2FzdCc7CiAgICAgIGVsLmNsYXNzTmFtZSA9ICdtY3MtdG9hc3QnOwogICAgICBkb2N1bWVudC5ib2R5LmFwcGVuZENoaWxkKGVsKTsKICAgIH0KICAgIGVsLnRleHRDb250ZW50ID0gbXNnOwogICAgZWwuY2xhc3NMaXN0LmFkZCgnc2hvdycpOwogICAgY2xlYXJUaW1lb3V0KGVsLl90KTsKICAgIGVsLl90ID0gc2V0VGltZW91dChmdW5jdGlvbigpIHsgZWwuY2xhc3NMaXN0LnJlbW92ZSgnc2hvdycpOyB9LCBkdXJhdGlvbik7CiAgfQoKICB3aW5kb3cuTUNTQ29tbW9uID0gewogICAgZm10OiBmbXQsCiAgICBmb3JtYXRNb25leTogZm9ybWF0TW9uZXksCiAgICBmb3JtYXRQZXJjZW50OiBmb3JtYXRQZXJjZW50LAogICAgZGVib3VuY2U6IGRlYm91bmNlLAogICAgZ2V0U3RvcmFnZTogZ2V0U3RvcmFnZSwKICAgIHNldFN0b3JhZ2U6IHNldFN0b3JhZ2UsCiAgICByZW1vdmVTdG9yYWdlOiByZW1vdmVTdG9yYWdlLAogICAgY2xlYXJBbGxTdG9yYWdlOiBjbGVhckFsbFN0b3JhZ2UsCiAgICBjb3B5VGV4dDogY29weVRleHQsCiAgICB2YWxpZGF0ZVJhbmdlOiB2YWxpZGF0ZVJhbmdlLAogICAgc2hvd1RvYXN0OiBzaG93VG9hc3QsCiAgICBQUkVGSVg6IFBSRUZJWAogIH07Cn0pKHdpbmRvdyk7Cg==
+// js/common.js - 矿链通综合计价工具公共工具库
+(function(window) {
+  'use strict';
+
+  var PREFIX = 'mcs_';
+
+  function fmt(n, d) {
+    if (n == null || isNaN(n)) return '--';
+    return n.toLocaleString('zh-CN', { minimumFractionDigits: d, maximumFractionDigits: d });
+  }
+
+  function formatMoney(n) {
+    return fmt(n, 2);
+  }
+
+  function formatPercent(n) {
+    return fmt(n, 2) + '%';
+  }
+
+  function debounce(fn, wait) {
+    var t;
+    return function() {
+      var ctx = this, args = arguments;
+      clearTimeout(t);
+      t = setTimeout(function() { fn.apply(ctx, args); }, wait);
+    };
+  }
+
+  function getStorage(key, fallback) {
+    try {
+      var v = localStorage.getItem(PREFIX + key);
+      return v ? JSON.parse(v) : fallback;
+    } catch (e) {
+      return fallback;
+    }
+  }
+
+  function setStorage(key, value) {
+    try { localStorage.setItem(PREFIX + key, JSON.stringify(value)); } catch (e) {}
+  }
+
+  function removeStorage(key) {
+    try { localStorage.removeItem(PREFIX + key); } catch (e) {}
+  }
+
+  function clearAllStorage() {
+    try {
+      Object.keys(localStorage).forEach(function(k) {
+        if (k.indexOf(PREFIX) === 0) localStorage.removeItem(k);
+      });
+    } catch (e) {}
+  }
+
+  function copyText(text, cb) {
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(text).then(function() { cb && cb(true); }, function() { cb && cb(false); });
+    } else {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand('copy'); cb && cb(true); } catch (e) { cb && cb(false); }
+      document.body.removeChild(ta);
+    }
+  }
+
+  function validateRange(input, min, max) {
+    var v = parseFloat(input.value);
+    var err = input.parentElement.querySelector('.error-tip') || (input.closest('.field') ? input.closest('.field').querySelector('.error-tip') : null);
+    if (isNaN(v) || (min != null && v < min) || (max != null && v > max)) {
+      input.classList.add('error');
+      if (err) err.style.display = 'block';
+      return false;
+    }
+    input.classList.remove('error');
+    if (err) err.style.display = 'none';
+    return true;
+  }
+
+  function showToast(msg, duration) {
+    duration = duration || 1500;
+    var el = document.getElementById('mcs-toast');
+    if (!el) {
+      el = document.createElement('div');
+      el.id = 'mcs-toast';
+      el.className = 'mcs-toast';
+      document.body.appendChild(el);
+    }
+    el.textContent = msg;
+    el.classList.add('show');
+    clearTimeout(el._t);
+    el._t = setTimeout(function() { el.classList.remove('show'); }, duration);
+  }
+
+  window.MCSCommon = {
+    fmt: fmt,
+    formatMoney: formatMoney,
+    formatPercent: formatPercent,
+    debounce: debounce,
+    getStorage: getStorage,
+    setStorage: setStorage,
+    removeStorage: removeStorage,
+    clearAllStorage: clearAllStorage,
+    copyText: copyText,
+    validateRange: validateRange,
+    showToast: showToast,
+    PREFIX: PREFIX
+  };
+})(window);

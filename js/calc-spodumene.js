@@ -1,1 +1,105 @@
-Ly8ganMvY2FsYy1zcG9kdW1lbmUuanMKKGZ1bmN0aW9uKHdpbmRvdykgewogICd1c2Ugc3RyaWN0JzsKCiAgdmFyIEMgPSB3aW5kb3cuTUNTQ29tbW9uOwogIHZhciBCYXNlQ2FsYyA9IHdpbmRvdy5CYXNlQ2FsYzsKCiAgdmFyIFRJRVJTID0gWwogICAgeyBsbzogMiwgaGk6IDIuOTksIGQ6IDI2MDAwLCBsYWJlbDogJzIuMCUtMi45OSUnLCBjbHM6ICd0YWctMScgfSwKICAgIHsgbG86IDMsIGhpOiAzLjQ5LCBkOiAzMjAwMCwgbGFiZWw6ICczLjAlLTMuNDklJywgY2xzOiAndGFnLTInIH0sCiAgICB7IGxvOiAzLjUsIGhpOiAzLjk5LCBkOiAyODUwMCwgbGFiZWw6ICczLjUlLTMuOTklJywgY2xzOiAndGFnLTMnIH0sCiAgICB7IGxvOiA0LCBoaTogNC40OSwgZDogMjcwMDAsIGxhYmVsOiAnNC4wJS00LjQ5JScsIGNsczogJ3RhZy00JyB9LAogICAgeyBsbzogNC41LCBoaTogNC45OSwgZDogMjQwMDAsIGxhYmVsOiAnNC41JS00Ljk5JScsIGNsczogJ3RhZy01JyB9LAogICAgeyBsbzogNSwgaGk6IDk5Ljk5LCBkOiAyMzAwMCwgbGFiZWw6ICc+PTUuMCUnLCBjbHM6ICd0YWctNicgfQogIF07CgogIGZ1bmN0aW9uIFNwb2R1bWVuZUNhbGMoKSB7CiAgICBCYXNlQ2FsYy5jYWxsKHRoaXMsIHsKICAgICAgaWQ6ICdzcG9kdW1lbmUnLAogICAgICBuYW1lOiAn6ZSC6L6J55+zJywKICAgICAgdGhlbWU6IHsgcHJpbWFyeTogJyM5YjAwZmYnLCBhY2NlbnQ6ICcjMDBmMGZmJywgaWNvbjogJ+KaoScsIHRhZzogJ0xp4oKCTyDCtyDlub/mnJ/miYAgTEMnIH0sCiAgICAgIHByaWNlU291cmNlOiB7CiAgICAgICAgcHJveHk6ICdodHRwczovL2xjLmZzeHN5bWFsbC5jb20vbGMnLAogICAgICAgIGZhbGxiYWNrOiAnZGF0YS9wcmljZS5qc29uJwogICAgICB9LAogICAgICBmaWVsZHM6IFsKICAgICAgICB7IGlkOiAnbGlvMicsIGxhYmVsOiAnTGnigoJPIOWTgeS9jScsIHVuaXQ6ICclJywgbWluOiAyLCBtYXg6IDEwMCwgc3RlcDogMC4xLCBkZWZhdWx0OiA1LjAgfSwKICAgICAgICB7IGlkOiAncmVjb3ZlcnknLCBsYWJlbDogJ+WbnuaUtueOhycsIHVuaXQ6ICclJywgbWluOiAwLCBtYXg6IDEwMCwgc3RlcDogMC4xLCBkZWZhdWx0OiA4NSB9LAogICAgICAgIHsgaWQ6ICdkZWR1Y3Rpb24nLCBsYWJlbDogJ+aJo+WHj+WfuuWHhiBEJywgdW5pdDogJ0NOWS/lkKgnLCBtaW46IDAsIHN0ZXA6IDEwMCwgZGVmYXVsdDogMjMwMDAgfQogICAgICBdCiAgICB9KTsKICAgIHRoaXMucHJpY2UgPSA4MDAwMDsKICB9CgogIFNwb2R1bWVuZUNhbGMucHJvdG90eXBlID0gT2JqZWN0LmNyZWF0ZShCYXNlQ2FsYy5wcm90b3R5cGUpOwogIFNwb2R1bWVuZUNhbGMucHJvdG90eXBlLmNvbnN0cnVjdG9yID0gU3BvZHVtZW5lQ2FsYzsKCiAgU3BvZHVtZW5lQ2FsYy5wcm90b3R5cGUuZmV0Y2hQcmljZSA9IGZ1bmN0aW9uKCkgewogICAgdmFyIHNlbGYgPSB0aGlzOwogICAgdmFyIHByb3h5ID0gdGhpcy5wcmljZVNvdXJjZS5wcm94eSArICc/Xz0nICsgRGF0ZS5ub3coKTsKICAgIGZldGNoKHByb3h5KQogICAgICAudGhlbihmdW5jdGlvbihyKSB7IGlmICghci5vaykgdGhyb3cgbmV3IEVycm9yKCd4Jyk7IHJldHVybiByLmpzb24oKTsgfSkKICAgICAgLnRoZW4oZnVuY3Rpb24oZCkgewogICAgICAgIGlmIChkLnByaWNlKSB7CiAgICAgICAgICBzZWxmLnByaWNlID0gZC5wcmljZTsKICAgICAgICAgIHNlbGYudXBkYXRlUHJpY2VEaXNwbGF5KCk7CiAgICAgICAgICBzZWxmLmF1dG9DYWxjKCk7CiAgICAgICAgfQogICAgICB9KQogICAgICAuY2F0Y2goZnVuY3Rpb24oKSB7CiAgICAgICAgZmV0Y2goc2VsZi5wcmljZVNvdXJjZS5mYWxsYmFjayArICc/Xz0nICsgRGF0ZS5ub3coKSkKICAgICAgICAgIC50aGVuKGZ1bmN0aW9uKHIpIHsgcmV0dXJuIHIuanNvbigpOyB9KQogICAgICAgICAgLnRoZW4oZnVuY3Rpb24oZCkgewogICAgICAgICAgICBpZiAoIXNlbGYubWFudWFsUHJpY2UgJiYgZC5wcmljZSA+IDApIHNlbGYucHJpY2UgPSBkLnByaWNlOwogICAgICAgICAgICBzZWxmLnVwZGF0ZVByaWNlRGlzcGxheSh0cnVlKTsKICAgICAgICAgICAgc2VsZi5hdXRvQ2FsYygpOwogICAgICAgICAgfSkKICAgICAgICAgIC5jYXRjaChmdW5jdGlvbigpIHsKICAgICAgICAgICAgc2VsZi5wcmljZSA9IHNlbGYucHJpY2UgfHwgODAwMDA7CiAgICAgICAgICAgIHNlbGYudXBkYXRlUHJpY2VEaXNwbGF5KHRydWUpOwogICAgICAgICAgICBzZWxmLmF1dG9DYWxjKCk7CiAgICAgICAgICB9KTsKICAgICAgfSk7CiAgfTsKCiAgU3BvZHVtZW5lQ2FsYy5wcm90b3R5cGUudXBkYXRlUHJpY2VEaXNwbGF5ID0gZnVuY3Rpb24ob2ZmbGluZSkgewogICAgdmFyIGVsID0gdGhpcy5lbC5xdWVyeVNlbGVjdG9yKCcucHJpY2UtdmFsdWUnKTsKICAgIGlmICghZWwpIHJldHVybjsKICAgIHZhciBsYWJlbCA9IHRoaXMuZWwucXVlcnlTZWxlY3RvcignLnByaWNlLW5hbWUnKTsKICAgIGlmIChsYWJlbCkgbGFiZWwudGV4dENvbnRlbnQgPSAn5bm/5pyf5omAIExDIOeis+mFuOmUgic7CiAgICBpZiAob2ZmbGluZSkgewogICAgICBlbC5pbm5lckhUTUwgPSAnPHNwYW4gY2xhc3M9Im9mZmxpbmUiPuemu+e6vyDCtyAnICsgQy5mbXQodGhpcy5wcmljZSwgMCkgKyAnPC9zcGFuPjxzcGFuIGNsYXNzPSJ1bml0Ij7lhYMv5ZCoPC9zcGFuPic7CiAgICB9IGVsc2UgewogICAgICBlbC5pbm5lckhUTUwgPSBDLmZtdCh0aGlzLnByaWNlLCAwKSArICc8c3BhbiBjbGFzcz0idW5pdCI+5YWDL+WQqDwvc3Bhbj4nOwogICAgfQogICAgdGhpcy5lbC5xdWVyeVNlbGVjdG9yKCcucHJpY2UtYmFyIC5kb3QnKS5jbGFzc05hbWUgPSAnZG90ICcgKyAob2ZmbGluZSA/ICdvZmZsaW5lJyA6ICcnKTsKICB9OwoKICBTcG9kdW1lbmVDYWxjLnByb3RvdHlwZS5jYWxjVG90YWwgPSBmdW5jdGlvbihpbnB1dHMpIHsKICAgIHZhciBwcmljZSA9IHRoaXMucHJpY2UgfHwgMDsKICAgIHZhciBoID0gMzAgLyA3NCAvIChpbnB1dHMucmVjb3ZlcnkgLyAxMDApIC8gKGlucHV0cy5saW8yIC8gMTAwKTsKICAgIHZhciBkbXQgPSAocHJpY2UgLSBpbnB1dHMuZGVkdWN0aW9uKSAvIGg7CiAgICB2YXIgZXhjaGFuZ2VSYXRlID0gKHdpbmRvdy5nbG9iYWxDb25maWcgJiYgd2luZG93Lmdsb2JhbENvbmZpZy5leGNoYW5nZVJhdGUpIHx8IDcuMjsKICAgIHJldHVybiB7CiAgICAgIGg6IGgudG9GaXhlZCg0KSwKICAgICAgZG10OiAnwqUnICsgQy5mb3JtYXRNb25leShkbXQpLAogICAgICBkdW5QcmljZTogJ8KlJyArIEMuZm9ybWF0TW9uZXkoZG10IC8gaW5wdXRzLmxpbzIpLAogICAgICB1c2Q6ICckJyArIEMuZm9ybWF0TW9uZXkoZG10IC8gZXhjaGFuZ2VSYXRlKSwKICAgICAgZm9ybXVsYTogJ0ggPSAzMMO3NzTDt+WbnuaUtueOh8O35ZOB5L2NOyBETVQgPSAoTEMnICsgQy5mbXQocHJpY2UsIDApICsgJyAtIEQnICsgQy5mbXQoaW5wdXRzLmRlZHVjdGlvbiwgMCkgKyAnKSDDtyBIJwogICAgfTsKICB9OwoKICBTcG9kdW1lbmVDYWxjLnByb3RvdHlwZS5yZW5kZXJSZXN1bHRzID0gZnVuY3Rpb24ocmVzdWx0cywgaW5wdXRzKSB7CiAgICB2YXIgaHRtbCA9ICc8ZGl2IGNsYXNzPSJyZXN1bHQtZ3JpZCI+JyArCiAgICAgICc8ZGl2IGNsYXNzPSJyZXN1bHQtYm94Ij48c3BhbiBjbGFzcz0icmItbGFiZWwiPkgg57O75pWwPC9zcGFuPjxzcGFuIGNsYXNzPSJyYi12YWx1ZSI+JyArIHJlc3VsdHMuaCArICc8L3NwYW4+PC9kaXY+JyArCiAgICAgICc8ZGl2IGNsYXNzPSJyZXN1bHQtYm94IGhpZ2hsaWdodCI+PHNwYW4gY2xhc3M9InJiLWxhYmVsIj5ETVQg5Y2V5Lu3PC9zcGFuPjxzcGFuIGNsYXNzPSJyYi12YWx1ZSI+JyArIHJlc3VsdHMuZG10ICsgJzwvc3Bhbj48L2Rpdj4nICsKICAgICAgJzxkaXYgY2xhc3M9InJlc3VsdC1ib3giPjxzcGFuIGNsYXNzPSJyYi1sYWJlbCI+5ZCo5bqm5Lu3PC9zcGFuPjxzcGFuIGNsYXNzPSJyYi12YWx1ZSI+JyArIHJlc3VsdHMuZHVuUHJpY2UgKyAnPC9zcGFuPjwvZGl2PicgKwogICAgICAnPGRpdiBjbGFzcz0icmVzdWx0LWJveCI+PHNwYW4gY2xhc3M9InJiLWxhYmVsIj7mipjlkIjnvo7lhYM8L3NwYW4+PHNwYW4gY2xhc3M9InJiLXZhbHVlIj4nICsgcmVzdWx0cy51c2QgKyAnPC9zcGFuPjwvZGl2PicgKwogICAgJzwvZGl2PicgKwogICAgJzxkaXYgY2xhc3M9ImZvcm11bGEiPicgKyByZXN1bHRzLmZvcm11bGEgKyAnPC9kaXY+JzsKICAgIHRoaXMuZWwucXVlcnlTZWxlY3RvcignLnJlc3VsdC1hcmVhJykuaW5uZXJIVE1MID0gaHRtbDsKICB9OwoKICB3aW5kb3cuU3BvZHVtZW5lQ2FsYyA9IFNwb2R1bWVuZUNhbGM7Cn0pKHdpbmRvdyk7Cg==
+// js/calc-spodumene.js
+(function(window) {
+  'use strict';
+
+  var C = window.MCSCommon;
+  var BaseCalc = window.BaseCalc;
+
+  var TIERS = [
+    { lo: 2, hi: 2.99, d: 26000, label: '2.0%-2.99%', cls: 'tag-1' },
+    { lo: 3, hi: 3.49, d: 32000, label: '3.0%-3.49%', cls: 'tag-2' },
+    { lo: 3.5, hi: 3.99, d: 28500, label: '3.5%-3.99%', cls: 'tag-3' },
+    { lo: 4, hi: 4.49, d: 27000, label: '4.0%-4.49%', cls: 'tag-4' },
+    { lo: 4.5, hi: 4.99, d: 24000, label: '4.5%-4.99%', cls: 'tag-5' },
+    { lo: 5, hi: 99.99, d: 23000, label: '>=5.0%', cls: 'tag-6' }
+  ];
+
+  function SpodumeneCalc() {
+    BaseCalc.call(this, {
+      id: 'spodumene',
+      name: '锂辉石',
+      theme: { primary: '#9b00ff', accent: '#00f0ff', icon: '⚡', tag: 'Li₂O · 广期所 LC' },
+      priceSource: {
+        proxy: 'https://lc.fsxsymall.com/lc',
+        fallback: 'data/price.json'
+      },
+      fields: [
+        { id: 'lio2', label: 'Li₂O 品位', unit: '%', min: 2, max: 100, step: 0.1, default: 5.0 },
+        { id: 'recovery', label: '回收率', unit: '%', min: 0, max: 100, step: 0.1, default: 85 },
+        { id: 'deduction', label: '扣减基准 D', unit: 'CNY/吨', min: 0, step: 100, default: 23000 }
+      ]
+    });
+    this.price = 80000;
+  }
+
+  SpodumeneCalc.prototype = Object.create(BaseCalc.prototype);
+  SpodumeneCalc.prototype.constructor = SpodumeneCalc;
+
+  SpodumeneCalc.prototype.fetchPrice = function() {
+    var self = this;
+    var proxy = this.priceSource.proxy + '?_=' + Date.now();
+    fetch(proxy)
+      .then(function(r) { if (!r.ok) throw new Error('x'); return r.json(); })
+      .then(function(d) {
+        if (d.price) {
+          self.price = d.price;
+          self.updatePriceDisplay();
+          self.autoCalc();
+        }
+      })
+      .catch(function() {
+        fetch(self.priceSource.fallback + '?_=' + Date.now())
+          .then(function(r) { return r.json(); })
+          .then(function(d) {
+            if (!self.manualPrice && d.price > 0) self.price = d.price;
+            self.updatePriceDisplay(true);
+            self.autoCalc();
+          })
+          .catch(function() {
+            self.price = self.price || 80000;
+            self.updatePriceDisplay(true);
+            self.autoCalc();
+          });
+      });
+  };
+
+  SpodumeneCalc.prototype.updatePriceDisplay = function(offline) {
+    var el = this.el.querySelector('.price-value');
+    if (!el) return;
+    var label = this.el.querySelector('.price-name');
+    if (label) label.textContent = '广期所 LC 碳酸锂';
+    if (offline) {
+      el.innerHTML = '<span class="offline">离线 · ' + C.fmt(this.price, 0) + '</span><span class="unit">元/吨</span>';
+    } else {
+      el.innerHTML = C.fmt(this.price, 0) + '<span class="unit">元/吨</span>';
+    }
+    this.el.querySelector('.price-bar .dot').className = 'dot ' + (offline ? 'offline' : '');
+  };
+
+  SpodumeneCalc.prototype.calcTotal = function(inputs) {
+    var price = this.price || 0;
+    var h = 30 / 74 / (inputs.recovery / 100) / (inputs.lio2 / 100);
+    var dmt = (price - inputs.deduction) / h;
+    var exchangeRate = (window.globalConfig && window.globalConfig.exchangeRate) || 7.2;
+    return {
+      h: h.toFixed(4),
+      dmt: '¥' + C.formatMoney(dmt),
+      dunPrice: '¥' + C.formatMoney(dmt / inputs.lio2),
+      usd: '$' + C.formatMoney(dmt / exchangeRate),
+      formula: 'H = 30÷74÷回收率÷品位; DMT = (LC' + C.fmt(price, 0) + ' - D' + C.fmt(inputs.deduction, 0) + ') ÷ H'
+    };
+  };
+
+  SpodumeneCalc.prototype.renderResults = function(results, inputs) {
+    var html = '<div class="result-grid">' +
+      '<div class="result-box"><span class="rb-label">H 系数</span><span class="rb-value">' + results.h + '</span></div>' +
+      '<div class="result-box highlight"><span class="rb-label">DMT 单价</span><span class="rb-value">' + results.dmt + '</span></div>' +
+      '<div class="result-box"><span class="rb-label">吨度价</span><span class="rb-value">' + results.dunPrice + '</span></div>' +
+      '<div class="result-box"><span class="rb-label">折合美元</span><span class="rb-value">' + results.usd + '</span></div>' +
+    '</div>' +
+    '<div class="formula">' + results.formula + '</div>';
+    this.el.querySelector('.result-area').innerHTML = html;
+  };
+
+  window.SpodumeneCalc = SpodumeneCalc;
+})(window);
